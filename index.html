@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Yuvan Creations</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheetappointments -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            .flip-box {
+                perspective: 1000px;
+                width: 300px;
+                height: 400px;
+                margin: auto;
+            }
+    
+            .flip-box-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+            }
+    
+            .flip-box:hover .flip-box-inner {
+                transform: rotateY(180deg);
+            }
+    
+            .flip-box-front, .flip-box-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+    
+            .flip-box-front {
+                background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+    
+            .flip-box-front img {
+                border-radius: 5px;
+                width: 200px;
+                height: 150px;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
+            }
+    
+            .flip-box-back {
+                background: linear-gradient(to bottom, #e9ecef, #f8f9fa);
+                color: #343a40;
+                transform: rotateY(180deg);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
+    
+            .team-info {
+                text-align: center;
+            }
+    
+            .team-info h4 {
+                margin: 10px 0;
+            }
+    
+            .social-icons a {
+                margin: 0 5px;
+                color: #6c757d;
+                transition: color 0.3s;
+            }
+    
+            .social-icons a:hover {
+                color: #495057;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Spinner Start -->
+        <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+        <div id="header"></div>
+        <script>
+          fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('header').innerHTML = data;
+            });
+        </script>
+
+        <!-- Carousel Start -->
+        <div class="container-fluid px-0">
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img src="img/carousel-1.jpg" class="img-fluid" alt="First slide">
+                        <div class="carousel-caption">
+                            <div class="container carousel-content">
+                                <h6 class="text-secondary h4 animated fadeInUp">YUVAN CREATIONS</h6>
+                                <h1 class="text-white display-1 mb-4 animated fadeInRight">"BEST IN CITY"</h1>
+                                <p class="mb-4 text-white fs-5 animated fadeInDown">"Yuvan Creations - Your vision, our expertise."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/carousel-2.jpg" class="img-fluid" alt="Second slide">
+                        <div class="carousel-caption">
+                            <div class="container carousel-content">
+                                <h6 class="text-secondary h4 animated fadeInUp">Best Services In City</h6>
+                                <h1 class="text-white display-1 mb-4 animated fadeInLeft">Support Evrywhere !</h1>
+                                <p class="mb-4 text-white fs-5 animated fadeInDown">"Empowering your business with cutting-edge digital solutions that seamlessly integrate innovation and excellence."</p>
+                               </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+        <!-- About Start -->
+        <div class="container-fluid py-5 my-5">
+            <div class="container pt-5">
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+                        <div class="h-100 position-relative">
+                            <img src="img/about-1.jpg" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
+                            <div class="position-absolute w-75" style="top: 25%; left: 25%;">
+                                <img src="img/about-2.png" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                        <h5 class="text-primary">About Us</h5>
+                        <h1 class="mb-4">Experience Excellence with Yuvan Creations </h1>
+                        <p>Welcome to Yuvan Creations, where technology meets innovation. Since 2007, we have been revolutionizing the industry, offering unparalleled IT and tech solutions to empower businesses and individuals alike. From humble beginnings as an offline provider, we’ve evolved into a global leader in delivering top-notch digital solutions.</p>
+                        <p class="mb-4">At Yuvan Creations, we redefine innovation and excellence. Our unwavering commitment to quality, creativity, and customer satisfaction ensures we deliver results that exceed expectations. Whether you’re looking to elevate your brand, secure your spaces, or capture unforgettable memories, Yuvan Creations is your trusted partner.
+
+                            Step into a world of possibilities with Yuvan Creations—your gateway to cutting-edge technology and premium solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Services Start -->
+        <div class="container-fluid services py-5 mb-5">
+            <div class="container">
+                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                    <h5 class="text-primary">Our Services</h5>
+                    <h1>At Yuvan Creations, we specialize in a comprehensive suite of services designed to cater to your diverse needs:</h1>
+                </div>
+                <div class="row g-5 services-inner">
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                        <div class="services-item bg-light">
+                            <div class="p-4 text-center services-content">
+                                <div class="services-content-icon">
+                                    <i class="fa fa-code fa-7x mb-4 text-primary"></i>
+                                    <h4 class="mb-3">Web Design</h4>
+                                    <p class="mb-4">Create visually stunning and highly functional websites tailored to your business needs, ensuring seamless user experiences across all devices.</p>
+                                    <a href="web.html" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                        <div class="services-item bg-light">
+                            <div class="p-4 text-center services-content">
+                                <div class="services-content-icon">
+                                    <i class="fa fa-desktop fa-7x mb-4 text-primary"></i>
+                                    <h4 class="mb-3">Computer Hardware & Software Solutions</h4>
+                                    <p class="mb-4">Provide robust hardware and software solutions to optimize performance, enhance productivity, and support your business operations.</p>
+                                    <a href="computer.html" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                        <div class="services-item bg-light">
+                            <div class="p-4 text-center services-content">
+                                <div class="services-content-icon">
+                                    <i class="fa fa-mobile-alt fa-7x mb-4 text-primary"></i>
+                                    <h4 class="mb-3">Mobile Hardware & Repairing Solutions</h4>
+                                    <p class="mb-4">Deliver innovative hardware and software solutions for creative projects, empowering businesses with tools for success.</p>
+                                    <a href="mobile.html" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                        <div class="services-item bg-light">
+                            <div class="p-4 text-center services-content">
+                                <div class="services-content-icon">
+                                    <i class="fa fa-video fa-7x mb-4 text-primary"></i>
+                                    <h4 class="mb-3">CCTV Camera Solutions</h4>
+                                    <p class="mb-4">Install advanced CCTV systems for enhanced security, offering real-time monitoring and peace of mind for your premises.</p>
+                                    <a href="cctv.html" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                        <div class="services-item bg-light">
+                            <div class="p-4 text-center services-content">
+                                <div class="services-content-icon">
+                                    <i class="fa fa-paint-brush fa-7x mb-4 text-primary"></i>
+                                    <h4 class="mb-3">Graphic Design</h4>
+                                    <p class="mb-4">Design captivating visuals that strengthen your brand identity and leave a lasting impact on your audience.</p>
+                                    <a href="graphic.html" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                        <div class="services-item bg-light">
+                            <div class="p-4 text-center services-content">
+                                <div class="services-content-icon">
+                                    <i class="fa fa-film fa-7x mb-4 text-primary"></i>
+                                    <h4 class="mb-3">Video Editing</h4>
+                                    <p class="mb-4">Produce professional-grade videos with expert editing, turning your ideas into engaging stories that resonate with viewers.</p>
+                                    <a href="video.html" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services End -->
+
+        <!-- Team Start -->
+        <div class="container-fluid py-5 mb-5 team">
+            <div class="container">
+                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                    <h5 class="text-primary">Our Team</h5>
+                    <h1>Meet our expert Team</h1>
+                </div>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <img src="img/team-1.jpg" alt="Nishant Sharma">
+                                <div class="team-info">
+                                    <h4>Nishant Sharma</h4>
+                                    <p>Founder & CEO</p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <p>Nishant Sharma is the Founder & CEO, responsible for leading the company and driving its vision.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <img src="img/team-2.jpg" alt="Aman Verma">
+                                <div class="team-info">
+                                    <h4>Aman Verma</h4>
+                                    <p>Technical Head</p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <p>Aman Verma is the Technical Head, overseeing technical operations and leading the development team.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <img src="img/team-4.jpg" alt="Rahul Parida">
+                                <div class="team-info">
+                                    <h4>Rahul Parida</h4>
+                                    <p>Marketing Head</p>
+                                </div>
+                            </div>
+                            <div class="flip-box-back">
+                                <p>Rahul Parida oversees all marketing campaigns and promotes brand visibility.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+        <!-- Contact Start -->
+        <div class="container-fluid py-5 mb-5">
+            <div class="container">
+                <div class="contact-detail position-relative p-5">
+                    <div class="row g-5 mb-5 justify-content-center">
+                        <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                            <div class="d-flex bg-light p-3 rounded">
+                                <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="text-primary">Address</h4>
+                                    <a href="https://www.google.com/maps?q=Kankhal,+Haridwar,+Uttarakhand-249408" target="_blank" class="h5">Kankhal, Haridwar, Uttarakhand-249408</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                            <div class="d-flex bg-light p-3 rounded">
+                                <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                                    <i class="fa fa-phone text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="text-primary">Call Us</h4>
+                                    <a class="h5" href="tel:+91-9557300217" target="_blank">+91-9557300217</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".7s">
+                            <div class="d-flex bg-light p-3 rounded">
+                                <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                                    <i class="fa fa-envelope text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="text-primary">Email Us</h4>
+                                    <a class="h5" href="mailto:yuvancreationshrd@gmail.com" target="_blank">yuvancreationshrd@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-5">
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                            <div class="p-5 h-100 rounded contact-map">
+                                <iframe class="rounded w-100 h-100" 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.4814691413066!2d78.14164507579347!3d29.929799875273034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092947dc14d3db%3A0x8e327a32b524b700!2sKankhal%2C%20Haridwar%2C%20Uttarakhand%20249408!5e0!3m2!1sen!2sin!4v1686493221834!5m2!1sen!2sin" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                            <div class="p-5 rounded contact-form">
+                                <form id="contactForm">
+                                    <div class="mb-4">
+                                        <input type="text" class="form-control border-0 py-3" name="name" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <input type="email" class="form-control border-0 py-3" name="email" placeholder="Your Email" required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <input type="text" class="form-control border-0 py-3" name="Work" placeholder="Work">
+                                    </div>
+                                    <div class="mb-4">
+                                        <textarea class="w-100 form-control border-0 py-3" name="message" rows="6" cols="10" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="text-start">
+                                        <button class="btn bg-primary text-white py-3 px-5" type="submit">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <!-- Script -->
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#contactForm').on('submit', function (e) {
+                    e.preventDefault(); // Prevent default form submission
+                    $.ajax({
+                        url: "https://formsubmit.co/ajax/yuvancreationshrd@gmail.com",
+                        method: "POST",
+                        data: {
+                            name: $('input[name="name"]').val(),
+                            email: $('input[name="email"]').val(),
+                            Work: $('input[name="Work"]').val(),
+                            message: $('textarea[name="message"]').val()
+                        },
+                        dataType: "json",
+                        success: function (response) {
+                            alert("Message sent successfully!");
+                            $('#contactForm')[0].reset(); // Reset the form
+                        },
+                        error: function (error) {
+                            alert("Error sending message. Please try again later.");
+                        }
+                    });
+                });
+            });
+        </script>
+        <!-- Contact End -->
+
+        <!-- Footer Section -->
+        <div id="footer"></div>
+        <script>
+          fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('footer').innerHTML = data;
+            });
+        </script>
+
+        <a href="https://www.freecounterstat.com" title="free web counter"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=dny2qt3au59c2ljmm6nwkjftx27jbs1w" border="0" title="free web counter" alt="free web counter"></a>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"><i class="fa fa-arrow-up text-white"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'936de9c0a885adde',t:'MTc0NTc1MjY0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+    </body>
+</html>

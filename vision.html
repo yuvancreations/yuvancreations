@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Yuvan Creations - Vision & Mission</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* 3D Flip Box */
+        .flip-box {
+            background-color: transparent;
+            width: 200px;
+            height: 300px;
+            perspective: 1500px; /* Increase perspective for stronger 3D effect */
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s ease-in-out; /* Smooth 3D flip transition */
+            transform-style: preserve-3d;
+        }
+
+        .flip-box:hover .flip-box-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-box-front, .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+        }
+
+        .flip-box-front {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            transform: translateZ(30px); /* Move front side slightly forward */
+        }
+
+        .flip-box-back {
+            background-color: #00ffcc;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            transform: rotateY(180deg) translateZ(30px); /* Move back side slightly forward */
+        }
+
+        /* 3D Digital Clock */
+        .digital-clock {
+            font-family: 'Saira', sans-serif;
+            font-size: 48px;
+            color: #00ffcc;
+            background: #000;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc; /* More intense glow */
+            text-align: center;
+            margin-right: auto;
+            margin-left: 0;
+            width: fit-content;
+            transform: perspective(1000px) rotateX(15deg); /* 3D effect for clock */
+        }
+
+      
+
+        .vision-mission-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            perspective: 1500px; /* Add perspective for whole section */
+        }
+
+        .vision-mission-section .flip-box,
+        .vision-mission-section .digital-clock {
+            flex: 1;
+        }
+
+        .vision-mission-section .flip-box {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Header Section -->
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5">
+        <div class="container text-center py-5">
+            <h1 class="display-2 text-white mb-4 animated slideInDown">Vision & Mission</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Vision & Mission</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Vision & Mission Section Start -->
+    <div class="container-fluid py-5 mb-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 300px;">
+                <h5 class="text-primary">Our Vision & Mission</h5>
+                <h1>What Drives Us Forward</h1>
+            </div>
+            <div class="vision-mission-section">
+                <!-- Digital Clock -->
+                <div class="digital-clock" id="digital-clock"></div>
+
+                <!-- Flip Box for Vision & Mission -->
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <p>Our Vision & Mission</p>
+                        </div>
+                        <div class="flip-box-back">
+                            <h3>Our Vision</h3>
+                            <p>To be a global leader in IT solutions, driving innovation and excellence.</p>
+                            <h3>Our Mission</h3>
+                            <p>To deliver cutting-edge technology solutions that empower businesses to achieve their goals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vision & Mission Section End -->
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"><i class="fa fa-arrow-up text-white"></i></a>
+
+    <!-- JavaScript for Digital Clock -->
+    <script>
+        function updateDigitalClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12 || 12; // Convert to 12-hour format
+            document.getElementById('digital-clock').textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+        }
+
+        setInterval(updateDigitalClock, 1000);
+        updateDigitalClock();
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

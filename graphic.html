@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Yuvan Creations - Graphic Design Services</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Graphic Design, Professional Services" name="keywords">
+    <meta content="Expert graphic design services to bring your creative ideas to life." name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+     <!-- Custom Styles for Glass Popup -->
+     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+        }
+
+        .glass-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.706);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1050;
+        }
+
+        .glass-popup h4 {
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        .glass-popup p {
+            color: #333;
+        }
+
+        .glass-popup img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+
+        .glass-popup .popup-content-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .glass-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .glass-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1049;
+        }
+
+        .services-item {
+            transition: transform 0.3s;
+        }
+
+        .services-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .read-more-btn {
+            cursor: pointer;
+        }
+
+        .services-item i {
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .services-item:hover i {
+            transform: rotateY(360deg) scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5">
+        <div class="container text-center py-5">
+            <h1 class="display-2 text-white mb-4 animated slideInDown">Graphic Design Services</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Services</a></li>
+                    <li class="breadcrumb-item" aria-current="page">Graphic Design</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Services Start -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="services-item p-4 bg-light text-center">
+                    <i class="fa fa-paint-brush fa-4x text-primary mb-3"></i>
+                    <h4>Logo Design</h4>
+                    <p>Create memorable and professional logos for your brand.</p>
+                    <span class="btn btn-primary read-more-btn" data-title="Logo Design" data-content="Creating memorable and professional logos that represent your brand’s identity. Ensuring that the logo is versatile, scalable, and easily recognizable. Incorporating brand values and target audience preferences into the design. Crafting logos that work across various mediums, from print to digital. Providing multiple design concepts and revisions to ensure client satisfaction." data-image="images/logo-design.jpg">Read More</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item p-4 bg-light text-center">
+                    <i class="fa fa-ad fa-4x text-primary mb-3"></i>
+                    <h4>Banner Design</h4>
+                    <p>Design stunning banners for websites, social media, and more.</p>
+                    <span class="btn btn-primary read-more-btn" data-title="Banner Design" data-content="Designing visually appealing banners for websites, social media, events, and promotions. Ensuring banners are aligned with brand colors, fonts, and overall aesthetic. Creating attention-grabbing designs that effectively convey messages. Optimizing banners for various screen sizes and resolutions. Delivering high-quality, ready-to-use banners for both online and offline marketing." data-image="images/banner-design.jpg">Read More</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item p-4 bg-light text-center">
+                    <i class="fa fa-file-alt fa-4x text-primary mb-3"></i>
+                    <h4>Brochure Design</h4>
+                    <p>Create compelling brochures to showcase your products or services.</p>
+                    <span class="btn btn-primary read-more-btn" data-title="Brochure Design" data-content="Designing engaging brochures that effectively showcase products, services, and company information. Creating layouts that are easy to read and visually striking. Incorporating brand colors, fonts, and graphics to maintain consistency. Focusing on a clean design that emphasizes key information and calls to action. Delivering print-ready or digital brochures with high-quality imagery and content." data-image="images/brochure-design.jpg">Read More</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item p-4 bg-light text-center">
+                    <i class="fa fa-images fa-4x text-primary mb-3"></i>
+                    <h4>Social Media Graphics</h4>
+                    <p>Create eye-catching graphics for all your social media platforms.</p>
+                    <span class="btn btn-primary read-more-btn" data-title="Social Media Graphics" data-content="Designing eye-catching graphics for social media platforms, including Facebook, Instagram, Twitter, and LinkedIn. Tailoring graphics to fit platform specifications while maintaining brand consistency. Creating custom visuals like promotional posts, cover images, and ads. Enhancing engagement with creative designs that stand out in crowded social media feeds. Ensuring that all designs are optimized for shareability and impact." data-image="images/social-media-graphics.jpg">Read More</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item p-4 bg-light text-center">
+                    <i class="fa fa-edit fa-4x text-primary mb-3"></i>
+                    <h4>Illustrations</h4>
+                    <p>Design unique illustrations for your projects and campaigns.</p>
+                    <span class="btn btn-primary read-more-btn" data-title="Illustrations" data-content="Designing unique and custom illustrations for use in marketing, publications, and online content. Crafting illustrations that align with the brand’s style and message. Creating both digital and hand-drawn styles, depending on the project’s needs. Using illustrations to enhance storytelling and make content more engaging. Offering custom artwork for campaigns, websites, and presentations." data-image="images/illustrations.jpg">Read More</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item p-4 bg-light text-center">
+                    <i class="fa fa-vector-square fa-4x text-primary mb-3"></i>
+                    <h4>Brand Identity</h4>
+                    <p>Develop a cohesive and strong visual identity for your brand.</p>
+                    <span class="btn btn-primary read-more-btn" data-title="Brand Identity" data-content="Developing a cohesive and strong visual identity for your brand across all platforms. Creating consistent logos, color schemes, typography, and visual elements that represent the brand’s values. Designing marketing materials like business cards, letterheads, and signage to match the brand’s image. Establishing guidelines for the brand's visual language to ensure consistency in all communications. Providing a complete brand package that strengthens recognition and loyalty." data-image="images/brand-identity.jpg">Read More</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Glass Popup -->
+    <div class="glass-popup-overlay"></div>
+    <div class="glass-popup">
+        <span class="close-btn">&times;</span>
+        <div class="popup-content-container">
+            <img src="" alt="Service Image" class="popup-image">
+            <div>
+                <h4 class="popup-title"></h4>
+                <p class="popup-content"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.read-more-btn').on('click', function () {
+                const title = $(this).data('title');
+                const content = $(this).data('content');
+                const image = $(this).data('image');
+
+                $('.popup-title').text(title);
+                $('.popup-content').text(content);
+                $('.popup-image').attr('src', image);
+                $('.glass-popup, .glass-popup-overlay').fadeIn();
+            });
+
+            $('.close-btn, .glass-popup-overlay').on('click', function () {
+                $('.glass-popup, .glass-popup-overlay').fadeOut();
+            });
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"><i class="fa fa-arrow-up text-white"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

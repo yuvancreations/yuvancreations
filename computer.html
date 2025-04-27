@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Yuvan Creations - Computer Repair Services</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Computer Repair, Professional Services" name="keywords">
+    <meta content="Expert computer repair services to fix your devices efficiently and professionally." name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+      <!-- Custom Styles for Glass Popup -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+        }
+
+        .glass-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.706);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 1050;
+        }
+
+        .glass-popup h4 {
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        .glass-popup p {
+            color: #333;
+        }
+
+        .glass-popup img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+
+        .glass-popup .popup-content-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .glass-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .glass-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1049;
+        }
+
+        .services-item {
+            transition: transform 0.3s;
+        }
+
+        .services-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .read-more-btn {
+            cursor: pointer;
+        }
+
+        .services-item i {
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .services-item:hover i {
+            transform: rotateY(360deg) scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5">
+        <div class="container text-center py-5">
+            <h1 class="display-2 text-white mb-4 animated slideInDown">Computer Repair Services</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Services</a></li>
+                    <li class="breadcrumb-item" aria-current="page">Computer Repair</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Services Start -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="services-item p-4 bg-light text-center">
+                    <i class="fa fa-desktop fa-4x text-primary mb-3"></i>
+                    <h4>Hardware Repair</h4>
+                    <p>Fix broken components such as hard drives, motherboards, and screens.</p>
+                    <span class="btn btn-primary read-more-btn" data-title="Hardware Repair" data-content="Diagnosing and fixing hardware issues like motherboard failures, overheating, and faulty components. Repairing or replacing malfunctioning screens, keyboards, and power ports. Fixing or upgrading hard drives, RAM, and graphic cards to improve performance. Replacing defective cooling fans, batteries, and other critical components. Offering repairs for damaged casings, hinges, and connectors for laptops and desktops." data-image="images/hardware-repair.jpg">Read More</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item p-4 bg-light text-center">
+                    <i class="fa fa-microchip fa-4x text-primary mb-3"></i>
+                    <h4>System Diagnostics</h4>
+                    <p>Identify and resolve hardware and software issues efficiently.</p>
+                    <span class="btn btn-primary read-more-btn" data-title="System Diagnostics" data-content="Diagnosing hardware and software issues using tests and error analysis to identify failing components. Troubleshooting system crashes, blue screens, and performance slowdowns. Running stress tests and checking system logs for detailed insights. Providing solutions to restore system functionality. Ensuring efficient and reliable operation after repairs." data-image="images/system-diagnostics.jpg">Read More</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item p-4 bg-light text-center">
+                    <i class="fa fa-shield-alt fa-4x text-primary mb-3"></i>
+                    <h4>Virus Removal</h4>
+                    <p>Comprehensive virus and malware removal services.</p>
+                    <span class="btn btn-primary read-more-btn" data-title="Virus Removal" data-content="Comprehensive virus, malware, spyware, and ransomware removal using advanced tools. Isolating and cleaning infected files to prevent further damage. Deep-rooted malware removal (rootkits) for complete protection. Installing antivirus software and running full system scans. Regular updates and security setup to prevent future infections." data-image="images/virus-removal.jpg">Read More</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item p-4 bg-light text-center">
+                    <i class="fa fa-network-wired fa-4x text-primary mb-3"></i>
+                    <h4>Networking Issues</h4>
+                    <p>Resolve connectivity and network-related problems.</p>
+                    <span class="btn btn-primary read-more-btn" data-title="Networking Issues" data-content="Resolving Wi-Fi signal drops, slow speeds, and connection issues with network configuration adjustments. Setting up routers, modems, and Wi-Fi extenders for optimal coverage. Troubleshooting wired network problems, ensuring stable connections. Fixing IP conflicts and DNS-related issues affecting internet access. Securing networks with proper firewall settings and encryption." data-image="images/networking-issues.jpg">Read More</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item p-4 bg-light text-center">
+                    <i class="fa fa-database fa-4x text-primary mb-3"></i>
+                    <h4>Data Recovery</h4>
+                    <p>Recover lost or corrupted data from your computer.</p>
+                    <span class="btn btn-primary read-more-btn" data-title="Data Recovery" data-content="Recovering lost data from damaged or corrupted hard drives, SSDs, or external storage devices. Retrieving deleted files, even from emptied Recycle Bins or formatted drives. Restoring files corrupted by power surges, crashes, or malware. Specialized RAID data recovery for complex storage setups. Offering cloud backup recovery services for remote data retrieval." data-image="images/data-recovery.jpg">Read More</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item p-4 bg-light text-center">
+                    <i class="fa fa-sync-alt fa-4x text-primary mb-3"></i>
+                    <h4>Software Installation</h4>
+                    <p>Install and configure the software you need.</p>
+                    <span class="btn btn-primary read-more-btn" data-title="Software Installation" data-content="Installing and configuring operating systems like Windows, macOS, or Linux, including essential updates. Setting up and activating required software applications, office suites, and utilities. Installing device drivers to ensure full hardware compatibility. Configuring software for optimal performance and security. Ensuring software licenses are properly activated for legal use." data-image="images/software-installation.jpg">Read More</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Glass Popup -->
+    <div class="glass-popup-overlay"></div>
+    <div class="glass-popup">
+        <span class="close-btn">&times;</span>
+        <div class="popup-content-container">
+            <img src="" alt="Service Image" class="popup-image">
+            <div>
+                <h4 class="popup-title"></h4>
+                <p class="popup-content"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.read-more-btn').on('click', function () {
+                const title = $(this).data('title');
+                const content = $(this).data('content');
+                const image = $(this).data('image');
+
+                $('.popup-title').text(title);
+                $('.popup-content').text(content);
+                $('.popup-image').attr('src', image);
+                $('.glass-popup, .glass-popup-overlay').fadeIn();
+            });
+
+            $('.close-btn, .glass-popup-overlay').on('click', function () {
+                $('.glass-popup, .glass-popup-overlay').fadeOut();
+            });
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"><i class="fa fa-arrow-up text-white"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
