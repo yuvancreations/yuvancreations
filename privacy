@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Policy - Yuvan Creations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <div class="container py-5">
+        <h1 class="mb-4">Privacy Policy</h1>
+        <p><strong>Effective Date:</strong> April 29, 2025</p>
+
+        <p>At Yuvan Creations, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website or interact with our services.</p>
+
+        <h3>Information We Collect</h3>
+        <ul>
+            <li>Personal Information (name, email, phone) submitted via contact forms</li>
+            <li>Usage data through cookies and analytics tools</li>
+        </ul>
+
+        <h3>How We Use Your Information</h3>
+        <ul>
+            <li>To respond to your inquiries and requests</li>
+            <li>To improve our website and services</li>
+            <li>To send updates or promotional content (only with your consent)</li>
+        </ul>
+
+        <h3>Data Protection</h3>
+        <p>We implement industry-standard security measures to protect your data. We do not sell or share your personal data with third parties without your explicit consent.</p>
+
+        <h3>Third-Party Services</h3>
+        <p>Our site may include links to third-party services (e.g., form submission tools, analytics, map embedding). We are not responsible for their privacy practices.</p>
+
+        <h3>Your Rights</h3>
+        <p>You may request to view, update, or delete your personal data at any time by contacting us at <a href="mailto:yuvancreationshrd@gmail.com">yuvancreationshrd@gmail.com</a>.</p>
+
+        <h3>Changes to This Policy</h3>
+        <p>We may update this policy occasionally. Changes will be posted on this page with the revised date.</p>
+
+        <p>By using our site, you agree to this Privacy Policy.</p>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
