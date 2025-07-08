@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Computer Services | YUVAN CREATIONS</title>
+    <link rel="icon" href="images/icon.ico" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="YUVAN CREATIONS - Professional Computer & Laptop Repair Services" name="description">
+    <meta content="computer repair, laptop service, data recovery, desktop assembly, antivirus, hardware repair" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="dark-scheme">
+
+    <div id="wrapper">
+
+        <div class="float-text show-on-scroll">
+            <span><a href="#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+
+        <div id="header"></div>
+        <script>
+          fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('header').innerHTML = data;
+            });
+        </script>
+
+        <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-500 jarallax">
+            <img src="images/background/7.png" class="jarallax-img" alt="">
+            <div class="gradient-edge-bottom h-50"></div>
+            <div class="sw-overlay op-5"></div>
+            <div class="abs w-80 bottom-10 z-2 w-100">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between gx-5">
+                        <div class="col-lg-6">
+                            <div class="relative wow mask-right">
+                                <div class="text-start">
+                                    <h1 class="fs-96 text-uppercase fs-sm-10vw mb-0 lh-1">Computer Services</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
+                            <p class="mb-0">Comprehensive solutions for all your computer needs - from repair and maintenance to data recovery and custom builds.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="pt-120 pb-120 position-relative">
+            <div class="container">
+                <div class="row justify-content-center text-center mb-5">
+                    <div class="col-lg-8">
+                        <h2 class="text-uppercase mb-3">Our Computer Services</h2>
+                        <p class="lead">Expert solutions for desktops, laptops, and all your computing needs</p>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Computer Repair -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h3>Computer Repair</h3>
+                            <p>Diagnosis and repair of all desktop computer issues including hardware failures, software problems, and performance issues.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Motherboard diagnostics</li>
+                                <li><i class="fas fa-check-circle"></i> Power supply replacement</li>
+                                <li><i class="fas fa-check-circle"></i> Component-level repair</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Laptop Service -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h3>Laptop Service</h3>
+                            <p>Specialized repair services for all laptop brands and models, from screen replacements to motherboard repairs.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Keyboard replacement</li>
+                                <li><i class="fas fa-check-circle"></i> Hinge repair</li>
+                                <li><i class="fas fa-check-circle"></i> Charging port fix</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Desktop Assembly -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3>Custom PC Assembly</h3>
+                            <p>Build your dream PC with our custom assembly service. We help select components and build optimized systems.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Gaming PCs</li>
+                                <li><i class="fas fa-check-circle"></i> Workstations</li>
+                                <li><i class="fas fa-check-circle"></i> Budget builds</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Data Recovery -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Data Recovery</h3>
+                            <p>Professional data recovery services for accidentally deleted files, formatted drives, and physically damaged storage.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Hard drive recovery</li>
+                                <li><i class="fas fa-check-circle"></i> SSD recovery</li>
+                                <li><i class="fas fa-check-circle"></i> RAID reconstruction</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Virus Removal -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-virus"></i>
+                            </div>
+                            <h3>Virus & Malware Removal</h3>
+                            <p>Complete virus eradication and system disinfection with follow-up protection installation.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Rootkit removal</li>
+                                <li><i class="fas fa-check-circle"></i> Ransomware recovery</li>
+                                <li><i class="fas fa-check-circle"></i> System optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Hardware Upgrade -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h3>Hardware Upgrades</h3>
+                            <p>Boost your system's performance with strategic hardware upgrades tailored to your needs.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> RAM upgrades</li>
+                                <li><i class="fas fa-check-circle"></i> SSD installation</li>
+                                <li><i class="fas fa-check-circle"></i> GPU upgrades</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Services -->
+        <section class="pt-60 pb-60 bg-dark">
+            <div class="container">
+                <div class="row justify-content-center text-center mb-5">
+                    <div class="col-lg-8">
+                        <h2 class="text-uppercase mb-3">Specialized Services</h2>
+                        <p class="lead">Additional solutions for your specific computing needs</p>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Network Services -->
+                    <div class="col-md-3 col-6">
+                        <div class="special-service">
+                            <div class="special-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h5>Network Setup</h5>
+                        </div>
+                    </div>
+                    
+                    <!-- OS Installation -->
+                    <div class="col-md-3 col-6">
+                        <div class="special-service">
+                            <div class="special-icon">
+                                <i class="fab fa-windows"></i>
+                            </div>
+                            <h5>OS Installation</h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Backup Solutions -->
+                    <div class="col-md-3 col-6">
+                        <div class="special-service">
+                            <div class="special-icon">
+                                <i class="fas fa-hdd"></i>
+                            </div>
+                            <h5>Backup Solutions</h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Thermal Paste -->
+                    <div class="col-md-3 col-6">
+                        <div class="special-service">
+                            <div class="special-icon">
+                                <i class="fas fa-temperature-high"></i>
+                            </div>
+                            <h5>Thermal Repasting</h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Software Install -->
+                    <div class="col-md-3 col-6">
+                        <div class="special-service">
+                            <div class="special-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <h5>Software Setup</h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Printer Setup -->
+                    <div class="col-md-3 col-6">
+                        <div class="special-service">
+                            <div class="special-icon">
+                                <i class="fas fa-print"></i>
+                            </div>
+                            <h5>Printer Setup</h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Password Recovery -->
+                    <div class="col-md-3 col-6">
+                        <div class="special-service">
+                            <div class="special-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <h5>Password Recovery</h5>
+                        </div>
+                    </div>
+                    
+                    <!-- CCTV Setup -->
+                    <div class="col-md-3 col-6">
+                        <div class="special-service">
+                            <div class="special-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h5>CCTV Installation</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="pt-120 pb-120">
+            <div class="container">
+                <div class="row justify-content-center text-center mb-5">
+                    <div class="col-lg-8">
+                        <h2 class="text-uppercase mb-3">Our Repair Process</h2>
+                        <p class="lead">Transparent and efficient service from diagnosis to delivery</p>
+                    </div>
+                </div>
+                
+                <div class="row process-steps">
+                    <div class="col-md-3">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h4>Diagnosis</h4>
+                            <p>Thorough testing to identify all issues</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h4>Approval</h4>
+                            <p>Detailed quote with no obligation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h4>Repair</h4>
+                            <p>Quality parts and expert service</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <h4>Testing</h4>
+                            <p>Rigorous quality control checks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+
+            <!-- Decorative SVG background -->
+            <svg class="position-absolute top-0 start-0 w-100" height="120" style="z-index:1;" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#1e293b" fill-opacity="1" d="M0,0L80,16C160,32,320,64,480,74.7C640,85,800,75,960,69.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+            </svg>
+            <style>
+                .bg-gradient {
+                    background: linear-gradient(135deg, #1e293b 60%, #4eacff 100%);
+                }
+                .attractive-feature {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 24px;
+                    background: rgba(255,255,255,0.09);
+                    border-radius: 16px;
+                    padding: 28px 32px;
+                    box-shadow: 0 6px 32px 0 rgba(30,172,255,0.08), 0 1.5px 6px 0 rgba(0,0,0,0.07);
+                    margin-bottom: 24px;
+                    transition: transform 0.2s, box-shadow 0.2s;
+                }
+                .attractive-feature:hover {
+                    transform: translateY(-4px) scale(1.02);
+                    box-shadow: 0 12px 40px 0 rgba(30,172,255,0.13), 0 2px 8px 0 rgba(0,0,0,0.10);
+                }
+                .attractive-feature .feature-icon {
+                    min-width: 64px;
+                    min-height: 64px;
+                    max-width: 64px;
+                    max-height: 64px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 2rem;
+                    color: #fff;
+                    margin-right: 0;
+                    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+                }
+                .attractive-feature h4 {
+                    color: #fff;
+                    font-weight: 700;
+                    margin-bottom: 6px;
+                    letter-spacing: 1px;
+                }
+                .attractive-feature p {
+                    color: #e0e0e0;
+                    margin-bottom: 0;
+                    font-size: 1.08rem;
+                }
+                @media (max-width: 991px) {
+                    .attractive-feature {
+                        flex-direction: column;
+                        text-align: center;
+                        padding: 22px 12px;
+                        gap: 14px;
+                    }
+                    .attractive-feature .feature-icon {
+                        margin-bottom: 10px;
+                    }
+                }
+            </style>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="pt-120 pb-120">
+            <div class="container">
+                <div class="row justify-content-center text-center mb-5">
+                    <div class="col-lg-8">
+                        <h2 class="text-uppercase mb-3">Frequently Asked Questions</h2>
+                        <p class="lead">Get answers to common questions about our computer services</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        How much does computer repair typically cost?
+                                    </button>
+                                </h3>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                                    <div class="accordion-body">
+                                        Repair costs vary depending on the issue and required parts. Simple software fixes start at ₹500, while hardware repairs typically range from ₹1500-₹5000. We provide free diagnostics and upfront pricing before any work begins.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                        Can you recover data from a dead hard drive?
+                                    </button>
+                                </h3>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                                    <div class="accordion-body">
+                                        In many cases, yes. We have specialized tools for recovering data from mechanically failed drives. Success depends on the extent of damage, but we achieve about 90% recovery rate for typical failures. We'll evaluate your drive and provide a realistic assessment.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                        Should I repair or replace my old computer?
+                                    </button>
+                                </h3>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                                    <div class="accordion-body">
+                                        We'll help you make this decision based on your usage needs and the computer's condition. Generally, if repair costs exceed 50% of a comparable new system's price, replacement may be better. For older systems (5+ years), strategic upgrades can often extend their useful life.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="accordion" id="faqAccordion2">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                        Do you offer warranty on repairs?
+                                    </button>
+                                </h3>
+                                <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour">
+                                    <div class="accordion-body">
+                                        Yes, all repairs come with a 90-day warranty on both parts and labor. Some components like hard drives may carry manufacturer warranties that we'll help you claim. The warranty covers defects but not new damage or unrelated failures.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                        How long does data recovery take?
+                                    </button>
+                                </h3>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+                                    <div class="accordion-body">
+                                        Simple logical recoveries (deleted files, formatted drives) typically take 1-2 days. Physical recoveries from damaged drives can take 3-7 days depending on severity. We prioritize emergency cases for business clients with time-sensitive needs.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                                        Can you build a custom PC to my specifications?
+                                    </button>
+                                </h3>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
+                                    <div class="accordion-body">
+                                        Absolutely! We specialize in custom builds for gaming, graphic design, video editing, and general use. We'll help select compatible components that match your budget and performance requirements, then assemble and thoroughly test your system.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info Section -->
+        <section class="pt-60 pb-120 bg-dark">
+            <div class="container">
+                <div class="pure-glass-card">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="contact-info-box">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h4>Our Location</h4>
+                                <p>Yuvan Creations HQ<br>Knakhal, Haridwar-249401</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="contact-info-box">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <h4>Call Us</h4>
+                                <p>+91 9557300217<br>Mon-Sat: 10AM - 7PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="contact-info-box">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h4>Email Us</h4>
+                                <p>yuvancreationshrd@gmail.com<br>Response within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <div id="footer"></div>
+        <script>
+          fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('footer').innerHTML = data;
+            });
+        </script>
+
+    </div>
+
+    <!-- Javascript Files -->
+    <script src="js/vendors.js"></script>
+    <script src="js/designesia.js"></script>
+    
+    <style>
+        /* Service Cards */
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #fff;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .service-card p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+        
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .service-features li {
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .service-features i {
+            color: #4eacff;
+            margin-right: 8px;
+        }
+        
+        /* Special Services */
+        .special-service {
+            text-align: center;
+            padding: 20px 15px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            transition: all 0.3s;
+            height: 100%;
+        }
+        
+        .special-service:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .special-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 20px;
+            color: #fff;
+        }
+        
+        .special-service h5 {
+            color: #fff;
+            margin-bottom: 0;
+        }
+        
+        /* Process Steps */
+        .process-steps {
+            position: relative;
+        }
+        
+        .process-steps:before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+        
+        .step {
+            position: relative;
+            text-align: center;
+            z-index: 2;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            border: 2px solid #4eacff;
+        }
+        
+        .step h4 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .step p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0;
+        }
+        
+        /* Feature Boxes */
+        .feature-box {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            font-size: 20px;
+            color: #fff;
+        }
+        
+        .feature-content h4 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .feature-content p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0;
+        }
+        
+        /* About Image */
+        .about-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .about-image img {
+            transition: transform 0.5s;
+            width: 100%;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .stats-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            color: #4eacff;
+            margin-bottom: 5px;
+            font-size: 28px;
+        }
+        
+        .stat-item p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+        
+        /* Accordion */
+        .accordion-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        
+        .accordion-button {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-weight: 500;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background: rgba(255, 255, 255, 0.1);
+            color: #4eacff;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        
+        .accordion-body {
+            background: rgba(0, 0, 0, 0.2);
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Contact Info Boxes */
+        .contact-info-box {
+            text-align: center;
+            padding: 30px 20px;
+            height: 100%;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            color: #fff;
+        }
+        
+        .contact-info-box h4 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info-box p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0;
+        }
+        
+        /* Pure Glass Card */
+        .pure-glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+        }
+        
+        @media (max-width: 767px) {
+            .service-card, .contact-info-box {
+                padding: 20px;
+            }
+            
+            .feature-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .feature-icon {
+                margin: 0 auto 15px;
+            }
+            
+            .process-steps:before {
+                display: none;
+            }
+            
+            .step {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</body>
+</html>
