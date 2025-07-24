@@ -276,112 +276,71 @@ $(document).ready(function(){
 
 
 
-<section id="section-Our Services" class="bg-dark section-dark text-light">
+<section id="services" class="bg-dark text-light py-5">
     <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-6 offset-lg-3 text-center">
-                <div class="subtitle mb-3" style="font-family: 'Montserrat', sans-serif; letter-spacing: 3px; color: #c7a97f;">OUR SERVICES</div>
-                <h3 class="mb-4" style="font-family: 'Manrope', sans-serif; font-weight: 700; line-height: 1.3; font-size: 2.2rem;">
-                    At Yuvan Creations, <br>we specialize in a comprehensive suite of services designed to cater to your diverse needs
-                </h3>
-                <div class="divider" style="width: 80px; height: 3px; background: #c7a97f; margin: 0 auto;"></div>
+        <!-- Section Header -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <span class="text-gold text-uppercase letter-spacing-3 fw-bold d-block mb-3">Our Premium Services</span>
+                <h2 class="display-5 fw-bold mb-4">Elevating Your Digital <span class="text-gold">Experience</span></h2>
+                <div class="divider mx-auto bg-gold"></div>
             </div>
         </div>
 
-      
-
-        <div class="row g-4 justify-content-center">
+        <!-- Services Grid -->
+        <div class="row g-4">
             <!-- Computer Hardware -->
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('images/misc/computer.jpg');">
-                        <div class="service-icon">
-                            <i class="fas fa-desktop"></i>
-                        </div>
-                        <h4>Computer Hardware & Software Solutions</h4>
-                        <p>Provide robust hardware and software solutions to optimize performance.</p>
-                        <div class="hover-indicator">
-                            <span>View Details</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    <div class="card-back" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-                        <h4>Computer Solutions</h4>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Custom PC Builds</li>
-                            <li><i class="fas fa-check"></i> Hardware Upgrades</li>
-                            <li><i class="fas fa-check"></i> System Diagnostics</li>
-                            <li><i class="fas fa-check"></i> Software Installation</li>
-                            <li><i class="fas fa-check"></i> Virus Removal</li>
-                            <li><i class="fas fa-check"></i> Data Recovery</li>
-                        </ul>
-                        <div class="service-badges">
-                            <span class="badge">Premium Support</span>
-                            <span class="badge">On-site Service</span>
+                <div class="service-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                    <div class="card-inner">
+                        <div class="card-front bg-gradient-dark rounded-4 p-4">
+                            <div class="icon-wrapper bg-gold-gradient mb-4">
+                                <i class="fas fa-desktop fa-2x text-white"></i>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Computer Solutions</h3>
+                            <p class="text-muted mb-4">High-performance hardware and software solutions tailored to your needs.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-gold text-dark">Premium Support</span>
+                                <a href="#" class="text-gold view-more" data-bs-toggle="modal" data-bs-target="#serviceModal1">View Details <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Mobile Hardware & Repairing -->
+            <!-- Mobile Repair -->
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('images/misc/mobile.jpg');">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h4>Mobile Hardware & Repairing</h4>
-                        <p>Innovative hardware solutions for mobile devices and gadgets.</p>
-                        <div class="hover-indicator">
-                            <span>View Details</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    <div class="card-back" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-                        <h4>Mobile Services</h4>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Screen Replacement</li>
-                            <li><i class="fas fa-check"></i> Battery Services</li>
-                            <li><i class="fas fa-check"></i> Water Damage Repair</li>
-                            <li><i class="fas fa-check"></i> Software Issues</li>
-                            <li><i class="fas fa-check"></i> Camera Repair</li>
-                            <li><i class="fas fa-check"></i> Data Recovery</li>
-                        </ul>
-                        <div class="service-badges">
-                            <span class="badge">1 Year Warranty</span>
-                            <span class="badge">Express Service</span>
+                <div class="service-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                    <div class="card-inner">
+                        <div class="card-front bg-gradient-dark rounded-4 p-4">
+                            <div class="icon-wrapper bg-gold-gradient mb-4">
+                                <i class="fas fa-mobile-alt fa-2x text-white"></i>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Mobile Repair</h3>
+                            <p class="text-muted mb-4">Expert repairs for all mobile devices with warranty protection.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-gold text-dark">1 Year Warranty</span>
+                                <a href="#" class="text-gold view-more" data-bs-toggle="modal" data-bs-target="#serviceModal2">View Details <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- CCTV Camera Solutions -->
+            <!-- CCTV Solutions -->
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('images/misc/cctv.jpg');">
-                        <div class="service-icon">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <h4>CCTV Camera Solutions</h4>
-                        <p>Advanced surveillance systems for complete security monitoring.</p>
-                        <div class="hover-indicator">
-                            <span>View Details</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    <div class="card-back" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-                        <h4>Security Features</h4>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 4K Ultra HD</li>
-                            <li><i class="fas fa-check"></i> Night Vision</li>
-                            <li><i class="fas fa-check"></i> Motion Detection</li>
-                            <li><i class="fas fa-check"></i> Weatherproof</li>
-                            <li><i class="fas fa-check"></i> Mobile Access</li>
-                            <li><i class="fas fa-check"></i> Cloud Storage</li>
-                        </ul>
-                        <div class="service-badges">
-                            <span class="badge">2 Year Warranty</span>
-                            <span class="badge">24/7 Support</span>
+                <div class="service-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                    <div class="card-inner">
+                        <div class="card-front bg-gradient-dark rounded-4 p-4">
+                            <div class="icon-wrapper bg-gold-gradient mb-4">
+                                <i class="fas fa-video fa-2x text-white"></i>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">CCTV Solutions</h3>
+                            <p class="text-muted mb-4">Advanced surveillance systems for complete security monitoring.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-gold text-dark">2 Year Warranty</span>
+                                <a href="#" class="text-gold view-more" data-bs-toggle="modal" data-bs-target="#serviceModal3">View Details <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -389,31 +348,18 @@ $(document).ready(function(){
 
             <!-- Graphic Design -->
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('images/misc/gd.jpg');">
-                        <div class="service-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <h4>Graphic Design</h4>
-                        <p>Captivating visuals that strengthen your brand identity.</p>
-                        <div class="hover-indicator">
-                            <span>View Details</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    <div class="card-back" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-                        <h4>Design Services</h4>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Logo Design</li>
-                            <li><i class="fas fa-check"></i> Brand Identity</li>
-                            <li><i class="fas fa-check"></i> Print Materials</li>
-                            <li><i class="fas fa-check"></i> Social Media</li>
-                            <li><i class="fas fa-check"></i> UI/UX Design</li>
-                            <li><i class="fas fa-check"></i> Packaging</li>
-                        </ul>
-                        <div class="service-badges">
-                            <span class="badge">Custom Solutions</span>
-                            <span class="badge">Fast Turnaround</span>
+                <div class="service-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                    <div class="card-inner">
+                        <div class="card-front bg-gradient-dark rounded-4 p-4">
+                            <div class="icon-wrapper bg-gold-gradient mb-4">
+                                <i class="fas fa-paint-brush fa-2x text-white"></i>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Graphic Design</h3>
+                            <p class="text-muted mb-4">Captivating visuals that strengthen your brand identity.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-gold text-dark">Custom Solutions</span>
+                                <a href="#" class="text-gold view-more" data-bs-toggle="modal" data-bs-target="#serviceModal4">View Details <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -421,31 +367,18 @@ $(document).ready(function(){
 
             <!-- Video Editing -->
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('images/misc/ve.jpg');">
-                        <div class="service-icon">
-                            <i class="fas fa-film"></i>
-                        </div>
-                        <h4>Video Editing</h4>
-                        <p>Professional editing for engaging visual stories.</p>
-                        <div class="hover-indicator">
-                            <span>View Details</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    <div class="card-back" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-                        <h4>Editing Services</h4>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 4K/8K Editing</li>
-                            <li><i class="fas fa-check"></i> Color Correction</li>
-                            <li><i class="fas fa-check"></i> Motion Graphics</li>
-                            <li><i class="fas fa-check"></i> Sound Design</li>
-                            <li><i class="fas fa-check"></i> Multi-Camera</li>
-                            <li><i class="fas fa-check"></i> Social Media</li>
-                        </ul>
-                        <div class="service-badges">
-                            <span class="badge">Fast Delivery</span>
-                            <span class="badge">Unlimited Revisions</span>
+                <div class="service-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                    <div class="card-inner">
+                        <div class="card-front bg-gradient-dark rounded-4 p-4">
+                            <div class="icon-wrapper bg-gold-gradient mb-4">
+                                <i class="fas fa-film fa-2x text-white"></i>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Video Editing</h3>
+                            <p class="text-muted mb-4">Professional editing for engaging visual stories.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-gold text-dark">Fast Delivery</span>
+                                <a href="#" class="text-gold view-more" data-bs-toggle="modal" data-bs-target="#serviceModal5">View Details <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -453,31 +386,18 @@ $(document).ready(function(){
 
             <!-- Wedding Photography -->
             <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="card-front" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('images/misc/wedding.jpg');">
-                        <div class="service-icon">
-                            <i class="fas fa-camera"></i>
-                        </div>
-                        <h4>Wedding & Pre-Wedding Photography</h4>
-                        <p>Capture your special moments with professional artistry.</p>
-                        <div class="hover-indicator">
-                            <span>View Details</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    <div class="card-back" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-                        <h4>Photography Services</h4>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Full Wedding Coverage</li>
-                            <li><i class="fas fa-check"></i> Pre-Wedding Shoots</li>
-                            <li><i class="fas fa-check"></i> Candid Photography</li>
-                            <li><i class="fas fa-check"></i> Traditional Photography</li>
-                            <li><i class="fas fa-check"></i> Album Design</li>
-                            <li><i class="fas fa-check"></i> Drone Photography</li>
-                        </ul>
-                        <div class="service-badges">
-                            <span class="badge">Premium Packages</span>
-                            <span class="badge">Custom Options</span>
+                <div class="service-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                    <div class="card-inner">
+                        <div class="card-front bg-gradient-dark rounded-4 p-4">
+                            <div class="icon-wrapper bg-gold-gradient mb-4">
+                                <i class="fas fa-camera fa-2x text-white"></i>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Wedding Photography</h3>
+                            <p class="text-muted mb-4">Capture your special moments with professional artistry.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-gold text-dark">Premium Packages</span>
+                                <a href="#" class="text-gold view-more" data-bs-toggle="modal" data-bs-target="#serviceModal6">View Details <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -486,227 +406,479 @@ $(document).ready(function(){
     </div>
 </section>
 
+<!-- Service Modals -->
+<!-- Computer Solutions Modal -->
+<div class="modal fade" id="serviceModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-light border-gold">
+            <div class="modal-header border-bottom-gold">
+                <h5 class="modal-title text-gold fw-bold">Computer Hardware & Software Solutions</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pe-md-3">
+                            <img src="images/misc/computer.jpg" alt="Computer Solutions" class="img-fluid rounded mb-4">
+                            <h4 class="text-gold mb-3">Our Expertise</h4>
+                            <p>We provide comprehensive computer solutions including custom builds, upgrades, and maintenance to ensure optimal performance for both home and business environments.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="fas fa-star text-gold me-2"></i>
+                                <span>Premium on-site service available</span>
+                            </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <i class="fas fa-shield-alt text-gold me-2"></i>
+                                <span>1-year warranty on all hardware</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-gold mb-3">Services Include</h4>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Custom PC Builds & Configuration</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Hardware Upgrades & Replacements</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> System Diagnostics & Troubleshooting</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Software Installation & Optimization</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Virus & Malware Removal</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Data Backup & Recovery Services</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Network Setup & Configuration</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> IT Support & Maintenance Plans</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-top-gold">
+                <button type="button" class="btn btn-outline-gold" data-bs-dismiss="modal">Close</button>
+                <a href="computer-repair.html" class="btn btn-gold">Go to Service Page</a>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Mobile Repair Modal -->
+<div class="modal fade" id="serviceModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-light border-gold">
+            <div class="modal-header border-bottom-gold">
+                <h5 class="modal-title text-gold fw-bold">Mobile Hardware & Repairing</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pe-md-3">
+                            <img src="images/misc/mobile.jpg" alt="Mobile Repair" class="img-fluid rounded mb-4">
+                            <h4 class="text-gold mb-3">Our Expertise</h4>
+                            <p>Professional mobile repair services for all major brands and models. We use high-quality parts and provide warranty on all repairs to ensure your device performs like new.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="fas fa-star text-gold me-2"></i>
+                                <span>Same-day service available</span>
+                            </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <i class="fas fa-shield-alt text-gold me-2"></i>
+                                <span>Trusted Work</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-gold mb-3">Services Include</h4>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Screen & Display Replacements</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Battery Replacement Services</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Water Damage Repair & Cleaning</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Charging Port & Button Repairs</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Software Issues & OS Updates</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Camera & Speaker Repairs</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Data Recovery & Transfer</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Mobile Accessory Installation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-top-gold">
+                <button type="button" class="btn btn-outline-gold" data-bs-dismiss="modal">Close</button>
+                <a href="mobile-repair.html" class="btn btn-gold">Go to mobile-repair</a>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- CCTV Solutions Modal -->
+<div class="modal fade" id="serviceModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-light border-gold">
+            <div class="modal-header border-bottom-gold">
+                <h5 class="modal-title text-gold fw-bold">CCTV Camera Solutions</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pe-md-3">
+                            <img src="images/misc/cctv.jpg" alt="CCTV Solutions" class="img-fluid rounded mb-4">
+                            <h4 class="text-gold mb-3">Our Expertise</h4>
+                            <p>Complete security surveillance solutions for homes and businesses. We design, install, and maintain CCTV systems with the latest technology for maximum protection.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="fas fa-star text-gold me-2"></i>
+                                <span>24/7 monitoring options</span>
+                            </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <i class="fas fa-shield-alt text-gold me-2"></i>
+                                <span>2-year equipment warranty</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-gold mb-3">Services Include</h4>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> HD & 4K Security Camera Installation</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Night Vision & Thermal Cameras</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Motion Detection & Alerts</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Weatherproof Outdoor Systems</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Remote Mobile Access Setup</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Cloud & Local Storage Solutions</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Existing System Upgrades</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Maintenance & Support Plans</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-top-gold">
+                <button type="button" class="btn btn-outline-gold" data-bs-dismiss="modal">Close</button>
+                <a href="cctv-solutions.html" class="btn btn-gold">Go to Service Page</a>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Graphic Design Modal -->
+<div class="modal fade" id="serviceModal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-light border-gold">
+            <div class="modal-header border-bottom-gold">
+                <h5 class="modal-title text-gold fw-bold">Graphic Design Services</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pe-md-3">
+                            <img src="images/misc/gd.jpg" alt="Graphic Design" class="img-fluid rounded mb-4">
+                            <h4 class="text-gold mb-3">Creative Excellence</h4>
+                            <p>Transform your vision into stunning visuals with our professional graphic design services. We create compelling designs that elevate brands and communicate effectively.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="fas fa-star text-gold me-2"></i>
+                                <span>Unlimited revisions included</span>
+                            </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <i class="fas fa-shield-alt text-gold me-2"></i>
+                                <span>100% satisfaction guarantee</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-gold mb-3">Our Design Services</h4>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Logo & Brand Identity Design</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Business Cards & Stationery</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Brochures & Flyers</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Social Media Graphics & Banners</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Product Packaging Design</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> UI/UX Design for Websites & Apps</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Infographics & Presentation Design</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Large Format Printing Designs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-top-gold">
+                <button type="button" class="btn btn-outline-gold" data-bs-dismiss="modal">Close</button>
+                <a href="graphic-design.html" class="btn btn-gold">Go to Service Page</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Video Editing Modal -->
+<div class="modal fade" id="serviceModal5" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-light border-gold">
+            <div class="modal-header border-bottom-gold">
+                <h5 class="modal-title text-gold fw-bold">Professional Video Editing</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pe-md-3">
+                            <img src="images/misc/ve.jpg" alt="Video Editing" class="img-fluid rounded mb-4">
+                            <h4 class="text-gold mb-3">Editing Mastery</h4>
+                            <p>Bring your footage to life with our professional video editing services. We transform raw videos into polished, engaging content that captivates your audience.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="fas fa-star text-gold me-2"></i>
+                                <span>Fast turnaround times</span>
+                            </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <i class="fas fa-shield-alt text-gold me-2"></i>
+                                <span>Industry-standard software</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-gold mb-3">Editing Services</h4>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> 4K/8K Video Editing & Color Grading</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Commercial & Promotional Videos</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> YouTube & Social Media Content</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Motion Graphics & Animation</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Corporate & Training Videos</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Multi-Camera Editing</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Audio Enhancement & Sound Design</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Special Effects & Transitions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-top-gold">
+                <button type="button" class="btn btn-outline-gold" data-bs-dismiss="modal">Close</button>
+                <a href="video-editing.html" class="btn btn-gold">Go to Service Page</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Wedding Photography Modal -->
+<div class="modal fade" id="serviceModal6" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-light border-gold">
+            <div class="modal-header border-bottom-gold">
+                <h5 class="modal-title text-gold fw-bold">Wedding & Pre-Wedding Photography</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="pe-md-3">
+                            <img src="images/misc/wedding.jpg" alt="Wedding Photography" class="img-fluid rounded mb-4">
+                            <h4 class="text-gold mb-3">Capturing Memories</h4>
+                            <p>Professional wedding photography that beautifully documents your special day. We blend traditional and candid styles to create timeless memories you'll cherish forever.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="fas fa-star text-gold me-2"></i>
+                                <span>Flexible package options</span>
+                            </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <i class="fas fa-shield-alt text-gold me-2"></i>
+                                <span>High-quality prints & albums</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-gold mb-3">Photography Services</h4>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Full Wedding Day Coverage</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Pre-Wedding & Engagement Shoots</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Candid & Photojournalistic Style</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Traditional & Portrait Photography</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Drone Photography & Aerial Shots</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Bridal Portraits & Detail Shots</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Custom Wedding Albums & Prints</li>
+                            <li><i class="fas fa-check-circle text-gold me-2"></i> Photo Editing & Retouching</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-top-gold">
+                <button type="button" class="btn btn-outline-gold" data-bs-dismiss="modal">Close</button>
+                <a href="wedding-photography.html" class="btn btn-gold">Go to Service Page</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
-    /* Base Typography */
-    @import url('https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+    /* Color Variables */
+    :root {
+        --gold: #c7a97f;
+        --dark-gold: #b08d5f;
+        --dark: #1a1a1a;
+        --darker: #121212;
+    }
     
-    /* Import local font icons */
-    @import url("../fonts/fontawesome4/css/font-awesome.css");
-    @import url("../fonts/fontawesome6/css/fontawesome.css");
-    @import url("../fonts/fontawesome6/css/brands.css");
-    @import url("../fonts/fontawesome6/css/solid.css");
-    @import url("../fonts/elegant_font/HTML_CSS/style.css");
-    @import url("../fonts/et-line-font/style.css");
-    @import url("../fonts/icofont/icofont.min.css");
+    /* Text Colors */
+    .text-gold { color: var(--gold) !important; }
     
-    /* Service Card Styles */
+    /* Backgrounds */
+    .bg-gold { background-color: var(--gold) !important; }
+    .bg-dark { background-color: var(--dark) !important; }
+    .bg-darker { background-color: var(--darker) !important; }
+    .bg-gradient-dark { background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%) !important; }
+    .bg-gold-gradient { background: linear-gradient(135deg, var(--gold) 0%, var(--dark-gold) 100%) !important; }
+    
+    /* Borders */
+    .border-gold { border: 1px solid var(--gold) !important; }
+    .border-top-gold { border-top: 1px solid rgba(199, 169, 127, 0.3) !important; }
+    .border-bottom-gold { border-bottom: 1px solid rgba(199, 169, 127, 0.3) !important; }
+    
+    /* Buttons */
+    .btn-gold {
+        background-color: var(--gold);
+        color: #000;
+        font-weight: 600;
+        border: none;
+        transition: all 0.3s ease;
+    }
+    .btn-gold:hover {
+        background-color: var(--dark-gold);
+        color: #000;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(199, 169, 127, 0.3);
+    }
+    .btn-outline-gold {
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        background: transparent;
+        transition: all 0.3s ease;
+    }
+    .btn-outline-gold:hover {
+        background-color: var(--gold);
+        color: #000;
+    }
+    
+    /* Service Cards */
     .service-card {
         position: relative;
-        height: 380px;
-        perspective: 1500px;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-        font-family: 'Manrope', sans-serif;
+        height: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        perspective: 1000px;
     }
     
-    .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 40px 70px rgba(0,0,0,0.4);
-    }
-    
-    .card-front, .card-back {
-        position: absolute;
+    .card-inner {
+        position: relative;
         width: 100%;
         height: 100%;
-        backface-visibility: hidden;
-        transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
-        padding: 30px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-size: cover;
-        background-position: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
     }
     
     .card-front {
-        transform: rotateY(0deg);
-    }
-    
-    .card-back {
-        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.3s ease;
     }
     
     .service-card:hover .card-front {
-        transform: rotateY(-180deg);
+        transform: translateY(-10px);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
     }
     
-    .service-card:hover .card-back {
-        transform: rotateY(0deg);
-    }
-    
-    /* Card Front Styling */
-    .service-icon {
+    .icon-wrapper {
         width: 80px;
         height: 80px;
-        background: rgba(199, 169, 127, 0.2);
-        border: 2px solid #c7a97f;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 25px;
-        font-size: 32px;
-        color: #c7a97f;
+        margin: 0 auto;
         transition: all 0.3s ease;
     }
     
-    .service-card:hover .service-icon {
-        background: rgba(199, 169, 127, 0.8);
-        color: #fff;
-        transform: scale(1.1);
+    .service-card:hover .icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
     }
     
-    .card-front h4 {
-        font-family: 'Manrope', sans-serif;
-        font-weight: 700;
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-        color: #fff;
-        position: relative;
-        padding-bottom: 10px;
-    }
-    
-    .card-front h4:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50px;
-        height: 2px;
-        background: #c7a97f;
-    }
-    
-    .card-front p {
-        font-family: 'Manrope', sans-serif;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 25px;
-        color: rgba(255,255,255,0.8);
-    }
-    
-    .hover-indicator {
-        display: flex;
-        align-items: center;
-        color: #c7a97f;
-        font-family: 'Manrope', sans-serif;
+    .view-more {
+        text-decoration: none;
         font-weight: 600;
-        font-size: 0.875rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.4s ease;
+        transition: all 0.3s ease;
+        opacity: 0.8;
     }
     
-    .service-card:hover .hover-indicator {
+    .service-card:hover .view-more {
         opacity: 1;
-        transform: translateY(0);
+        text-shadow: 0 0 10px rgba(199, 169, 127, 0.5);
     }
     
-    .hover-indicator i {
-        margin-left: 10px;
+    .view-more i {
         transition: transform 0.3s ease;
     }
     
-    .service-card:hover .hover-indicator i {
+    .service-card:hover .view-more i {
         transform: translateX(5px);
     }
     
-    /* Card Back Styling */
-    .card-back h4 {
-        font-family: 'Manrope', sans-serif;
-        font-weight: 700;
-        font-size: 1.4rem;
-        margin-bottom: 20px;
-        color: #c7a97f;
+    /* Modal Styles */
+    .modal-content {
+        border-radius: 10px;
+        overflow: hidden;
     }
     
-    .card-back ul {
+    .service-list {
         list-style: none;
         padding: 0;
-        margin: 0 0 20px 0;
-        width: 100%;
     }
     
-    .card-back ul li {
-        font-family: 'Manrope', sans-serif;
-        font-weight: 400;
-        font-size: 0.875rem;
+    .service-list li {
         padding: 8px 0;
-        color: rgba(255,255,255,0.8);
-        text-align: left;
         position: relative;
-        padding-left: 25px;
+        padding-left: 30px;
     }
     
-    .card-back ul li i {
-        color: #c7a97f;
-        position: absolute;
-        left: 0;
-        top: 8px;
-        font-size: 14px;
+    /* Divider */
+    .divider {
+        width: 80px;
+        height: 3px;
+        margin: 20px auto;
     }
     
-    .service-badges {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-    
-    .badge {
-        background: rgba(199, 169, 127, 0.2);
-        color: #c7a97f;
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 0.75rem;
-        font-family: 'Manrope', sans-serif;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-    }
+    /* Letter Spacing */
+    .letter-spacing-3 { letter-spacing: 3px; }
     
     /* Responsive Adjustments */
-    @media (max-width: 992px) {
-        .service-card {
-            height: 350px;
-        }
-    }
-    
     @media (max-width: 768px) {
         .service-card {
-            height: 320px;
+            margin-bottom: 20px;
         }
         
-        .card-front, .card-back {
-            padding: 20px;
+        .modal-body .row {
+            flex-direction: column;
         }
         
-        .card-front h4, .card-back h4 {
-            font-size: 1.2rem;
+        .modal-body .col-md-6 {
+            width: 100%;
+            padding: 0;
+        }
+        
+        .modal-body img {
+            margin-bottom: 20px;
         }
     }
 </style>
+
+<!-- Tilt.js for 3D hover effect -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+<script>
+    // Initialize tilt.js
+    $(document).ready(function() {
+        $('.service-card').tilt({
+            glare: true,
+            maxGlare: 0.2,
+            scale: 1.03
+        });
+        
+        // Add hover effect to cards
+        $('.service-card').hover(
+            function() {
+                $(this).find('.card-front').css('transform', 'translateY(-10px)');
+            },
+            function() {
+                $(this).find('.card-front').css('transform', 'translateY(0)');
+            }
+        );
+    });
+</script>
 
 
 
