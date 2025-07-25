@@ -13102,3 +13102,11 @@ img {
     width: auto;
   }
 }
+
+/* Force consistent image alignment and aspect ratio */
+.security-showcase img {
+    width: 100%;       /* Ensure full width of parent container */
+    height: 300px;     /* Fixed height (adjust as needed) */
+    object-fit: cover; /* Maintain aspect ratio while filling space */
+    object-position: center; /* Center the image focus */
+}
