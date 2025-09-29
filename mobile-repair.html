@@ -218,6 +218,186 @@
             </div>
         </section>
 
+
+    <!-- Pricing Section -->
+     <section class="pt-60 pb-60 bg-dark">
+         <div class="container">
+          <div class="row justify-content-center text-center mb-5">
+              <div class="col-lg-8">
+               <h2 class="text-uppercase mb-3">Repair Pricing</h2>
+               <p class="lead">Transparent pricing for popular mobile repair services</p>
+              </div>
+          </div>
+          
+          <div class="row g-4">
+              <!-- Screen Replacement -->
+              <div class="col-md-4">
+               <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Screen Replacement</h3>
+                    <div class="price">₹1,200<span>/device</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Original/Aftermarket options</li>
+                    <li><i class="fas fa-check"></i> 1-2 hour service</li>
+                    <li><i class="fas fa-check"></i> Warranty included</li>
+                    <li><i class="fas fa-check"></i> All major brands</li>
+                    <li><i class="fas fa-times"></i> No home service</li>
+                    <li><i class="fas fa-times"></i> Parts cost extra for premium models</li>
+                </ul>
+                <a href="#" class="pricing-button">Book Now</a>
+               </div>
+              </div>
+              
+              <!-- Battery Replacement -->
+              <div class="col-md-4">
+               <div class="pricing-card popular">
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-header">
+                    <h3>Battery Replacement</h3>
+                    <div class="price">₹900<span>/device</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> OEM quality batteries</li>
+                    <li><i class="fas fa-check"></i> Safe installation</li>
+                    <li><i class="fas fa-check"></i> 1 hour service</li>
+                    <li><i class="fas fa-check"></i> Warranty included</li>
+                    <li><i class="fas fa-times"></i> No pickup/delivery</li>
+                    <li><i class="fas fa-times"></i> Not for non-removable batteries</li>
+                </ul>
+                <a href="#" class="pricing-button">Book Now</a>
+               </div>
+              </div>
+              
+              <!-- Water Damage Repair -->
+              <div class="col-md-4">
+               <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Water Damage Repair</h3>
+                    <div class="price">₹1,500<span>/device</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Immediate treatment</li>
+                    <li><i class="fas fa-check"></i> Corrosion cleaning</li>
+                    <li><i class="fas fa-check"></i> Component-level repair</li>
+                    <li><i class="fas fa-check"></i> Success not guaranteed</li>
+                    <li><i class="fas fa-times"></i> Parts cost extra</li>
+                    <li><i class="fas fa-times"></i> No warranty on water damage</li>
+                </ul>
+                <a href="#" class="pricing-button">Book Now</a>
+               </div>
+              </div>
+          </div>
+         </div>
+     </section>
+     <style>
+     /* Pricing Cards */
+     .pricing-card {
+         background: rgba(255,255,255,0.05);
+         border-radius: 12px;
+         padding: 30px;
+         height: 100%;
+         transition: all 0.3s;
+         border: 1px solid rgba(255,255,255,0.1);
+         position: relative;
+         box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+     }
+     .pricing-card:hover {
+         background: rgba(255,255,255,0.10);
+         transform: translateY(-5px);
+         box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+     }
+     .pricing-header {
+         text-align: center;
+         margin-bottom: 20px;
+     }
+     .pricing-header h3 {
+         color: #fff;
+         margin-bottom: 10px;
+         font-size: 1.5rem;
+         font-weight: 600;
+     }
+     .price {
+         font-size: 2.2rem;
+         color: #4eacff;
+         font-weight: 700;
+         margin-bottom: 5px;
+     }
+     .price span {
+         font-size: 1rem;
+         color: rgba(255,255,255,0.7);
+         font-weight: 400;
+         margin-left: 5px;
+     }
+     .pricing-features {
+         list-style: none;
+         padding: 0;
+         margin: 0 0 25px 0;
+     }
+     .pricing-features li {
+         margin-bottom: 10px;
+         color: rgba(255,255,255,0.85);
+         font-size: 1rem;
+         display: flex;
+         align-items: center;
+     }
+     .pricing-features i {
+         margin-right: 8px;
+         font-size: 1.1rem;
+     }
+     .pricing-features .fa-check {
+         color: #4eacff;
+     }
+     .pricing-features .fa-times {
+         color: #ff4e4e;
+     }
+     .pricing-button {
+         display: block;
+         width: 100%;
+         text-align: center;
+         background: #4eacff;
+         color: #fff;
+         border-radius: 8px;
+         padding: 12px 0;
+         font-weight: 600;
+         text-decoration: none;
+         transition: background 0.2s;
+         box-shadow: 0 2px 8px rgba(78,172,255,0.15);
+     }
+     .pricing-button:hover {
+         background: #3578e5;
+         color: #fff;
+     }
+     .popular {
+         border: 2px solid #4eacff;
+         box-shadow: 0 12px 32px rgba(78,172,255,0.10);
+     }
+     .popular-badge {
+         position: absolute;
+         top: -18px;
+         left: 50%;
+         transform: translateX(-50%);
+         background: #4eacff;
+         color: #fff;
+         padding: 5px 18px;
+         border-radius: 12px;
+         font-size: 0.95rem;
+         font-weight: 600;
+         box-shadow: 0 2px 8px rgba(78,172,255,0.15);
+         letter-spacing: 0.5px;
+     }
+     @media (max-width: 767px) {
+         .pricing-card {
+          padding: 18px;
+         }
+         .pricing-header h3 {
+          font-size: 1.2rem;
+         }
+         .price {
+          font-size: 1.5rem;
+         }
+     }
+     </style>
       
         <!-- FAQ Section -->
         <section class="pt-60 pb-120 bg-dark">
