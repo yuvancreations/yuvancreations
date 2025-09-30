@@ -65,14 +65,38 @@
         <!-- Video Showcase -->
         <section class="pt-60 pb-60">
             <div class="container">
-                <div class="video-showcase">
-                    <div class="plyr__video-embed" id="player">
-                        <iframe src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
+                <div id="videoShowcaseCarousel" class="carousel slide video-showcase" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="c" alt="Video Editing Showcase" class="d-block w-100" style="object-fit:cover; height:400px;">
+                            <div class="carousel-caption d-none d-md-block showcase-caption text-center">
+                                <h3>Our Latest Work</h3>
+                                <p class="mb-0">Wedding Film Sample - Shot on Sony A7SIII</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/background/5.png" alt="Corporate Video" class="d-block w-100" style="object-fit:cover; height:400px;">
+                            <div class="carousel-caption d-none d-md-block showcase-caption text-center">
+                                <h3>Corporate Video</h3>
+                                <p class="mb-0">Company Profile - Shot on Canon C200</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/background/6.png" alt="Commercial" class="d-block w-100" style="object-fit:cover; height:400px;">
+                            <div class="carousel-caption d-none d-md-block showcase-caption text-center">
+                                <h3>Product Commercial</h3>
+                                <p class="mb-0">Promotional Spot - Shot on Blackmagic 6K</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="showcase-caption text-center mt-4">
-                        <h3>Our Latest Work</h3>
-                        <p class="mb-0">Wedding Film Sample - Shot on Sony A7SIII</p>
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#videoShowcaseCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#videoShowcaseCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </section>
