@@ -24,292 +24,761 @@
 
 <body class="dark-scheme">
 
-    <div id="wrapper">
+   <div id="wrapper">
 
-        <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
-        </div>
-        <div class="scrollbar-v show-on-scroll"></div>
+    <div class="float-text show-on-scroll">
+        <span><a href="#">Scroll to top</a></span>
+    </div>
+    <div class="scrollbar-v show-on-scroll"></div>
 
-        <!-- page preloader begin -->
-        <div id="de-loader"></div>
-        <!-- page preloader close -->
+    <div id="de-loader"></div>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+    </script>
 
-        <div id="header"></div>
-        <script>
-          fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById('header').innerHTML = data;
-            });
+    <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800" data-video-src="mp4:video/2.mp4" aria-label="Yuvan Creations hero section" style="background: #050505; overflow: hidden;">
+        
+        <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"LocalBusiness",
+          "name":"Yuvan Creations",
+          "telephone":"+919557300217",
+          "url":"https://yuvancreations.example.com",
+          "image":"https://yuvancreations.example.com/images/misc/about.png",
+          "address":{
+            "@type":"PostalAddress",
+            "addressLocality":"Haridwar",
+            "addressRegion":"Uttarakhand",
+            "addressCountry":"IN"
+          },
+          "description":"Yuvan Creations — professional photography, video editing, graphic design, CCTV & device repairs since 2007.",
+          "sameAs":[
+            "https://www.facebook.com/yourpage",
+            "https://www.instagram.com/yourpage"
+          ],
+          "service":[
+            {"@type":"Service","name":"Photography"},
+            {"@type":"Service","name":"Video Editing"},
+            {"@type":"Service","name":"Graphic Design"},
+            {"@type":"Service","name":"Computer Repair"},
+            {"@type":"Service","name":"Mobile Repair"}
+          ]
+        }
         </script>
 
-      <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800" data-video-src="mp4:video/2.mp4" aria-label="Yuvan Creations hero section">
-    
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"LocalBusiness",
-      "name":"Yuvan Creations",
-      "telephone":"+919557300217",
-      "url":"https://yuvancreations.example.com",
-      "image":"https://yuvancreations.example.com/images/misc/about.png",
-      "address":{
-        "@type":"PostalAddress",
-        "addressLocality":"Haridwar",
-        "addressRegion":"Uttarakhand",
-        "addressCountry":"IN"
-      },
-      "description":"Yuvan Creations — professional photography, video editing, graphic design, CCTV & device repairs since 2007. Trusted local IT and media services in Haridwar.",
-      "sameAs":[
-        "https://www.facebook.com/yourpage",
-        "https://www.instagram.com/yourpage"
-      ],
-      "service":[
-        {"@type":"Service","name":"Photography"},
-        {"@type":"Service","name":"Video Editing"},
-        {"@type":"Service","name":"Graphic Design"},
-        {"@type":"Service","name":"Computer Repair"},
-        {"@type":"Service","name":"Mobile Repair"}
-      ]
-    }
-    </script>
+        <div class="hero-bg-effects">
+            <div class="cinematic-glow glow-left"></div>
+            <div class="cinematic-glow glow-right"></div>
+            <div class="cinematic-glow glow-center"></div>
+            <div class="noise-overlay"></div> 
+            <div class="sw-overlay op-8" style="background: radial-gradient(circle at center, transparent 0%, #000 100%);"></div>
+        </div>
 
-    <div class="gradient-edge-top op-6 h-50 color"></div>
-    <div class="gradient-edge-bottom"></div>
-    <div class="sw-overlay op-8"></div>
+        <div class="hero-container">
+            <div class="container h-100">
+                <div class="hero-grid">
+                    
+                    <!-- Left 3D Column -->
+                    <div class="hero-column hero-column-left">
+                        <div class="perspective-box">
+                            <div class="card-3d-left floating-card">
+                                <div class="card-inner">
+                                    <div class="card-decoration top-left"></div>
+                                    <div class="stat-block stat-block-1">
+                                        <div class="stat-number">17+</div>
+                                        <div class="stat-label">Years</div>
+                                    </div>
+                                    <div class="card-decoration bottom-right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="abs abs-centered z-2 w-80">
-        <div class="container">
-            <div class="hero-3d" aria-hidden="false">
-                <div class="hero-layers" aria-hidden="true">
-                    <div class="layer layer--video"></div>
-                    <div class="layer layer--nebula"></div>
-                    <div class="layer layer--mesh"></div>
+                    <!-- Center Content Column -->
+                    <div class="hero-column hero-column-center">
+                        <div class="center-content">
+                            <h1 class="hero-title-main">Yuvan Creations</h1>
+                            <div class="gold-divider-main"></div>
+                            <p class="hero-sub-text">Professional photography, video editing, graphic design and IT/repair services since 2007 — Haridwar.</p>
+
+                            <div class="hero-stats-group">
+                                <div class="stat-pill-modern">
+                                    <i class="fa fa-calendar text-gold-gradient"></i>
+                                    <span>SINCE 2007</span>
+                                </div>
+                                <div class="stat-pill-modern">
+                                    <i class="fa fa-map-pin text-gold-gradient"></i>
+                                    <span>HARIDWAR, UTTARAKHAND</span>
+                                </div>
+                            </div>
+
+                            <div class="hero-ctas-modern">
+                                <a href="tel:+919557300217" class="btn-3d btn-call-3d">
+                                    <span class="btn-text"><i class="fa fa-phone me-2"></i>Call Now</span>
+                                    <span class="btn-shine"></span>
+                                </a>
+                                <a href="https://wa.me/919557300217" target="_blank" class="btn-3d btn-whatsapp-3d">
+                                    <span class="btn-text"><i class="fab fa-whatsapp me-2"></i>WhatsApp</span>
+                                    <span class="btn-shine"></span>
+                                </a>
+                                <a href="contact-us.html" class="btn-3d btn-contact-3d">
+                                    <span class="btn-text"><i class="fa fa-envelope me-2"></i>Contact Us</span>
+                                    <span class="btn-shine"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right 3D Column -->
+                    <div class="hero-column hero-column-right">
+                        <div class="perspective-box">
+                            <div class="card-3d-right floating-card" style="animation-delay: 2s;">
+                                <div class="card-inner">
+                                    <div class="card-decoration top-right"></div>
+                                    <div class="stat-block stat-block-2">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <div class="stat-text">Complete Solutions</div>
+                                    </div>
+                                    <div class="card-decoration bottom-left"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+            </div>
+        </div>
 
-                <div class="card-3d" role="img" aria-label="Yuvan Creations hero card">
-                    <div class="card-face card-content">
-                        <h1 class="hero-title">YUVAN CREATIONS</h1>
-                        <p class="hero-sub">Professional photography, video editing, graphic design and IT/repair services since 2007 — Haridwar.</p>
-
-                        <div class="hero-stats" role="group" aria-label="Service highlights">
-                            <div class="stat"><i class="fa fa-calendar" aria-hidden="true"></i><span>SINCE 2007</span></div>
-                            <div class="stat"><i class="fa fa-map-pin" aria-hidden="true"></i><span>IT & Creative Services in कनखल, हरिद्वार — Yuvan Creations</span></div>
-                        </div>
-
-                        <div class="hero-ctas" role="group" aria-label="Call and WhatsApp actions">
-                            <a href="tel:+919557300217" class="cta-btn btn-call" title="Call Yuvan Creations" aria-label="Call Yuvan Creations" style="background-color: #28a745; transition: background-color 0.3s;">
-                                <i class="fa fa-phone me-2" aria-hidden="true"></i>Call Now
-                            </a>
-                            <a href="https://wa.me/919557300217?text=Hi%20Yuvan%20Creations%2C%20I%27d%20like%20to%20enquire%20about%20your%20services" target="_blank" rel="noopener noreferrer" class="cta-btn btn-whatsapp" title="Message on WhatsApp" aria-label="Message on WhatsApp" style="background-color: #25D366; transition: background-color 0.3s;">
-                                <i class="fab fa-whatsapp me-2" aria-hidden="true"></i>WhatsApp
-                            </a>
-                            <a href="contact-us.html" class="cta-btn btn-contact" title="Open contact form" aria-label="Contact form" style="background-color: #007bff; transition: background-color 0.3s;">
-                                <i class="fa fa-envelope me-2" aria-hidden="true"></i>Contact Us
-                            </a>
-                        </div>
+        <!-- Bottom Carousel -->
+        <div class="hero-carousel-wrapper sm-hide">
+            <div class="container">
+                <div class="glass-strip-modern">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+                    
+                    <div class="services-carousel-modern owl-carousel owl-theme" aria-label="Key services carousel">
+                        <div class="service-chip-modern"><i class="fas fa-camera"></i> <span>Photography</span></div>
+                        <div class="service-chip-modern"><i class="fas fa-heart"></i> <span>Pre-Wedding</span></div>
+                        <div class="service-chip-modern"><i class="fas fa-video"></i> <span>Video Editing</span></div>
+                        <div class="service-chip-modern"><i class="fas fa-paint-brush"></i> <span>Graphic Design</span></div>
+                        <div class="service-chip-modern"><i class="fas fa-laptop-code"></i> <span>Web Dev</span></div>
+                        <div class="service-chip-modern"><i class="fas fa-bullhorn"></i> <span>Marketing</span></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="abs w-100 start-0 bottom-0 z-3" style="margin: 20px 0;">
-        <div class="container">
-            <div class="sm-hide border-white-op-3 rounded-1 bg-blur relative" style="padding: 20px; margin: 20px 0;">
-                <div class="row g-2 justify-content-center align-items-center">
-                    <div class="col-12">
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-                        
-                        <div class="services-carousel owl-carousel owl-theme" style="padding: 0;" aria-label="Key services carousel">
-                            <div class="service-item">
-                                <div class="icon-box" style="width:50px;height:50px;"><i class="fas fa-camera fa-2x" aria-hidden="true"></i></div>
-                                <h4 style="font-size:0.9rem;margin:5px 0 0;">Photography</h4>
-                            </div>
-                            <div class="service-item">
-                                <div class="icon-box" style="width:50px;height:50px;"><i class="fas fa-heart fa-2x" aria-hidden="true"></i></div>
-                                <h4 style="font-size:0.9rem;margin:5px 0 0;">Pre-Wedding Shoot</h4>
-                            </div>
-                            <div class="service-item">
-                                <div class="icon-box" style="width:50px;height:50px;"><i class="fas fa-video fa-2x" aria-hidden="true"></i></div>
-                                <h4 style="font-size:0.9rem;margin:5px 0 0;">Video Editing</h4>
-                            </div>
-                            <div class="service-item">
-                                <div class="icon-box" style="width:50px;height:50px;"><i class="fas fa-paint-brush fa-2x" aria-hidden="true"></i></div>
-                                <h4 style="font-size:0.9rem;margin:5px 0 0;">Graphic Design</h4>
-                            </div>
-                            <div class="service-item">
-                                <div class="icon-box" style="width:50px;height:50px;"><i class="fas fa-laptop-code fa-2x" aria-hidden="true"></i></div>
-                                <h4 style="font-size:0.9rem;margin:5px 0 0;">Web Development</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <style>
+            /* --- REDESIGN: PREMIUM 3D HERO --- */
+            :root {
+                --gold-gradient: linear-gradient(135deg, #3e2f11, #fcf6ba, #7d5603, #fbf5b7, #aa771c);
+                --gold-solid: #c7a97f;
+                --glass-bg: rgba(20, 20, 20, 0.7);
+                --glass-border: rgba(255, 255, 255, 0.12);
+            }
 
-    <style>
-        /* --- General & 3D Variables --- */
-        :root{--gold:#c7a97f;--dark:#0f0f10;--glass:rgba(255,255,255,0.04)}
-        
-        /* --- 3D Hero Styles --- */
-        .hero-3d{position:relative; width:100%; height:720px; display:flex; align-items:center; justify-content:center; perspective:1400px; -webkit-perspective:1400px;}
-        .hero-layers{position:absolute;inset:0;overflow:hidden;pointer-events:none;transform-style:preserve-3d;}
-        .layer{position:absolute;inset:0;will-change:transform,opacity}
-        .layer--video{background:radial-gradient(circle at 10% 20%, rgba(199,169,127,0.06), transparent 10%), url('images/background/2.webp') center/cover no-repeat; filter:blur(6px) saturate(1.1); opacity:.7; transform:translateZ(-120px) scale(1.08);}
-        .layer--nebula{background:linear-gradient(120deg, rgba(153,122,84,0.06), rgba(32,32,40,0.08)); mix-blend-mode:overlay; animation:nebulaShift 8s linear infinite; transform:translateZ(-80px) scale(1.05);}
-        .layer--mesh{background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.02), transparent 4%), repeating-linear-gradient(45deg, rgba(199,169,127,0.02) 0 1px, transparent 1px 16px); opacity:0.6; transform:translateZ(-40px) scale(1.02); animation:meshMove 14s linear infinite;}
-        
-        @keyframes nebulaShift{0%{transform:translateZ(-80px) scale(1.06) translateX(-4%)}50%{transform:translateZ(-80px) scale(1.06) translateX(4%)}100%{transform:translateZ(-80px) scale(1.06) translateX(-4%)}}
-        @keyframes meshMove{0%{background-position:0 0}100%{background-position:800px 0}}
+            #section-hero {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            }
 
-        .card-3d{width:100%;max-width:1100px;transform-style:preserve-3d;transition:transform .15s cubic-bezier(.2,.9,.2,1);will-change:transform;display:flex;justify-content:center;align-items:center;pointer-events:auto}
-        .card-face{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.25)); border:1px solid rgba(199,169,127,0.12); padding:48px; border-radius:18px; backdrop-filter: blur(6px); box-shadow:0 30px 60px rgba(0,0,0,0.6); transform:translateZ(40px) scale(.99); animation:cardFloat 6s ease-in-out infinite;}
-        
-        .hero-title{font-size:clamp(34px,7vw,84px); letter-spacing:2px; text-transform:uppercase; margin:0 0 12px; line-height:1; background:linear-gradient(90deg,var(--gold),#fff); -webkit-background-clip:text;background-clip:text;color:transparent; position:relative; overflow:visible; transform:translateZ(60px)}
-        .hero-sub{max-width:900px;margin:0 auto 18px;opacity:.95;font-size:1.05rem;color:rgba(255,255,255,0.9)}
-        .hero-stats{display:flex;gap:26px;justify-content:center;margin-top:12px;transform:translateZ(48px)}
-        .stat{display:flex;align-items:center;gap:10px;font-weight:700;color:rgba(255,255,255,0.9)}
-        .stat i{color:var(--gold); font-size:1.15rem}
+            /* Background Effects */
+            .hero-bg-effects {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                pointer-events: none;
+            }
 
-        .hero-ctas{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap;transform:translateZ(44px)}
-        
-        /* --- Buttons (Merged Styles) --- */
-        .cta-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;text-decoration:none;font-weight:700;box-shadow:0 6px 22px rgba(0,0,0,0.45);transition:transform .18s ease,box-shadow .18s ease}
-        .btn-call{background:#ffd27a;color:#0b0b0b}
-        .btn-whatsapp{background:#25D366;color:#fff}
-        .btn-contact{background:#6b5ce7;color:#fff}
-        .cta-btn:active{transform:translateY(1px) scale(.996)}
-        .cta-btn:hover{transform: translateY(-3px);}
+            .noise-overlay {
+                position: absolute;
+                inset: 0;
+                opacity: 0.03;
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            }
 
-        /* --- Animation Keyframes --- */
-        @keyframes cardFloat{0%{transform:translateZ(40px) translateY(0)}50%{transform:translateZ(40px) translateY(-8px)}100%{transform:translateZ(40px) translateY(0)}}
-        
-        /* Reveal Animations */
-        .hero-title,.hero-sub{opacity:0; transform-origin:center}
-        .hero-3d.loaded .hero-title{animation:revealTitle .9s cubic-bezier(.2,.9,.2,1) forwards}
-        .hero-3d.loaded .hero-sub{animation:revealSub .9s .12s cubic-bezier(.2,.9,.2,1) forwards}
-        @keyframes revealTitle{0%{opacity:0; transform:translateY(18px) translateZ(40px)}100%{opacity:1; transform:translateY(0) translateZ(60px)}}
-        @keyframes revealSub{0%{opacity:0; transform:translateY(14px) translateZ(40px)}100%{opacity:1; transform:translateY(0) translateZ(48px)}}
+            .cinematic-glow {
+                position: absolute;
+                border-radius: 50%;
+                filter: blur(120px);
+                pointer-events: none;
+                z-index: 1;
+            }
 
-        /* --- Carousel Styles (From Code 1) --- */
-        .services-carousel { padding:0 !important; }
-        .service-item {
-            background: rgba(255,255,255,0.06);
-            border-radius:10px;
-            padding:10px;
-            margin:0 6px;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:center;
-            min-width:110px;
-            text-align:center;
-        }
-        .service-item h4 { margin:6px 0 0; font-weight:600; font-size:.9rem; }
-        .icon-box i { color: #fff; line-height:50px; }
+            .glow-left {
+                width: 600px;
+                height: 600px;
+                background: rgba(199, 169, 127, 0.2);
+                top: 5%;
+                left: -15%;
+                animation: floatGlow 12s ease-in-out infinite;
+            }
 
-        /* --- Responsive --- */
-        @media (max-width:768px){
-            .hero-3d{height:640px}
-            .card-face{padding:28px;border-radius:12px}
-            .hero-stats{flex-direction:column;gap:6px}
-            .hero-ctas{flex-direction:column}
-        }
-        @media (max-width:576px){
-            .cta-btn { padding:.5rem .8rem; font-size:.95rem; }
-            .abs.abs-centered.w-80 { width:90% !important; }
-        }
-        @media (prefers-reduced-motion: reduce){
-            .layer--nebula,.layer--mesh,.card-face,.hero-3d.loaded .hero-title,.hero-3d.loaded .hero-sub{animation:none}
-            .card-3d{transition:none}
-        }
-    </style>
+            .glow-right {
+                width: 500px;
+                height: 500px;
+                background: rgba(107, 92, 231, 0.15);
+                bottom: 5%;
+                right: -10%;
+                animation: floatGlow 14s ease-in-out infinite reverse;
+            }
 
-    <script>
-        // --- 1. Owl Carousel Init ---
+            .glow-center {
+                width: 400px;
+                height: 400px;
+                background: rgba(199, 169, 127, 0.1);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: floatGlow 16s ease-in-out infinite;
+            }
+
+            @keyframes floatGlow {
+                0%, 100% { transform: translate(0, 0); }
+                50% { transform: translate(30px, 30px); }
+            }
+
+            /* Hero Main Container */
+            .hero-container {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 60px 20px;
+            }
+
+            .hero-container .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: auto;
+            }
+
+            /* Hero Grid Layout */
+            .hero-grid {
+                display: grid;
+                grid-template-columns: 1fr 1.5fr 1fr;
+                gap: 40px;
+                width: 100%;
+                align-items: center;
+                max-width: 1400px;
+            }
+
+            .hero-column {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Left Column - 3D Card */
+            .hero-column-left,
+            .hero-column-right {
+                perspective: 1200px;
+            }
+
+            .perspective-box {
+                width: 100%;
+                height: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .card-3d-left,
+            .card-3d-right {
+                width: 280px;
+                height: 280px;
+                transform-style: preserve-3d;
+                transform: perspective(1000px);
+                transition: transform 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+            }
+
+            .floating-card {
+                animation: floatingCard 3s ease-in-out infinite;
+            }
+
+            @keyframes floatingCard {
+                0%, 100% { transform: translateY(0px) rotateX(5deg) rotateY(-5deg); }
+                50% { transform: translateY(-20px) rotateX(5deg) rotateY(-5deg); }
+            }
+
+            .card-inner {
+                width: 100%;
+                height: 100%;
+                background: var(--glass-bg);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border: 1px solid var(--glass-border);
+                border-radius: 20px;
+                padding: 30px;
+                box-shadow: 
+                    0 30px 80px rgba(0, 0, 0, 0.6),
+                    inset 0 0 20px rgba(255, 255, 255, 0.05),
+                    0 0 40px rgba(199, 169, 127, 0.1);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .card-decoration {
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                border: 2px solid rgba(199, 169, 127, 0.3);
+                border-radius: 10px;
+            }
+
+            .top-left {
+                top: 15px;
+                left: 15px;
+                border-right: none;
+                border-bottom: none;
+            }
+
+            .top-right {
+                top: 15px;
+                right: 15px;
+                border-left: none;
+                border-bottom: none;
+            }
+
+            .bottom-left {
+                bottom: 15px;
+                left: 15px;
+                border-right: none;
+                border-top: none;
+            }
+
+            .bottom-right {
+                bottom: 15px;
+                right: 15px;
+                border-left: none;
+                border-top: none;
+            }
+
+            /* Stats Block */
+            .stat-block {
+                position: relative;
+                z-index: 2;
+                text-align: center;
+            }
+
+            .stat-block-1 {
+                animation: scaleIn 0.8s ease-out;
+            }
+
+            @keyframes scaleIn {
+                from { opacity: 0; transform: scale(0.8); }
+                to { opacity: 1; transform: scale(1); }
+            }
+
+            .stat-number {
+                font-size: 3rem;
+                font-weight: 800;
+                background: var(--gold-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                letter-spacing: 2px;
+                margin-bottom: 8px;
+            }
+
+            .stat-label {
+                font-size: 0.9rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.7);
+                letter-spacing: 1px;
+            }
+
+            .stat-block-2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .stat-icon {
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(135deg, rgba(199, 169, 127, 0.2), rgba(255, 255, 255, 0.05));
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.8rem;
+                background: var(--gold-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .stat-text {
+                font-size: 1rem;
+                font-weight: 600;
+                color: rgba(255, 255, 255, 0.8);
+                text-align: center;
+            }
+
+            /* Center Content */
+            .hero-column-center {
+                perspective: none;
+            }
+
+            .center-content {
+                text-align: center;
+                animation: fadeInUp 0.8s ease-out;
+            }
+
+            @keyframes fadeInUp {
+                from { opacity: 0; transform: translateY(30px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .hero-title-main {
+                font-family: 'Playfair Display', serif;
+                font-size: clamp(2.5rem, 5vw, 4.5rem);
+                font-weight: 800;
+                margin-bottom: 15px;
+                background: var(--gold-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                filter: drop-shadow(0 4px 15px rgba(199, 169, 127, 0.3));
+                line-height: 1.1;
+            }
+
+            .gold-divider-main {
+                width: 120px;
+                height: 4px;
+                background: var(--gold-gradient);
+                border-radius: 50%;
+                margin: 20px auto;
+                box-shadow: 0 0 20px rgba(199, 169, 127, 0.4);
+            }
+
+            .hero-sub-text {
+                font-family: 'Manrope', sans-serif;
+                font-size: 1.15rem;
+                line-height: 1.7;
+                color: rgba(255, 255, 255, 0.8);
+                max-width: 600px;
+                margin: 0 auto 30px;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+            }
+
+            /* Stats Group */
+            .hero-stats-group {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                margin-bottom: 40px;
+                flex-wrap: wrap;
+            }
+
+            .stat-pill-modern {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                background: rgba(255, 255, 255, 0.04);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(199, 169, 127, 0.2);
+                padding: 12px 24px;
+                border-radius: 50px;
+                font-size: 0.85rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: rgba(255, 255, 255, 0.9);
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .stat-pill-modern:hover {
+                background: rgba(199, 169, 127, 0.1);
+                border-color: rgba(199, 169, 127, 0.4);
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(199, 169, 127, 0.15);
+            }
+
+            .text-gold-gradient {
+                background: var(--gold-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            /* CTA Buttons */
+            .hero-ctas-modern {
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .btn-3d {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 14px 32px;
+                border-radius: 12px;
+                text-decoration: none;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 0.85rem;
+                transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+                border: none;
+                cursor: pointer;
+                overflow: hidden;
+                transform: perspective(1000px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            }
+
+            .btn-text {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .btn-shine {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                transform: translateX(-100%);
+                z-index: 1;
+            }
+
+            .btn-3d:hover .btn-shine {
+                animation: shine 0.6s ease-in-out;
+            }
+
+            @keyframes shine {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(100%); }
+            }
+
+            .btn-call-3d {
+                background: linear-gradient(135deg, #ffd700, #ffed4e);
+                color: #000;
+                box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+            }
+
+            .btn-call-3d:hover {
+                transform: translateY(-4px) perspective(1000px) rotateX(5deg);
+                box-shadow: 0 25px 60px rgba(255, 215, 0, 0.4);
+            }
+
+            .btn-whatsapp-3d {
+                background: linear-gradient(135deg, #25D366, #34D890);
+                color: #fff;
+                box-shadow: 0 15px 40px rgba(37, 211, 102, 0.3);
+            }
+
+            .btn-whatsapp-3d:hover {
+                transform: translateY(-4px) perspective(1000px) rotateX(5deg);
+                box-shadow: 0 25px 60px rgba(37, 211, 102, 0.4);
+            }
+
+            .btn-contact-3d {
+                background: transparent;
+                border: 2px solid rgba(199, 169, 127, 0.5);
+                color: #fff;
+                box-shadow: 0 15px 40px rgba(199, 169, 127, 0.1);
+            }
+
+            .btn-contact-3d:hover {
+                background: rgba(199, 169, 127, 0.1);
+                border-color: rgba(199, 169, 127, 0.8);
+                transform: translateY(-4px) perspective(1000px) rotateX(5deg);
+                box-shadow: 0 25px 60px rgba(199, 169, 127, 0.2);
+            }
+
+            /* Carousel */
+            .hero-carousel-wrapper {
+                position: absolute;
+                bottom: 30px;
+                left: 0;
+                right: 0;
+                z-index: 2;
+                width: 100%;
+            }
+
+            .glass-strip-modern {
+                background: rgba(255, 255, 255, 0.03);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 16px;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            .service-chip-modern {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 20px 15px;
+                border-radius: 12px;
+                transition: all 0.3s ease;
+                background: rgba(255, 255, 255, 0.02);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .service-chip-modern i {
+                font-size: 1.6rem;
+                background: var(--gold-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin-bottom: 10px;
+                transition: 0.3s;
+            }
+
+            .service-chip-modern span {
+                font-size: 0.8rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.8);
+                letter-spacing: 0.5px;
+            }
+
+            .service-chip-modern:hover {
+                background: rgba(199, 169, 127, 0.1);
+                border-color: rgba(199, 169, 127, 0.3);
+                transform: translateY(-8px);
+            }
+
+            /* Responsive */
+            @media (max-width: 1024px) {
+                .hero-grid {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+
+                .hero-column-left,
+                .hero-column-right {
+                    display: none;
+                }
+
+                .perspective-box {
+                    height: 300px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .hero-container {
+                    padding: 40px 15px;
+                    min-height: calc(100vh - 100px);
+                }
+
+                .hero-title-main {
+                    font-size: 2rem;
+                }
+
+                .hero-sub-text {
+                    font-size: 1rem;
+                }
+
+                .hero-stats-group {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                .stat-pill-modern {
+                    width: 100%;
+                    justify-content: center;
+                }
+
+                .hero-ctas-modern {
+                    gap: 12px;
+                }
+
+                .btn-3d {
+                    padding: 12px 24px;
+                    font-size: 0.8rem;
+                    flex: 1;
+                    min-width: 140px;
+                }
+
+                .hero-carousel-wrapper {
+                    display: none;
+                }
+            }
+        </style>
+
+        <script>
         $(document).ready(function(){
-            $(".services-carousel").owlCarousel({
-                loop:true,
-                margin:6,
-                nav:true,
-                dots:false,
-                autoplay:true,
-                autoplayTimeout:3500,
-                responsive:{
-                    0:{items:2},
-                    480:{items:3},
-                    768:{items:4},
-                    992:{items:5}
+            $(".services-carousel-modern").owlCarousel({
+                loop: true,
+                margin: 15,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                responsive: {
+                    0: { items: 3 },
+                    600: { items: 4 },
+                    1000: { items: 6 }
                 }
             });
-        });
 
-        // --- 2. 3D Parallax Logic ---
-        (function(){
-            const card = document.querySelector('.card-3d');
-            const hero = document.querySelector('.hero-3d');
-            const layers = document.querySelectorAll('.layer');
-            if (!card || !hero) return;
+            // 3D Card Hover Effect
+            const cardsLeft = document.querySelectorAll('.card-3d-left');
+            const cardsRight = document.querySelectorAll('.card-3d-right');
 
-            // Mark loaded -> start reveal animations
-            requestAnimationFrame(()=> hero.classList.add('loaded'));
+            [cardsLeft, cardsRight].forEach(cards => {
+                cards.forEach(card => {
+                    card.parentElement.addEventListener('mousemove', (e) => {
+                        const rect = card.parentElement.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+                        
+                        const rotateX = (y - centerY) / 10;
+                        const rotateY = (centerX - x) / 10;
+                        
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`;
+                    });
 
-            // Mouse parallax / 3D tilt
-            let width = window.innerWidth, height = window.innerHeight;
-            let currentX = 0, currentY = 0, targetX = 0, targetY = 0;
-
-            function onMove(e){
-                const rect = hero.getBoundingClientRect();
-                const x = ( (e.clientX - rect.left) / rect.width ) - 0.5;
-                const y = ( (e.clientY - rect.top) / rect.height ) - 0.5;
-                targetX = clamp(-y * 14, -18, 18); // rotateX
-                targetY = clamp(x * 18, -22, 22);   // rotateY
-
-                layers.forEach((L, i) => {
-                    const depth = [-120,-80,-40][i] || -20;
-                    const moveX = x * Math.abs(depth) * 0.06;
-                    const moveY = y * Math.abs(depth) * 0.06;
-                    L.style.transform = `translate3d(${moveX}px, ${moveY}px, ${depth}px) scale(${1 + Math.abs(depth)/2000})`;
+                    card.parentElement.addEventListener('mouseleave', () => {
+                        card.style.transform = `perspective(1000px) rotateX(5deg) rotateY(-5deg) translateZ(0)`;
+                    });
                 });
-            }
+            });
+        });
+        </script>
+    </section>
 
-            function onLeave(){
-                targetX = 0; targetY = 0;
-                layers.forEach((L,i)=> L.style.transform = `translate3d(0,0,${[-120,-80,-40][i]||-20}px) scale(1.0)`);
-            }
 
-            function animate(){
-                currentX += (targetX - currentX) * 0.12;
-                currentY += (targetY - currentY) * 0.12;
-                const tilt = `rotateX(${currentX}deg) rotateY(${currentY}deg)`;
-                card.style.transform = tilt + ' translateZ(0)';
-                requestAnimationFrame(animate);
-            }
-
-            function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
-
-            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (!prefersReduced){
-                hero.addEventListener('mousemove', onMove, {passive:true});
-                hero.addEventListener('mouseleave', onLeave, {passive:true});
-                animate();
-            } else {
-                layers.forEach((L,i)=> L.style.transform = `translate3d(0,0,${[-120,-80,-40][i]||-20}px) scale(1.0)`);
-            }
-            window.addEventListener('resize', ()=>{ width = window.innerWidth; height = window.innerHeight; });
-        })();
-    </script>
-</section>
-
-        </section>
-
+</div>
        <section id="section-about" class="section-dark text-light relative" style="padding: 100px 0; overflow: hidden;">
     
     <div class="glow-bg" style="position:absolute; top:20%; right:-10%; width:500px; height:500px; background:radial-gradient(circle, rgba(199,169,127,0.15) 0%, transparent 70%); border-radius:50%; z-index:0; pointer-events:none;"></div>
@@ -548,6 +1017,7 @@
     .text-gradient {
         background: linear-gradient(90deg, #fff, var(--gold));
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     .text-gold { color: var(--gold); }
@@ -1186,97 +1656,336 @@
 </script>
 
 
-<section id="our-prices" class="bg-dark text-light py-5">
-    <div class="container">
-        <!-- Header Section -->
-        <div class="row mb-4">
-            <div class="col-lg-8 mx-auto text-center">
+<section id="our-prices" class="section-dark relative" style="padding: 100px 0; background: #0b0b0c; overflow-x: hidden;">
+    
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <div class="container relative z-2">
+        
+        <div class="row mb-5 justify-content-center text-center">
+            <div class="col-lg-9">
                 <h6 class="text-gold mb-3" style="font-family: 'Manrope'; font-weight: 600; letter-spacing: 3px;">OUR PRICES</h6>
-                <h2 style="font-family: 'Manrope'; font-weight: 700; line-height: 1.3">At Yuvan Creations, we specialize in comprehensive solutions tailored to your needs</h2>
-                <div class="divider-line mx-auto my-4" style="width: 80px; height: 2px; background: #c7a97f;"></div>
-                
+                <h2 class="display-5 fw-bold text-white mb-3" style="font-family: 'Manrope', sans-serif;">
+                    At Yuvan Creations, we specialize in <br><span class="text-gold">comprehensive solutions</span> tailored to your needs
+                </h2>
+                <div class="divider mx-auto bg-gold opacity-50"></div>
             </div>
         </div>
 
-        <!-- Services Grid -->
-        <div class="row g-4">
-            <!-- Computer Service -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(199,169,127,0.1); border-radius: 8px; padding: 30px; transition: all 0.3s ease;">
-                    <div class="service-icon mb-4" style="width: 70px; height: 70px; background: rgba(199,169,127,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid #c7a97f;">
-                        <i class="icon_desktop" style="font-size: 28px; color: #c7a97f;"></i>
-                    </div>
-                    <h4 style="font-family: 'Manrope'; font-weight: 700; margin-bottom: 15px;">Computer Solutions</h4>
-                    <p style="font-family: 'Manrope'; color: rgba(255,255,255,0.7); margin-bottom: 20px;">Complete hardware and software services with genuine parts</p>
-                    
-                    <div class="transparency-details mb-3" style="background: rgba(0,0,0,0.2); border-radius: 6px; padding: 12px;">
-                        <div class="detail-item d-flex align-items-center mb-2">
-                            <i class="icon_clock me-2" style="color: #c7a97f;"></i>
-                            <span style="font-family: 'Manrope'; font-size: 14px;">Diagnostic: 30 min (Free)</span>
+        <div class="row g-4 align-items-stretch">
+            
+            <div class="col-lg-4 col-md-6 h-100">
+                <div class="glass-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                    <div class="card-content">
+                        <div class="icon-box">
+                            <div class="icon-bg"></div>
+                            <i class="fas fa-desktop"></i>
                         </div>
-                        <div class="detail-item d-flex align-items-center">
-                            <i class="icon_tag me-2" style="color: #c7a97f;"></i>
-                            <span style="font-family: 'Manrope'; font-size: 14px;">Starting from ₹999</span>
+                        <h3 class="service-title">Computer Solutions</h3>
+                        <p class="service-desc">Complete hardware and software services with genuine parts.</p>
+                        
+                        <div class="pricing-glass-block">
+                            <div class="detail-row">
+                                <i class="far fa-clock text-gold"></i> <span>Diagnostic: 30 min (Free)</span>
+                            </div>
+                            <div class="detail-row highlight">
+                                <i class="fas fa-tag text-gold"></i> <span>Starting from ₹999</span>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="trust-badge d-inline-flex align-items-center" style="background: rgba(199,169,127,0.1); border-radius: 20px; padding: 5px 12px; border: 1px solid rgba(199,169,127,0.3);">
-                        <i class="icon_shield me-2" style="color: #c7a97f; font-size: 14px;"></i>
-                        <span style="font-family: 'Manrope'; font-size: 13px; font-weight: 600;">1 Year Warranty</span>
+
+                        <div class="card-footer-simple">
+                            <span class="badge-gold-glow"><i class="fas fa-shield-alt me-2"></i>1 Year Warranty</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Mobile Repair Service -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(199,169,127,0.1); border-radius: 8px; padding: 30px; transition: all 0.3s ease;">
-                    <div class="service-icon mb-4" style="width: 70px; height: 70px; background: rgba(199,169,127,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid #c7a97f;">
-                        <i class="icon_mobile" style="font-size: 28px; color: #c7a97f;"></i>
-                    </div>
-                    <h4 style="font-family: 'Manrope'; font-weight: 700; margin-bottom: 15px;">Mobile Repair</h4>
-                    <p style="font-family: 'Manrope'; color: rgba(255,255,255,0.7); margin-bottom: 20px;">Professional repairs with 6-month warranty on all parts</p>
-                    
-                    <div class="transparency-details mb-3" style="background: rgba(0,0,0,0.2); border-radius: 6px; padding: 12px;">
-                        <div class="detail-item d-flex align-items-center mb-2">
-                            <i class="icon_clock me-2" style="color: #c7a97f;"></i>
-                            <span style="font-family: 'Manrope'; font-size: 14px;">Same-day service available</span>
+            <div class="col-lg-4 col-md-6 h-100">
+                <div class="glass-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                    <div class="card-content">
+                        <div class="icon-box">
+                            <div class="icon-bg"></div>
+                            <i class="fas fa-mobile-alt"></i>
                         </div>
-                        <div class="detail-item d-flex align-items-center">
-                            <i class="icon_tag me-2" style="color: #c7a97f;"></i>
-                            <span style="font-family: 'Manrope'; font-size: 14px;">Starting from ₹599</span>
+                        <h3 class="service-title">Mobile Repair</h3>
+                        <p class="service-desc">Professional repairs with 6-month warranty on all parts.</p>
+                        
+                        <div class="pricing-glass-block">
+                            <div class="detail-row">
+                                <i class="far fa-clock text-gold"></i> <span>Same-day service</span>
+                            </div>
+                            <div class="detail-row highlight">
+                                <i class="fas fa-tag text-gold"></i> <span>Starting from ₹599</span>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="trust-badge d-inline-flex align-items-center" style="background: rgba(199,169,127,0.1); border-radius: 20px; padding: 5px 12px; border: 1px solid rgba(199,169,127,0.3);">
-                        <i class="icon_livestream me-2" style="color: #c7a97f; font-size: 14px;"></i>
-                        <span style="font-family: 'Manrope'; font-size: 13px; font-weight: 600;">Live Repair Updates</span>
+
+                        <div class="card-footer-simple">
+                            <span class="badge-gold-glow"><i class="fas fa-tools me-2"></i>Live Repair Updates</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- CCTV Installation -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(199,169,127,0.1); border-radius: 8px; padding: 30px; transition: all 0.3s ease;">
-                    <div class="service-icon mb-4" style="width: 70px; height: 70px; background: rgba(199,169,127,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid #c7a97f;">
-                        <i class="icon_camera" style="font-size: 28px; color: #c7a97f;"></i>
-                    </div>
-                    <h4 style="font-family: 'Manrope'; font-weight: 700; margin-bottom: 15px;">CCTV Solutions</h4>
-                    <p style="font-family: 'Manrope'; color: rgba(255,255,255,0.7); margin-bottom: 20px;">Professional installation with remote monitoring</p>
-                    
-                    <div class="transparency-details mb-3" style="background: rgba(0,0,0,0.2); border-radius: 6px; padding: 12px;">
-                        <div class="detail-item d-flex align-items-center mb-2">
-                            <i class="icon_clock me-2" style="color: #c7a97f;"></i>
-                            <span style="font-family: 'Manrope'; font-size: 14px;">Installation: 2-4 hours</span>
+            <div class="col-lg-4 col-md-6 h-100">
+                <div class="glass-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                    <div class="card-content">
+                        <div class="icon-box">
+                            <div class="icon-bg"></div>
+                            <i class="fas fa-video"></i>
                         </div>
-                        <div class="detail-item d-flex align-items-center">
-                            <i class="icon_tag me-2" style="color: #c7a97f;"></i>
-                            <span style="font-family: 'Manrope'; font-size: 14px;">Starting from ₹4,999</span>
+                        <h3 class="service-title">CCTV Solutions</h3>
+                        <p class="service-desc">Professional installation with remote monitoring setup.</p>
+                        
+                        <div class="pricing-glass-block">
+                            <div class="detail-row">
+                                <i class="far fa-clock text-gold"></i> <span>Install: 2-4 hours</span>
+                            </div>
+                            <div class="detail-row highlight">
+                                <i class="fas fa-tag text-gold"></i> <span>Starting from ₹4,999</span>
+                            </div>
+                        </div>
+
+                        <div class="card-footer-simple">
+                            <span class="badge-gold-glow"><i class="fas fa-shield-alt me-2"></i>2 Year Warranty</span>
                         </div>
                     </div>
-                    
-                    <div class="trust-badge d-inline-flex align-items-center" style="background: rgba(199,169,127,0.1); border-radius: 20px; padding: 5px 12px; border: 1px solid rgba(199,169,127,0.3);">
-                        <i class="icon_shield me-2" style="color: #c7a97f; font-size: 14px;"></i>
-                        <span style="font-family: 'Manrope'; font-size: 13px; font-weight: 600;">2 Year Warranty</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 h-100">
+                <div class="glass-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                    <div class="card-content">
+                        <div class="icon-box">
+                            <div class="icon-bg"></div>
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3 class="service-title">Digital Marketing</h3>
+                        <p class="service-desc">SEO, Content & Social Media growth strategies.</p>
+                        
+                        <div class="pricing-glass-block">
+                            <div class="detail-row">
+                                <i class="far fa-calendar-alt text-gold"></i> <span>Monthly Plans</span>
+                            </div>
+                            <div class="detail-row highlight">
+                                <i class="fas fa-tag text-gold"></i> <span>Custom Packages</span>
+                            </div>
+                        </div>
+
+                        <div class="card-footer-simple">
+                            <span class="badge-gold-glow"><i class="fas fa-chart-line me-2"></i>ROI Focused</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 h-100">
+                <div class="glass-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                    <div class="card-content">
+                        <div class="icon-box">
+                            <div class="icon-bg"></div>
+                            <i class="fab fa-meta"></i>
+                        </div>
+                        <h3 class="service-title">Meta Ads</h3>
+                        <p class="service-desc">Facebook & Instagram campaigns for lead generation.</p>
+                        
+                        <div class="pricing-glass-block">
+                            <div class="detail-row">
+                                <i class="fas fa-bullseye text-gold"></i> <span>Precision Targeting</span>
+                            </div>
+                            <div class="detail-row highlight">
+                                <i class="fas fa-tag text-gold"></i> <span>Ad Spend + Service Fee</span>
+                            </div>
+                        </div>
+
+                        <div class="card-footer-simple">
+                            <span class="badge-gold-glow"><i class="fas fa-bolt me-2"></i>High Conversion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 h-100">
+                <div class="glass-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                    <div class="card-content">
+                        <div class="icon-box">
+                            <div class="icon-bg"></div>
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h3 class="service-title">Google Ads</h3>
+                        <p class="service-desc">PPC Management for instant search visibility.</p>
+                        
+                        <div class="pricing-glass-block">
+                            <div class="detail-row">
+                                <i class="fas fa-mouse-pointer text-gold"></i> <span>Pay Per Click</span>
+                            </div>
+                            <div class="detail-row highlight">
+                                <i class="fas fa-tag text-gold"></i> <span>Budget Friendly</span>
+                            </div>
+                        </div>
+
+                        <div class="card-footer-simple">
+                            <span class="badge-gold-glow"><i class="fas fa-check-circle me-2"></i>Instant Leads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<style>
+    /* VARIABLES */
+    :root {
+        --gold: #c7a97f;
+        --dark-gold: #b08d5f;
+        --dark-bg: #0b0b0c;
+        --card-glass: rgba(255, 255, 255, 0.03);
+    }
+
+    /* GLOBAL */
+    .text-gold { color: var(--gold) !important; }
+    .bg-gold { background-color: var(--gold) !important; }
+    .bg-gold-gradient { background: linear-gradient(135deg, var(--gold) 0%, var(--dark-gold) 100%) !important; }
+    .badge-pill {
+        display: inline-block; padding: 6px 16px; border: 1px solid rgba(199,169,127,0.3);
+        border-radius: 50px; color: var(--gold); font-size: 0.85rem; font-weight: 600;
+        text-transform: uppercase; background: rgba(199,169,127,0.05);
+    }
+    .divider { width: 80px; height: 3px; margin: 20px auto; background: var(--gold); }
+
+    /* BACKGROUND GLOWS */
+    .relative { position: relative; }
+    .z-2 { position: relative; z-index: 2; }
+    .bg-glow {
+        position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.15; z-index: 1; pointer-events: none;
+    }
+    .glow-1 { width: 400px; height: 400px; background: var(--gold); top: 10%; left: -10%; }
+    .glow-2 { width: 500px; height: 500px; background: #6b5ce7; bottom: 10%; right: -10%; }
+
+    /* --- GLASS CARD STYLING --- */
+    .glass-card {
+        height: 100%;
+        background: var(--card-glass);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        padding: 40px 30px;
+        transform-style: preserve-3d;
+        transition: transform 0.2s ease-out, border 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .glass-card:hover {
+        border-color: rgba(199, 169, 127, 0.4);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.4), inset 0 0 20px rgba(199,169,127,0.05);
+    }
+
+    .card-content {
+        transform: translateZ(20px);
+        display: flex; flex-direction: column; height: 100%;
+        align-items: flex-start;
+    }
+
+    /* Floating Icon */
+    .icon-box {
+        position: relative; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;
+        margin-bottom: 25px; transform-style: preserve-3d;
+    }
+    .icon-bg {
+        position: absolute; width: 100%; height: 100%; border-radius: 15px;
+        background: linear-gradient(135deg, rgba(199,169,127,0.2), rgba(255,255,255,0.05));
+        transform: translateZ(10px); transition: 0.4s ease;
+    }
+    .icon-box i { font-size: 1.8rem; color: #fff; transform: translateZ(30px); z-index: 2; }
+    
+    .glass-card:hover .icon-bg { background: var(--gold); transform: translateZ(20px) rotate(10deg); }
+    .glass-card:hover .icon-box i { color: #000; }
+
+    /* Typography */
+    .service-title { color: #fff; font-weight: 700; margin-bottom: 15px; transform: translateZ(25px); font-size: 1.5rem; font-family: 'Manrope', sans-serif; }
+    .service-desc { color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 25px; font-family: 'Manrope', sans-serif; transform: translateZ(20px); flex-grow: 1;}
+
+    /* Pricing Glass Block */
+    .pricing-glass-block {
+        background: rgba(0,0,0,0.3);
+        border-radius: 10px;
+        padding: 15px;
+        width: 100%;
+        margin-bottom: 25px;
+        border: 1px solid rgba(255,255,255,0.05);
+        transform: translateZ(25px);
+    }
+    .detail-row {
+        display: flex; align-items: center; margin-bottom: 8px; color: rgba(255,255,255,0.7); font-size: 0.9rem;
+    }
+    .detail-row.highlight {
+        color: #fff; font-weight: 700; font-size: 1rem; margin-bottom: 0;
+    }
+    .detail-row i { width: 25px; text-align: center; margin-right: 5px; }
+
+    /* Simple Footer (Badge Only) */
+    .card-footer-simple {
+        width: 100%; display: flex; justify-content: center; align-items: center;
+        transform: translateZ(30px); margin-top: auto; 
+    }
+
+    /* Premium Badge */
+    .badge-gold-glow {
+        background: linear-gradient(90deg, #c7a97f, #94744f);
+        color: #000; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
+        padding: 8px 16px; border-radius: 50px; box-shadow: 0 4px 15px rgba(199,169,127,0.3);
+        display: inline-flex; align-items: center;
+    }
+
+    @media (max-width: 768px) {
+        .glass-card { padding: 30px 20px; }
+        .pricing-glass-block { padding: 12px; }
+    }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+<script>
+    $('.glass-card').tilt({
+        glare: true,
+        maxGlare: 0.15,
+        scale: 1.02,
+        speed: 400,
+        perspective: 1000
+    });
+</script>
+
+<section class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="Founder Quote" style="padding: 80px 0; overflow: hidden;">
+    <img src="images/background/2.webp" class="jarallax-img" alt="Background" style="object-fit: cover; opacity: 0.4;">
+    
+    <div class="sw-overlay op-8" style="background: linear-gradient(to right, #000 0%, rgba(0,0,0,0.6) 100%); position: absolute; inset: 0;"></div>
+    
+    <div class="container relative z-4">
+        <div class="row align-items-center g-5">
+            <div class="col-md-4">
+                <div class="relative w-100 d-inline-block pe-md-5">
+                    <div class="abs bg-gold-gradient w-80px h-80px rounded-1 text-center end-0 z-2 wow scaleIn" style="position: absolute; top: -20px; right: 20px; width: 60px; height: 60px; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(199,169,127,0.4);">
+                        <i class="fas fa-quote-left text-white fs-40"></i>
+                    </div>
+                    <img src="images/misc/nish.jpg" class="w-100 rounded-20 wow scale-in-mask" alt="Founder of Yuvan Creations" style="border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);">
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <div class="glass-quote-box" style="background: rgba(255,255,255,0.02); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; border-left: 4px solid var(--gold);">
+                    <h3 class="fs-32 mb-4 wow fadeInUp" style="font-family: 'Manrope', serif; font-weight: 300; font-style: italic; line-height: 1.6;">
+                        “Transparency isn't just our policy - it's our promise.<br>
+                        Every repair conducted with <span class="text-gold fw-bold">honesty you can see</span>,<br>
+                        and <span class="text-gold fw-bold">trust you can feel</span>.”
+                    </h3>
+                    <div class="d-flex align-items-center wow fadeInUp" data-wow-delay="0.2s">
+                        <div style="height: 1px; width: 50px; background: var(--gold); margin-right: 15px;"></div>
+                        <span class="text-uppercase letter-spacing-3 fw-bold small">- Founder, Yuvan Creations</span>
                     </div>
                 </div>
             </div>
@@ -1284,89 +1993,369 @@
     </div>
 </section>
 
-        <section class="bg-dark section-dark text-light pt-80 relative jarallax" aria-label="section">
-            <img src="images/background/2.webp" class="jarallax-img" alt="">
-            <div class="gradient-edge-top"></div>
-            <div class="gradient-edge-bottom"></div>
-            <div class="sw-overlay op-8"></div>
-            <div class="container relative z-4">
-                <div class="row align-items-center g-5">
-                    <div class="col-md-4">
-                        <div class="relative w-100 d-inline-block pe-5">
-                            <div class="abs bg-color w-80px h-80px rounded-1 text-center end-0 z-2 wow scaleIn">
-                                <i class="icofont-quote-left text-white fs-40 d-block pt-3"></i>
-                            </div>
-                            <img src="images/misc/nish.jpg" class="w-100 rounded-1 wow scale-in-mask" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <h3 class="fs-32 mb-4 wow fadeInUp">“Transparency isn't just our policy - it's our promise.<br>
-                        Every repair conducted with honesty you can see,<br>
-                        and trust you can feel.”</h3>
+<style>
+    /* VARIABLES */
+    :root {
+        --gold: #c7a97f;
+        --dark-gold: #b08d5f;
+        --dark-bg: #0b0b0c;
+        --card-glass: rgba(255, 255, 255, 0.03);
+    }
 
-                        <span>- Founder, Yuvan Creations</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+    /* GLOBAL */
+    .text-gold { color: var(--gold) !important; }
+    .bg-gold { background-color: var(--gold) !important; }
+    .bg-gold-gradient { background: linear-gradient(135deg, var(--gold) 0%, var(--dark-gold) 100%) !important; }
+    
+    .badge-pill {
+        display: inline-block; padding: 6px 16px; border: 1px solid rgba(199,169,127,0.3);
+        border-radius: 50px; color: var(--gold); font-size: 0.85rem; font-weight: 600;
+        text-transform: uppercase; background: rgba(199,169,127,0.05);
+    }
+    .divider { width: 80px; height: 3px; margin: 20px auto; }
 
-        <section id="section-team" class="bg-dark section-dark text-light">
-    <div class="container">
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-6 relative z-3">
-                <div class="text-center">
-                    <div class="subtitle wow fadeInUp" data-wow-delay=".0s">Our Team</div>
-                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Meet Our Expert Team</h2>
-                    <p class="lead wow fadeInUp">Dedicated professionals committed to delivering exceptional service and innovative solutions.</p>
-                </div>
+    /* BACKGROUND GLOWS */
+    .relative { position: relative; }
+    .z-2 { position: relative; z-index: 2; }
+    .bg-glow {
+        position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.15; z-index: 1; pointer-events: none;
+    }
+    .glow-1 { width: 400px; height: 400px; background: var(--gold); top: 10%; left: -10%; }
+    .glow-2 { width: 500px; height: 500px; background: #6b5ce7; bottom: 10%; right: -10%; }
+
+    /* --- GLASS CARD STYLING --- */
+    .glass-card {
+        height: 100%;
+        background: var(--card-glass);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        padding: 40px 30px;
+        transform-style: preserve-3d;
+        transition: transform 0.2s ease-out, border 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .glass-card:hover {
+        border-color: rgba(199, 169, 127, 0.4);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.4), inset 0 0 20px rgba(199,169,127,0.05);
+    }
+
+    .card-content {
+        transform: translateZ(20px);
+        display: flex; flex-direction: column; height: 100%;
+        align-items: flex-start;
+    }
+
+    /* Floating Icon */
+    .icon-box {
+        position: relative; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;
+        margin-bottom: 25px; transform-style: preserve-3d;
+    }
+    .icon-bg {
+        position: absolute; width: 100%; height: 100%; border-radius: 15px;
+        background: linear-gradient(135deg, rgba(199,169,127,0.2), rgba(255,255,255,0.05));
+        transform: translateZ(10px); transition: 0.4s ease;
+    }
+    .icon-box i { font-size: 1.8rem; color: #fff; transform: translateZ(30px); z-index: 2; }
+    
+    .glass-card:hover .icon-bg { background: var(--gold); transform: translateZ(20px) rotate(10deg); }
+    .glass-card:hover .icon-box i { color: #000; }
+
+    /* Typography */
+    .service-title { color: #fff; font-weight: 700; margin-bottom: 10px; transform: translateZ(25px); font-size: 1.5rem; font-family: 'Manrope', sans-serif; }
+    .service-desc { color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 20px; font-family: 'Manrope', sans-serif; transform: translateZ(20px); }
+
+    /* Pricing Glass Block */
+    .pricing-glass-block {
+        background: rgba(0,0,0,0.3);
+        border-radius: 10px;
+        padding: 15px;
+        width: 100%;
+        margin-bottom: 25px;
+        border: 1px solid rgba(255,255,255,0.05);
+        transform: translateZ(25px);
+        flex-grow: 1;
+    }
+
+    /* Footer (Badge + Button) */
+    .card-footer-custom {
+        width: 100%; display: flex; justify-content: space-between; align-items: center;
+        transform: translateZ(30px); margin-top: auto; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px;
+    }
+
+    /* Premium Badge */
+    .badge-gold-glow {
+        background: linear-gradient(90deg, #c7a97f, #94744f);
+        color: #000; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
+        padding: 6px 12px; border-radius: 6px; box-shadow: 0 4px 15px rgba(199,169,127,0.3);
+    }
+
+    /* Link Style */
+    .view-btn {
+        color: var(--gold); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s;
+    }
+    .view-btn:hover { color: #fff; transform: translateX(5px); }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .card-footer-custom { flex-direction: column; align-items: flex-start; gap: 15px; }
+        .glass-card { padding: 30px 20px; }
+        .pricing-glass-block { padding: 12px; }
+    }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+<script>
+    $('.glass-card').tilt({
+        glare: true,
+        maxGlare: 0.15,
+        scale: 1.02,
+        speed: 400,
+        perspective: 1000
+    });
+</script>
+<section id="section-team" class="section-dark relative" style="padding: 120px 0; background-color: #050505; overflow: hidden;">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Yuvan Creations",
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "Nishant Sharma",
+          "jobTitle": "Founder & CEO",
+          "image": "images/team/1.jpg",
+          "description": "Leading the company and driving its vision."
+        },
+        {
+          "@type": "Person",
+          "name": "Aman Verma",
+          "jobTitle": "Technical Head",
+          "image": "images/team/2.jpg",
+          "description": "Overseeing technical operations and leading the development team."
+        }
+      ]
+    }
+    </script>
+
+    <div style="position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(199,169,127,0.08) 0%, transparent 70%); top: -20%; left: -10%; pointer-events: none;"></div>
+    <div style="position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(199,169,127,0.05) 0%, transparent 70%); bottom: -20%; right: -10%; pointer-events: none;"></div>
+
+    <div class="container relative z-2">
+        <div class="row mb-5 justify-content-center text-center">
+            <div class="col-lg-8">
+                <span class="text-gold text-uppercase letter-spacing-3 fw-bold d-block mb-3 small">The Minds Behind</span>
+                <h2 class="display-4 fw-bold text-white mb-4" style="font-family: 'Playfair Display', serif;">
+                    Meet Our <span class="text-gradient-gold">Visionaries</span>
+                </h2>
+                <div class="divider mx-auto bg-gold-gradient" style="width: 100px; height: 2px;"></div>
+                <p class="text-white-50 mt-4 lead">Dedicated professionals committed to delivering exceptional service and innovative solutions.</p>
             </div>
         </div>
 
-        <div class="row g-4">
-            <!-- Nishant Sharma -->
-            <div class="col-lg-6">
-                <div class="hover relative rounded-1 overflow-hidden wow fadeIn scale-in-mask h-100">
-                    <img src="images/team/1.jpg" class="w-100 hover-scale-1-1" alt="Nishant Sharma">
-                    <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                    <div class="abs w-100 start-0 bottom-0 z-3">
-                        <div class="bg-blur p-4 m-4 rounded-1 text-light relative z-2">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-grow-1">
-                                    <h3 class="mb-1">Nishant Sharma</h3>
-                                    <span class="text-gold">Founder & CEO</span>
-                                    <p class="mt-2 mb-0">Nishant Sharma is the Founder & CEO<br> responsible for leading the <br> company and driving its vision.</p>
-                                </div>
-                                
+        <div class="row g-5 justify-content-center">
+            
+            <div class="col-lg-5 col-md-6">
+                <div class="royal-team-card h-100 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="img-wrapper">
+                        <img src="images/team/1.jpg" alt="Nishant Sharma - Founder & CEO of Yuvan Creations" class="team-img">
+                        <div class="img-overlay"></div>
+                    </div>
+                    
+                    <div class="glass-info-box">
+                        <div class="name-badge">
+                            <h3 class="member-name">Nishant Sharma</h3>
+                            <span class="member-role">Founder & CEO</span>
+                        </div>
+                        <div class="member-desc">
+                            <p>Nishant Sharma is the Founder & CEO responsible for leading the company and driving its vision with strategic excellence.</p>
+                            <div class="social-line">
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
-                        <div class="gradient-edge-bottom h-100 op-8"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Aman Verma -->
-            <div class="col-lg-6">
-                <div class="hover relative rounded-1 overflow-hidden wow fadeIn scale-in-mask h-100">
-                    <img src="images/team/2.jpg" class="w-100 hover-scale-1-1" alt="Aman Verma">
-                    <div class="abs w-100 h-100 start-0 top-0 hover-op-1 radial-gradient-color"></div>
-                    <div class="abs w-100 start-0 bottom-0 z-3">
-                        <div class="bg-blur p-4 m-4 rounded-1 text-light relative z-2">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-grow-1">
-                                    <h3 class="mb-1">Aman Verma</h3>
-                                    <span class="text-gold">Technical Head</span>
-                                    <p class="mt-2 mb-0">Aman Verma is the Technical Head<br> overseeing technical operations<br> and  leading the development team.</p>
-                                </div>
-                                
+            <div class="col-lg-5 col-md-6">
+                <div class="royal-team-card h-100 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="img-wrapper">
+                        <img src="images/team/2.jpg" alt="Aman Verma - Technical Head at Yuvan Creations" class="team-img">
+                        <div class="img-overlay"></div>
+                    </div>
+                    
+                    <div class="glass-info-box">
+                        <div class="name-badge">
+                            <h3 class="member-name">Aman Verma</h3>
+                            <span class="member-role">Technical Head</span>
+                        </div>
+                        <div class="member-desc">
+                            <p>Aman Verma is the Technical Head overseeing technical operations and leading the development team with innovation.</p>
+                            <div class="social-line">
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
-                        <div class="gradient-edge-bottom h-100 op-8"></div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
+
+<style>
+    /* VARIABLES */
+    :root {
+        --gold: #c7a97f;
+        --dark-gold: #8a6e4b;
+    }
+
+    /* TYPOGRAPHY */
+    .text-gradient-gold {
+        background: linear-gradient(135deg, #fff 30%, var(--gold) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .bg-gold-gradient { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+
+    /* CARD CONTAINER */
+    .royal-team-card {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #0f0f10;
+        border: 1px solid rgba(255,255,255,0.05);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    /* IMAGE STYLING */
+    .img-wrapper {
+        position: relative;
+        width: 100%;
+        height: 450px; /* Tall premium aspect ratio */
+        overflow: hidden;
+    }
+    .team-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+        filter: grayscale(20%) contrast(1.1); /* Cinematic look */
+    }
+    .img-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, #000 10%, rgba(0,0,0,0.3) 50%, transparent 100%);
+        opacity: 0.9;
+        transition: 0.5s;
+    }
+
+    /* GLASS INFO BOX */
+    .glass-info-box {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(199, 169, 127, 0.3); /* Gold Border */
+        border-radius: 15px;
+        padding: 25px;
+        transform: translateY(0);
+        transition: all 0.5s ease;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    /* TEXT CONTENT */
+    .member-name {
+        color: #fff;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+    }
+    .member-role {
+        color: var(--gold);
+        font-family: 'Manrope', sans-serif;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 15px;
+    }
+    .member-desc {
+        height: 0; /* Hidden initially for clean look */
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+    .member-desc p {
+        color: rgba(255,255,255,0.7);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 15px;
+    }
+
+    /* SOCIAL ICONS */
+    .social-line {
+        display: flex;
+        gap: 15px;
+    }
+    .social-line a {
+        color: #fff;
+        font-size: 1.1rem;
+        transition: 0.3s;
+        opacity: 0.7;
+    }
+    .social-line a:hover {
+        color: var(--gold);
+        opacity: 1;
+        transform: translateY(-3px);
+    }
+
+    /* --- HOVER EFFECTS (THE MAGIC) --- */
+    .royal-team-card:hover {
+        border-color: var(--gold);
+        box-shadow: 0 20px 60px rgba(199, 169, 127, 0.15);
+        transform: translateY(-10px);
+    }
+    .royal-team-card:hover .team-img {
+        transform: scale(1.1);
+        filter: grayscale(0%) contrast(1.2);
+    }
+    .royal-team-card:hover .glass-info-box {
+        background: rgba(10, 10, 10, 0.85);
+        border-color: var(--gold);
+    }
+    .royal-team-card:hover .member-desc {
+        height: auto; /* Reveal text */
+        opacity: 1;
+        max-height: 200px; /* Safety height */
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+        .member-desc { height: auto; opacity: 1; } /* Always show on mobile */
+        .img-wrapper { height: 400px; }
+    }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
 
 <section id="section-clients" class="bg-dark section-dark text-light py-5">
     <div class="container">
