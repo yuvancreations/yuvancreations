@@ -1,0 +1,267 @@
+       <section id="section-hero" class="section-dark no-top no-bottom text-light jarallax relative mh-800" data-video-src="mp4:video/2.mp4" aria-label="Yuvan Creations hero section">
+            <!-- JSON-LD LocalBusiness structured data for SEO -->
+            <script type="application/ld+json">
+            {
+                "@context":"https://schema.org",
+                "@type":"LocalBusiness",
+                "name":"Yuvan Creations",
+                "telephone":"+919557300217",
+                "url":"https://yuvancreations.example.com",
+                "image":"https://yuvancreations.example.com/images/misc/about.png",
+                "address":{"@type":"PostalAddress","addressLocality":"Haridwar","addressRegion":"Uttarakhand","addressCountry":"IN"},
+                "description":"Yuvan Creations — professional photography, video editing, graphic design, CCTV & device repairs since 2007. Trusted local IT and media services in Haridwar.",
+                "sameAs":["https://www.facebook.com/yourpage","https://www.instagram.com/yourpage"],
+                "service":[{"@type":"Service","name":"Photography"},{"@type":"Service","name":"Video Editing"},{"@type":"Service","name":"Graphic Design"},{"@type":"Service","name":"Computer Repair"},{"@type":"Service","name":"Mobile Repair"}]
+            }
+            </script>
+
+            <div class="gradient-edge-top op-6 h-50 color"></div>
+            <div class="gradient-edge-bottom"></div>
+            <div class="sw-overlay op-8"></div>
+
+            <div class="abs abs-centered z-2 w-80">
+                <div class="container">
+                    <div class="hero-3d" aria-hidden="false">
+                        <!-- decorative animated background layers -->
+                        <div class="hero-layers" aria-hidden="true">
+                            <div class="layer layer--video"></div>
+                            <div class="layer layer--nebula"></div>
+                            <div class="layer layer--mesh"></div>
+                        </div>
+
+                        <!-- 3D card (mouse-parallax + float) -->
+                        <div class="card-3d" role="img" aria-label="Yuvan Creations hero card">
+                            <div class="card-face card-content">
+                                <h1 class="hero-title">YUVAN CREATIONS</h1>
+                                <p class="hero-sub">Professional photography, video editing, graphic design and IT/repair services since 2007 — Haridwar.</p>
+
+                                <div class="hero-stats" role="group" aria-label="Service highlights">
+                                    <div class="stat"><i class="fa fa-calendar" aria-hidden="true"></i><span>SINCE 2007</span></div>
+                                    <div class="stat"><i class="fa fa-map-pin" aria-hidden="true"></i><span>HARIDWAR, UTTARAKHAND</span></div>
+                                </div>
+
+                                <div class="hero-ctas" role="group" aria-label="Call and WhatsApp actions">
+                                    <a href="tel:+919876543210" class="cta-btn btn-call" title="Call Yuvan Creations" aria-label="Call Yuvan Creations"><i class="fa fa-phone me-2" aria-hidden="true"></i>Call Now</a>
+                                    <a href="https://wa.me/919876543210?text=Hi%20Yuvan%20Creations%2C%20I%27d%20like%20to%20enquire%20about%20your%20services" target="_blank" rel="noopener noreferrer" class="cta-btn btn-whatsapp" title="Message on WhatsApp" aria-label="Message on WhatsApp"><i class="fab fa-whatsapp me-2" aria-hidden="true"></i>WhatsApp</a>
+                                    <a href="#contact" class="cta-btn btn-contact" title="Open contact form" aria-label="Contact form"><i class="fa fa-envelope me-2" aria-hidden="true"></i>Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                :root{--gold:#c7a97f;--dark:#0f0f10;--glass:rgba(255,255,255,0.04)}
+                .hero-3d{position:relative; width:100%; height:720px; display:flex; align-items:center; justify-content:center; perspective:1400px; -webkit-perspective:1400px;}
+                .hero-layers{position:absolute;inset:0;overflow:hidden;pointer-events:none;transform-style:preserve-3d;}
+                .layer{position:absolute;inset:0;will-change:transform,opacity}
+                .layer--video{background:radial-gradient(circle at 10% 20%, rgba(199,169,127,0.06), transparent 10%), url('images/background/2.webp') center/cover no-repeat; filter:blur(6px) saturate(1.1); opacity:.7; transform:translateZ(-120px) scale(1.08);}
+                .layer--nebula{background:linear-gradient(120deg, rgba(153,122,84,0.06), rgba(32,32,40,0.08)); mix-blend-mode:overlay; animation:nebulaShift 8s linear infinite; transform:translateZ(-80px) scale(1.05);}
+                .layer--mesh{background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.02), transparent 4%), repeating-linear-gradient(45deg, rgba(199,169,127,0.02) 0 1px, transparent 1px 16px); opacity:0.6; transform:translateZ(-40px) scale(1.02); animation:meshMove 14s linear infinite;}
+                @keyframes nebulaShift{0%{transform:translateZ(-80px) scale(1.06) translateX(-4%)}50%{transform:translateZ(-80px) scale(1.06) translateX(4%)}100%{transform:translateZ(-80px) scale(1.06) translateX(-4%)}}
+                @keyframes meshMove{0%{background-position:0 0}100%{background-position:800px 0}}
+
+                .card-3d{width:100%;max-width:1100px;transform-style:preserve-3d;transition:transform .15s cubic-bezier(.2,.9,.2,1);will-change:transform;display:flex;justify-content:center;align-items:center;pointer-events:auto}
+                .card-face{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.25)); border:1px solid rgba(199,169,127,0.12); padding:48px; border-radius:18px; backdrop-filter: blur(6px); box-shadow:0 30px 60px rgba(0,0,0,0.6); transform:translateZ(40px) scale(.99)}
+                .hero-title{font-size:clamp(34px,7vw,84px); letter-spacing:2px; text-transform:uppercase; margin:0 0 12px; line-height:1; background:linear-gradient(90deg,var(--gold),#fff); -webkit-background-clip:text;background-clip:text;color:transparent; position:relative; overflow:visible; transform:translateZ(60px)}
+                .hero-sub{max-width:900px;margin:0 auto 18px;opacity:.95;font-size:1.05rem;color:rgba(255,255,255,0.9)}
+                .hero-stats{display:flex;gap:26px;justify-content:center;margin-top:12px;transform:translateZ(48px)}
+                .stat{display:flex;align-items:center;gap:10px;font-weight:700;color:rgba(255,255,255,0.9)}
+                .stat i{color:var(--gold); font-size:1.15rem}
+
+                .hero-ctas{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap;transform:translateZ(44px)}
+                .cta-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.6rem;text-decoration:none;font-weight:700;box-shadow:0 6px 22px rgba(0,0,0,0.45);transition:transform .18s ease,box-shadow .18s ease}
+                .btn-call{background:#ffd27a;color:#0b0b0b}
+                .btn-whatsapp{background:#25D366;color:#fff}
+                .btn-contact{background:#6b5ce7;color:#fff}
+                .cta-btn:active{transform:translateY(1px) scale(.996)}
+
+                /* float subtle */
+                .card-face{animation:cardFloat 6s ease-in-out infinite}
+                @keyframes cardFloat{0%{transform:translateZ(40px) translateY(0)}50%{transform:translateZ(40px) translateY(-8px)}100%{transform:translateZ(40px) translateY(0)}}
+
+                /* reveal animations */
+                .hero-title,.hero-sub{opacity:0; transform-origin:center}
+                .hero-3d.loaded .hero-title{animation:revealTitle .9s cubic-bezier(.2,.9,.2,1) forwards}
+                .hero-3d.loaded .hero-sub{animation:revealSub .9s .12s cubic-bezier(.2,.9,.2,1) forwards}
+                @keyframes revealTitle{0%{opacity:0; transform:translateY(18px) translateZ(40px)}100%{opacity:1; transform:translateY(0) translateZ(60px)}}
+                @keyframes revealSub{0%{opacity:0; transform:translateY(14px) translateZ(40px)}100%{opacity:1; transform:translateY(0) translateZ(48px)}}
+
+                /* accessibility: disable animations for reduced motion */
+                @media (prefers-reduced-motion: reduce){
+                    .layer--nebula,.layer--mesh,.card-face,.hero-3d.loaded .hero-title,.hero-3d.loaded .hero-sub{animation:none}
+                    .card-3d{transition:none}
+                }
+
+                /* small screens */
+                @media (max-width:768px){
+                    .hero-3d{height:640px}
+                    .card-face{padding:28px;border-radius:12px}
+                    .hero-stats{flex-direction:column;gap:6px}
+                    .hero-ctas{flex-direction:column}
+                }
+            </style>
+
+            <script>
+                (function(){
+                    const card = document.querySelector('.card-3d');
+                    const hero = document.querySelector('.hero-3d');
+                    const layers = document.querySelectorAll('.layer');
+                    if (!card || !hero) return;
+
+                    // Mark loaded -> start reveal animations
+                    requestAnimationFrame(()=> hero.classList.add('loaded'));
+
+                    // Mouse parallax / 3D tilt (lightweight)
+                    let width = window.innerWidth, height = window.innerHeight;
+                    let cx = width / 2, cy = height / 2;
+                    let currentX = 0, currentY = 0, targetX = 0, targetY = 0;
+
+                    function onMove(e){
+                        const rect = hero.getBoundingClientRect();
+                        const x = ( (e.clientX - rect.left) / rect.width ) - 0.5;
+                        const y = ( (e.clientY - rect.top) / rect.height ) - 0.5;
+                        targetX = clamp(-y * 14, -18, 18); // rotateX
+                        targetY = clamp(x * 18, -22, 22);   // rotateY
+
+                        // layers parallax
+                        layers.forEach((L, i) => {
+                            const depth = [-120,-80,-40][i] || -20;
+                            const moveX = x * Math.abs(depth) * 0.06;
+                            const moveY = y * Math.abs(depth) * 0.06;
+                            L.style.transform = `translate3d(${moveX}px, ${moveY}px, ${depth}px) scale(${1 + Math.abs(depth)/2000})`;
+                        });
+                    }
+
+                    function onLeave(){
+                        targetX = 0; targetY = 0;
+                        layers.forEach((L,i)=> L.style.transform = `translate3d(0,0,${[-120,-80,-40][i]||-20}px) scale(1.0)`);
+                    }
+
+                    function animate(){
+                        currentX += (targetX - currentX) * 0.12;
+                        currentY += (targetY - currentY) * 0.12;
+                        const tilt = `rotateX(${currentX}deg) rotateY(${currentY}deg)`;
+                        card.style.transform = tilt + ' translateZ(0)';
+                        requestAnimationFrame(animate);
+                    }
+
+                    function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
+
+                    // Attach events in non-reduced-motion environments
+                    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    if (!prefersReduced){
+                        hero.addEventListener('mousemove', onMove, {passive:true});
+                        hero.addEventListener('mouseleave', onLeave, {passive:true});
+                        animate();
+                    } else {
+                        // ensure layers set to base transform if reduced motion
+                        layers.forEach((L,i)=> L.style.transform = `translate3d(0,0,${[-120,-80,-40][i]||-20}px) scale(1.0)`);
+                    }
+
+                    // re-calc sizes on resize
+                    window.addEventListener('resize', ()=>{ width = window.innerWidth; height = window.innerHeight; });
+                })();
+            </script>
+        </section>
+
+            <div class="abs w-100 start-0 bottom-0 z-3" style="margin: 20px 0;">
+                <div class="container">
+                    <div class="sm-hide border-white-op-3 rounded-1 bg-blur relative" style="padding: 20px; margin: 20px 0;">
+                        <div class="row g-2 justify-content-center align-items-center">
+                            <div class="col-12">
+                                <!-- include required CSS/JS only once in head if possible; kept here for fallback -->
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+                                <div class="services-carousel owl-carousel owl-theme" style="padding: 0;" aria-label="Key services carousel">
+                                    <div class="service-item" role="group" aria-label="Photography service">
+                                        <div class="icon-box" style="width:50px;height:50px;"><i class="fas fa-camera fa-2x" aria-hidden="true"></i></div>
+                                        <h4 style="font-size:0.9rem;margin:5px 0 0;">Photography</h4>
+                                    </div>
+                                    <div class="service-item" role="group" aria-label="Pre-wedding shoot">
+                                        <div class="icon-box" style="width:50px;height:50px;"><i class="fas fa-heart fa-2x" aria-hidden="true"></i></div>
+                                        <h4 style="font-size:0.9rem;margin:5px 0 0;">Pre-Wedding Shoot</h4>
+                                    </div>
+                                    <div class="service-item" role="group" aria-label="Video editing">
+                                        <div class="icon-box" style="width:50px;height:50px;"><i class="fas fa-video fa-2x" aria-hidden="true"></i></div>
+                                        <h4 style="font-size:0.9rem;margin:5px 0 0;">Video Editing</h4>
+                                    </div>
+                                    <div class="service-item" role="group" aria-label="Graphic design">
+                                        <div class="icon-box" style="width:50px;height:50px;"><i class="fas fa-paint-brush fa-2x" aria-hidden="true"></i></div>
+                                        <h4 style="font-size:0.9rem;margin:5px 0 0;">Graphic Design</h4>
+                                    </div>
+                                    <div class="service-item" role="group" aria-label="Web development">
+                                        <div class="icon-box" style="width:50px;height:50px;"><i class="fas fa-laptop-code fa-2x" aria-hidden="true"></i></div>
+                                        <h4 style="font-size:0.9rem;margin:5px 0 0;">Web Development</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- carousel scripts -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+            <style>
+                .cta-btn {
+                    display:inline-flex;
+                    align-items:center;
+                    gap:.5rem;
+                    padding:.6rem 1rem;
+                    border-radius:.5rem;
+                    text-decoration:none;
+                    font-weight:600;
+                    color:#0b0b0b;
+                    transition:transform .15s ease, box-shadow .15s ease;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+                }
+                .btn-call { background: #ffd27a; }
+                .btn-whatsapp { background: #25D366; color:#fff; }
+                .btn-contact { background: #6b5ce7; color:#fff; }
+                .cta-btn:hover { transform: translateY(-3px); text-decoration:none; }
+                .services-carousel { padding:0 !important; }
+                .service-item {
+                    background: rgba(255,255,255,0.06);
+                    border-radius:10px;
+                    padding:10px;
+                    margin:0 6px;
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    justify-content:center;
+                    min-width:110px;
+                    text-align:center;
+                }
+                .service-item h4 { margin:6px 0 0; font-weight:600; font-size:.9rem; }
+                .icon-box i { color: #fff; line-height:50px; }
+                @media (max-width:576px){
+                    .cta-btn { padding:.5rem .8rem; font-size:.95rem; }
+                    .abs.abs-centered.w-80 { width:90% !important; }
+                }
+            </style>
+
+            <script>
+            $(document).ready(function(){
+                $(".services-carousel").owlCarousel({
+                    loop:true,
+                    margin:6,
+                    nav:true,
+                    dots:false,
+                    autoplay:true,
+                    autoplayTimeout:3500,
+                    responsive:{
+                        0:{items:2},
+                        480:{items:3},
+                        768:{items:4},
+                        992:{items:5}
+                    }
+                });
+            });
+            </script>
+        </section>
+
+        </section>
