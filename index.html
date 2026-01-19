@@ -395,8 +395,8 @@
                 font-size: 3rem;
                 font-weight: 800;
                 background: var(--gold-gradient);
-                background-clip: text;
                 -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-text-fill-color: transparent;
                 letter-spacing: 2px;
                 margin-bottom: 8px;
@@ -2355,43 +2355,323 @@
     }
 </style>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
 
-<section id="section-clients" class="bg-dark section-dark text-light py-5">
-    <div class="container">
-        <div class="row mb-4">
-            <div class="col-lg-8 mx-auto text-center">
-                <div class="subtitle mb-2" style="font-family: 'Montserrat', sans-serif; letter-spacing: 2px; color: #c7a97f;">OUR CLIENTS</div>
-                <h2 class="mb-3" style="font-family: 'Manrope', sans-serif; font-weight: 700;">Trusted by Businesses</h2>
-                <p class="lead" style="color: rgba(255,255,255,0.7);">We are proud to have worked with amazing clients.</p>
+<section id="section-clients" class="section-dark text-light relative" style="padding: 120px 0; background: #0b0b0c; overflow: hidden;">
+    
+    <!-- Background Glows -->
+    <div style="position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(199,169,127,0.1) 0%, transparent 70%); top: 5%; left: -10%; pointer-events: none; border-radius: 50%; filter: blur(80px);"></div>
+    <div style="position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(107,92,231,0.08) 0%, transparent 70%); bottom: -10%; right: -5%; pointer-events: none; border-radius: 50%; filter: blur(80px);"></div>
+
+    <div class="container relative z-2">
+        <!-- Header -->
+        <div class="row mb-5 justify-content-center">
+            <div class="col-lg-10 text-center">
+                <span class="badge-pill mb-3 wow fadeInUp" style="display: inline-block; padding: 8px 20px; border: 1px solid rgba(199,169,127,0.3); border-radius: 50px; color: #c7a97f; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; background: rgba(199,169,127,0.05); letter-spacing: 1px;">TRUSTED PARTNERS</span>
+                
+                <h2 class="display-4 fw-bold text-white mt-3 mb-3 wow fadeInUp" data-wow-delay="0.1s" style="font-family: 'Playfair Display', serif; letter-spacing: 1px;">
+                    Trusted by <span class="text-gradient" style="background: linear-gradient(135deg, #fff, #c7a97f); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Industry Leaders</span>
+                </h2>
+                
+                <p class="lead text-white-50 mt-4 wow fadeInUp" data-wow-delay="0.2s" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; line-height: 1.7; font-family: 'Manrope', sans-serif;">
+                    We're honored to partner with innovative brands and businesses that share our commitment to excellence and premium quality.
+                </p>
             </div>
         </div>
-        <div class="row justify-content-center align-items-center">
+
+        <!-- Clients Grid -->
+        <div class="row g-4 justify-content-center align-items-stretch mt-5">
+            
             <!-- Client: Yatra Go -->
-            <div class="col-md-3 col-6 mb-4 text-center">
-                <div class="client-logo-box p-3 bg-blur rounded-1">
-                    <a href="https://yatrago.com" target="_blank" rel="noopener" style="text-decoration: none;">
-                        <!-- You can replace the below with a logo image if available -->
-                        <div style="font-size:2rem; font-weight:700; color:#c7a97f; letter-spacing:1px;">Yatra Go</div>
-                        <div style="font-size:0.95rem; color:#fff; opacity:0.7;">yatrago.com</div>
+            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="premium-client-card h-100">
+                    <div class="client-content">
+                        <div class="client-icon-wrapper">
+                            <div class="icon-bg"></div>
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="client-name">Yatra Go</h3>
+                        <p class="client-desc">Travel & Tourism Solutions</p>
+                        <p class="client-info">A trusted travel platform delivering exceptional experiences across India.</p>
+                        <div class="client-badge">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <span>Web Design & Development</span>
+                        </div>
+                        <a href="https://yatrago.com" target="_blank" rel="noopener" class="client-link">
+                            Visit Website <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client: Shriganesh Studio -->
+            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="premium-client-card h-100">
+                    <div class="client-content">
+                        <div class="client-icon-wrapper">
+                            <div class="icon-bg"></div>
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3 class="client-name">Shri Ganesh Studio</h3>
+                        <p class="client-desc">Professional Photography</p>
+                        <p class="client-info">Premium photography services capturing life's most beautiful moments.</p>
+                        <div class="client-badge">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <span>Website & Branding</span>
+                        </div>
+                        <a href="https://yuvancreations.github.io/shriganeshstudio/" target="_blank" rel="noopener" class="client-link">
+                            Visit Website <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA Section -->
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-8 text-center">
+                <div class="cta-glass-box wow fadeInUp" data-wow-delay="0.5s">
+                    <p class="text-white-50 mb-3" style="font-size: 1.05rem;">Ready to elevate your brand?</p>
+                    <h3 class="text-white mb-4">Let's build something extraordinary together</h3>
+                    <a href="contact-us.html" class="btn-premium-cta">
+                        <span>Get Started Today</span>
+                        <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                 </div>
             </div>
-            <!-- Client: Shriganesh Studio -->
-<div class="col-md-3 col-6 mb-4 text-center">
-    <div class="client-logo-box p-3 bg-blur rounded-1">
-        <a href="https://yuvancreations.github.io/shriganeshstudio/" target="_blank" rel="noopener" style="text-decoration: none;">
-            <div style="font-size:1.7rem; font-weight:700; color:#c7a97f; letter-spacing:1px; white-space: nowrap;">Shri Ganesh Studio</div>
-            <div style="font-size:0.95rem; color:#fff; opacity:0.7;">shriganeshstudio</div>
-        </a>
-    </div>
-</div>
-            
-
         </div>
     </div>
 </section>
 
+<style>
+    :root {
+        --gold: #c7a97f;
+        --dark-gold: #8a6e4b;
+        --dark-bg: #0b0b0c;
+    }
+
+    .relative { position: relative; }
+    .z-2 { position: relative; z-index: 2; }
+    .text-white-50 { color: rgba(255,255,255,0.6) !important; }
+
+    /* --- PREMIUM CLIENT CARD --- */
+    .premium-client-card {
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(199, 169, 127, 0.2);
+        border-radius: 20px;
+        padding: 45px 35px;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .premium-client-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: linear-gradient(135deg, rgba(199,169,127,0.1) 0%, transparent 100%);
+        opacity: 0;
+        transition: 0.5s;
+        pointer-events: none;
+    }
+
+    .premium-client-card:hover {
+        border-color: var(--gold);
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 20px 60px rgba(199,169,127,0.15), inset 0 0 20px rgba(199,169,127,0.05);
+        transform: translateY(-10px);
+    }
+
+    .premium-client-card:hover::before {
+        opacity: 1;
+    }
+
+    /* Client Content */
+    .client-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    /* Icon Box */
+    .client-icon-wrapper {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon-bg {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(199,169,127,0.15), rgba(255,255,255,0.05));
+        border-radius: 15px;
+        transition: 0.4s;
+    }
+
+    .client-icon-wrapper i {
+        font-size: 2rem;
+        color: var(--gold);
+        z-index: 2;
+        transition: 0.3s;
+    }
+
+    .premium-client-card:hover .icon-bg {
+        background: var(--gold);
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .premium-client-card:hover .client-icon-wrapper i {
+        color: #000;
+        transform: scale(1.1);
+    }
+
+    /* Typography */
+    .client-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+    }
+
+    .client-desc {
+        font-family: 'Manrope', sans-serif;
+        color: var(--gold);
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 15px;
+    }
+
+    .client-info {
+        color: rgba(255,255,255,0.6);
+        font-family: 'Manrope', sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }
+
+    /* Badge */
+    .client-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(199,169,127,0.1);
+        color: var(--gold);
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        border: 1px solid rgba(199,169,127,0.2);
+        width: fit-content;
+    }
+
+    .client-badge i {
+        font-size: 0.9rem;
+    }
+
+    /* Link */
+    .client-link {
+        color: var(--gold);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.95rem;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        margin-top: auto;
+    }
+
+    .client-link:hover {
+        color: #fff;
+        transform: translateX(5px);
+    }
+
+    /* CTA Glass Box */
+    .cta-glass-box {
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(199,169,127,0.2);
+        border-radius: 20px;
+        padding: 50px 40px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    /* Premium CTA Button */
+    .btn-premium-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 45px;
+        background: linear-gradient(135deg, var(--gold) 0%, #d4a976 100%);
+        color: #000;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+        font-size: 0.95rem;
+        box-shadow: 0 10px 30px rgba(199,169,127,0.3);
+    }
+
+    .btn-premium-cta:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 50px rgba(199,169,127,0.4);
+        color: #000;
+    }
+
+    .btn-premium-cta:active {
+        transform: translateY(-2px);
+    }
+
+    /* Animations */
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .premium-client-card {
+            padding: 30px 25px;
+        }
+        .client-name {
+            font-size: 1.5rem;
+        }
+        .client-info {
+            font-size: 0.95rem;
+        }
+        .cta-glass-box {
+            padding: 35px 25px;
+        }
+        .btn-premium-cta {
+            padding: 12px 35px;
+            font-size: 0.9rem;
+        }
+    }
+</style>
 
     <!-- Footer Section -->
         <div id="footer"></div>
