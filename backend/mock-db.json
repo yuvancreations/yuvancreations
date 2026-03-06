@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "_id": "1772745056628",
+      "name": "Admin User",
+      "email": "admin@yuvan.com",
+      "password": "$2b$10$2BkvPHZ43JNq2/QZYcKeI.iscG0kjZCWD4jrTCiHiMt74fdQpe5J.",
+      "role": "admin",
+      "createdAt": "2026-03-05T21:10:56.628Z"
+    }
+  ],
+  "messages": []
+}

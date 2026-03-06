@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #111111;
+  --color-accent: #2563eb;
+  --color-brand: #DC2626;
+  /* Logo colors: accent=blue #2563eb | brand=red #DC2626 */
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #ffffff;
+  color: var(--color-primary);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Premium modern black arrow for body */
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'><path fill='%23111' stroke='white' stroke-width='1.5' d='M8 4l12 10.5-6.5 1 4.5 7.5-3 1.5-4.5-7.5-4.5 4V4z'/></svg>") 8 4, auto;
+}
+
+/* 3D Pointer Hand for all interactive elements */
+a,
+button,
+input[type="submit"],
+input[type="button"],
+select,
+[role="button"],
+a *,
+button * {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text y='24' font-size='24'>👆</text></svg>") 12 0, pointer !important;
+}
+
+/* Base utility overrides if needed */
