@@ -26,7 +26,7 @@ const FounderQuote = () => {
                                     <Quote className="text-white" fill="currentColor" size={28} />
                                 </div>
                                 <img
-                                    src="/images/team/team 1.jpg"
+                                    src={`${import.meta.env.BASE_URL}images/team/team 1.jpg`}
                                     alt="Founder Nishant Sharma"
                                     className="w-full h-auto aspect-[4/5] object-cover rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] grayscale hover:grayscale-0 transition-all duration-700"
                                     style={{ transform: "translateZ(20px)" }}

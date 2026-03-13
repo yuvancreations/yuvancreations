@@ -8,13 +8,13 @@ const Visionaries = [
         name: 'Nishant Sharma',
         role: 'Founder & CEO',
         description: 'Nishant Sharma is responsible for leading the company and driving its vision with strategic excellence.',
-        image: '/images/team/team 1.jpg'
+        image: `${import.meta.env.BASE_URL}images/team/team 1.jpg`
     },
     {
         name: 'Aman Verma',
         role: 'Technical Head',
         description: 'Aman Verma oversees technical operations and leads the development team with innovation.',
-        image: '/images/team/team 2.jpg'
+        image: `${import.meta.env.BASE_URL}images/team/team 2.jpg`
     }
 ];
 

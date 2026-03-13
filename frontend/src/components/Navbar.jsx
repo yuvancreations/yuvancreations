@@ -1,10 +1,11 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, User, ChevronDown, Mail, Phone, Monitor, Package, ClipboardList, FileText, FileSpreadsheet } from 'lucide-react';
+import { Menu, X, User, ChevronDown, Mail, Phone, Users } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LoginModal from './LoginModal';
 import SignupModal from './SignupModal';
+import { useVisitors } from './VisitorProvider';
 
 const constServices = [
     { name: 'Web Applications', path: '/services/web-apps' },
@@ -20,14 +21,20 @@ const constServices = [
 ];
 
 const constSoftware = [
-    { name: 'Make Invoice', icon: <FileText size={16} />, path: '/software/make-invoice' },
-    { name: 'Make Quotation', icon: <FileSpreadsheet size={16} />, path: '/software/make-quotation' },
-    { name: 'PC Build', icon: <Monitor size={16} />, path: '/software/pc-build' },
-    { name: 'Inventory Management', icon: <Package size={16} />, path: '/software/inventory' },
-    { name: 'Requirement Maker', icon: <ClipboardList size={16} />, path: '/software/requirement-maker' },
+    {
+        name: 'Bill Maker',
+        children: [
+            { name: 'Invoice Generate', path: '/software/bill-maker?type=invoice' },
+            { name: 'Quotation Generate', path: '/software/bill-maker?type=quotation' },
+        ],
+    },
+    { name: 'PC Build', path: '/software/pc-build' },
+    { name: 'Inventory Management', path: '/software/inventory' },
+    { name: 'Requirement Maker', path: '/software/requirement-maker' },
 ];
 
 const Navbar = () => {
+    const { visitorCount } = useVisitors();
     const { user, logout } = useAuth();
     const location = useLocation();
     const navigate = useNavigate();
@@ -39,6 +46,9 @@ const Navbar = () => {
 
     const [isLoginOpen, setIsLoginOpen] = useState(false);
     const [isSignupOpen, setIsSignupOpen] = useState(false);
+
+    const navServices = constServices;
+    const navSoftware = constSoftware;
 
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
@@ -57,7 +67,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="fixed w-full z-40 top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all flex flex-col">
+            <nav className="fixed w-full z-40 top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all flex flex-col nav-coder">
                 {/* Top Contact Bar */}
                 <div className="w-full bg-primary text-gray-300 py-2 text-[13px] hidden md:block">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
@@ -72,7 +82,11 @@ const Navbar = () => {
                             </a>
                         </div>
                         <div className="flex space-x-4">
-                            <span className="flex items-center">
+                            <span className="flex items-center text-accent font-bold">
+                                <Users size={14} className="mr-2" />
+                                Visitors: {visitorCount || '...'}
+                            </span>
+                            <span className="flex items-center text-gray-400">
                                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 mr-2 animate-pulse"></span>
                                 Premium IT Solutions
                             </span>
@@ -84,7 +98,7 @@ const Navbar = () => {
                     <div className="flex justify-between h-20 items-center">
                         {/* Logo */}
                         <Link to="/" className="flex-shrink-0 flex items-center cursor-pointer">
-                            <img src="/images/logo/navbaar logo.webp" alt="Yuvan Creations" className="h-10 md:h-12 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}images/logo/navbaar logo.webp`} alt="Yuvan Creations" className="h-10 md:h-12 w-auto object-contain" />
                         </Link>
 
                         {/* Desktop Menu */}
@@ -116,7 +130,7 @@ const Navbar = () => {
                                             transition={{ duration: 0.2 }}
                                             className="absolute top-full left-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl overflow-hidden py-2 z-50"
                                         >
-                                            {constServices.map((service) => (
+                                            {navServices.map((service) => (
                                                 <Link
                                                     key={service.name}
                                                     to={service.path}
@@ -152,14 +166,31 @@ const Navbar = () => {
                                             transition={{ duration: 0.2 }}
                                             className="absolute top-full left-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl overflow-hidden py-2 z-50"
                                         >
-                                            {constSoftware.map((item) => (
-                                                <Link
-                                                    key={item.name}
-                                                    to={item.path}
-                                                    className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-accent transition-colors"
-                                                >
-                                                    {item.name}
-                                                </Link>
+                                            {navSoftware.map((item) => (
+                                                item.children ? (
+                                                    <div key={item.name} className="px-4 py-2">
+                                                        <p className="text-[11px] font-black uppercase tracking-wider text-gray-400 mb-1">{item.name}</p>
+                                                        <div className="border-l border-gray-200 pl-3 space-y-1">
+                                                            {item.children.map((child) => (
+                                                                <Link
+                                                                    key={child.name}
+                                                                    to={child.path}
+                                                                    className="block px-2 py-1.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-accent rounded-md transition-colors"
+                                                                >
+                                                                    {child.name}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                ) : (
+                                                    <Link
+                                                        key={item.name}
+                                                        to={item.path}
+                                                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-accent transition-colors"
+                                                    >
+                                                        {item.name}
+                                                    </Link>
+                                                )
                                             ))}
                                         </motion.div>
                                     )}
@@ -168,6 +199,12 @@ const Navbar = () => {
 
                             <Link to="/about" className="text-gray-600 hover:text-accent font-medium transition-colors">
                                 About
+                            </Link>
+                            <Link to="/gallery" className="text-gray-600 hover:text-accent font-medium transition-colors">
+                                Gallery
+                            </Link>
+                            <Link to="/membership" className="text-gray-600 hover:text-accent font-medium transition-colors">
+                                Membership
                             </Link>
                             <button onClick={() => { setIsMobileMenuOpen(false); navigate('/contact'); }} className="text-gray-600 hover:text-accent font-medium transition-colors">
                                 Contact
@@ -252,7 +289,7 @@ const Navbar = () => {
                                                 exit={{ height: 0, opacity: 0 }}
                                                 className="overflow-hidden pl-6 bg-gray-50 rounded-b-lg"
                                             >
-                                                {constServices.map((service) => (
+                                                {navServices.map((service) => (
                                                     <Link
                                                         key={service.name}
                                                         to={service.path}
@@ -284,15 +321,33 @@ const Navbar = () => {
                                                 exit={{ height: 0, opacity: 0 }}
                                                 className="overflow-hidden pl-6 bg-gray-50 rounded-b-lg"
                                             >
-                                                {constSoftware.map((item) => (
-                                                    <Link
-                                                        key={item.name}
-                                                        to={item.path}
-                                                        onClick={() => setIsMobileMenuOpen(false)}
-                                                        className="block px-3 py-2.5 text-sm text-gray-600 hover:text-accent"
-                                                    >
-                                                        {item.name}
-                                                    </Link>
+                                                {navSoftware.map((item) => (
+                                                    item.children ? (
+                                                        <div key={item.name} className="py-1">
+                                                            <p className="px-3 text-[11px] font-black uppercase tracking-wider text-gray-400">{item.name}</p>
+                                                            <div className="pl-3 mt-1">
+                                                                {item.children.map((child) => (
+                                                                    <Link
+                                                                        key={child.name}
+                                                                        to={child.path}
+                                                                        onClick={() => setIsMobileMenuOpen(false)}
+                                                                        className="block px-3 py-2 text-sm text-gray-600 hover:text-accent"
+                                                                    >
+                                                                        {child.name}
+                                                                    </Link>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                    ) : (
+                                                        <Link
+                                                            key={item.name}
+                                                            to={item.path}
+                                                            onClick={() => setIsMobileMenuOpen(false)}
+                                                            className="block px-3 py-2.5 text-sm text-gray-600 hover:text-accent"
+                                                        >
+                                                            {item.name}
+                                                        </Link>
+                                                    )
                                                 ))}
                                             </motion.div>
                                         )}
@@ -305,6 +360,20 @@ const Navbar = () => {
                                     className="w-full text-left block px-3 py-3 text-base font-medium text-gray-700 hover:text-accent hover:bg-blue-50 rounded-lg"
                                 >
                                     About
+                                </Link>
+                                <Link
+                                    to="/gallery"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="w-full text-left block px-3 py-3 text-base font-medium text-gray-700 hover:text-accent hover:bg-blue-50 rounded-lg"
+                                >
+                                    Gallery
+                                </Link>
+                                <Link
+                                    to="/membership"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="w-full text-left block px-3 py-3 text-base font-medium text-gray-700 hover:text-accent hover:bg-blue-50 rounded-lg"
+                                >
+                                    Membership
                                 </Link>
                                 <button
                                     onClick={() => { setIsMobileMenuOpen(false); navigate('/contact'); }}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CreditCard, ShieldCheck, IndianRupee, ArrowRight, Loader2, CheckCircle2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { initiatePayment, verifyPayment } from '../../services/paymentService';
@@ -10,7 +11,9 @@ const PaymentPage = () => {
     const [amount, setAmount] = useState('');
     const [isProcessing, setIsProcessing] = useState(false);
     const [status, setStatus] = useState(null); // 'success', 'failed'
+    const [verificationTxId, setVerificationTxId] = useState('');
     const { user } = useAuth();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
@@ -20,17 +23,52 @@ const PaymentPage = () => {
         }
     }, []);
 
+    const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
     const handleVerification = async (txId) => {
+        setVerificationTxId(txId);
         setIsProcessing(true);
-        const result = await verifyPayment(txId);
-        if (result.success) {
-            setStatus('success');
-        } else {
-            setStatus('failed');
+        setStatus('pending');
+
+        // PhonePe can return PENDING briefly after redirect, so poll a few times.
+        const maxAttempts = 12;
+        for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+            const result = await verifyPayment(txId);
+
+            if (result.success) {
+                const pendingRaw = sessionStorage.getItem('pending_billmaker');
+                if (pendingRaw) {
+                    try {
+                        const parsed = JSON.parse(pendingRaw);
+                        if (parsed?.type === 'invoice' || parsed?.type === 'quotation') {
+                            navigate(`/software/bill-maker?type=${parsed.type}&txId=${encodeURIComponent(txId)}`, { replace: true });
+                            return;
+                        }
+                    } catch {
+                        // Ignore malformed local storage.
+                    }
+                }
+
+                setStatus('success');
+                setIsProcessing(false);
+                window.history.replaceState({}, document.title, window.location.pathname);
+                return;
+            }
+
+            if (!result.pending) {
+                setStatus('failed');
+                setIsProcessing(false);
+                window.history.replaceState({}, document.title, window.location.pathname);
+                return;
+            }
+
+            if (attempt < maxAttempts) {
+                await wait(3000);
+            }
         }
+
+        setStatus('pending');
         setIsProcessing(false);
-        // Clear URL params
-        window.history.replaceState({}, document.title, window.location.pathname);
     };
 
     const handlePay = async () => {
@@ -42,7 +80,8 @@ const PaymentPage = () => {
         setIsProcessing(true);
         const result = await initiatePayment({
             amount: parseFloat(amount),
-            customerName: user?.name || 'Customer'
+            customerName: user?.name || 'Customer',
+            mobileNumber: user?.phone || user?.mobile || ''
         });
 
         if (result.success) {
@@ -97,6 +136,50 @@ const PaymentPage = () => {
                                         className="px-8 py-3 bg-slate-100 text-slate-700 font-bold rounded-2xl hover:bg-slate-200 transition-all"
                                     >
                                         MAKE ANOTHER PAYMENT
+                                    </button>
+                                </motion.div>
+                            ) : status === 'pending' ? (
+                                <motion.div
+                                    initial={{ scale: 0.96, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    className="text-center space-y-6 py-10"
+                                >
+                                    <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto ring-8 ring-blue-50">
+                                        <Loader2 className="text-blue-600 animate-spin" size={40} />
+                                    </div>
+                                    <div>
+                                        <h2 className="text-2xl font-black text-slate-900">{isProcessing ? 'Verifying Payment...' : 'Payment Is Still Pending'}</h2>
+                                        <p className="text-slate-500 mt-2 font-medium">
+                                            {isProcessing ? 'Please wait, confirmation is in progress.' : 'If payment is done, click below to check status again.'}
+                                        </p>
+                                    </div>
+                                    {!isProcessing && verificationTxId && (
+                                        <button
+                                            onClick={() => handleVerification(verificationTxId)}
+                                            className="px-8 py-3 bg-slate-100 text-slate-700 font-bold rounded-2xl hover:bg-slate-200 transition-all"
+                                        >
+                                            CHECK STATUS AGAIN
+                                        </button>
+                                    )}
+                                </motion.div>
+                            ) : status === 'failed' ? (
+                                <motion.div
+                                    initial={{ scale: 0.96, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    className="text-center space-y-6 py-10"
+                                >
+                                    <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto ring-8 ring-red-50">
+                                        <CreditCard className="text-red-600" size={36} />
+                                    </div>
+                                    <div>
+                                        <h2 className="text-2xl font-black text-slate-900">Payment Not Completed</h2>
+                                        <p className="text-slate-500 mt-2 font-medium">If amount got deducted, wait 1 minute then try again.</p>
+                                    </div>
+                                    <button
+                                        onClick={() => setStatus(null)}
+                                        className="px-8 py-3 bg-slate-100 text-slate-700 font-bold rounded-2xl hover:bg-slate-200 transition-all"
+                                    >
+                                        TRY AGAIN
                                     </button>
                                 </motion.div>
                             ) : (

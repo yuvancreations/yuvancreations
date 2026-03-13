@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Globe, ArrowUpRight } from 'lucide-react';
 
@@ -29,6 +29,15 @@ const clients = [
         color: 'from-emerald-400 to-cyan-500',
         glow: 'rgba(16,185,129,0.3)',
         tag: 'Travel & Tours',
+    },
+    {
+        name: 'ShortWay',
+        tagline: 'Premier Digital Marketing Agency',
+        url: 'https://yuvancreations.github.io/shortway/',
+        logo: '🚀',
+        color: 'from-blue-500 to-indigo-500',
+        glow: 'rgba(59,130,246,0.3)',
+        tag: 'Digital Marketing',
     },
 ];
 
@@ -77,7 +86,7 @@ const Partners = () => {
                 </div>
 
                 {/* Client Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {clients.map((client, index) => (
                         <motion.a
                             key={index}

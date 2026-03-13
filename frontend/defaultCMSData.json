@@ -1,0 +1,36 @@
+﻿{
+  "navServices": [
+    { "name": "Web Applications", "path": "/services/web-apps" },
+    { "name": "App Development", "path": "/services/mobile-app-development" },
+    { "name": "Website Design", "path": "/services/website-design" },
+    { "name": "Computer Solutions", "path": "/services/computer-solutions" },
+    { "name": "Mobile Repair", "path": "/services/mobile-repair" },
+    { "name": "CCTV Solutions", "path": "/services/cctv-solutions" },
+    { "name": "Photography & Videography", "path": "/services/media-production" },
+    { "name": "Digital Marketing", "path": "/services/digital-marketing" },
+    { "name": "Meta Ads", "path": "/services/meta-ads" },
+    { "name": "Google Ads", "path": "/services/google-ads" }
+  ],
+  "navSoftware": [
+    {
+      "name": "Bill Maker",
+      "children": [
+        { "name": "Invoice Generate", "path": "/software/bill-maker?type=invoice" },
+        { "name": "Quotation Generate", "path": "/software/bill-maker?type=quotation" }
+      ]
+    },
+    { "name": "PC Build", "path": "/software/pc-build" },
+    { "name": "Inventory Management", "path": "/software/inventory" },
+    { "name": "Requirement Maker", "path": "/software/requirement-maker" }
+  ],
+  "pcComponents": {
+    "processor": [
+      { "id": "p1", "name": "Intel Core i3-10100F (10th Gen)", "price": 4500, "socket": "LGA1200" },
+      { "id": "p2", "name": "Intel Core i5-12400F (12th Gen)", "price": 11500, "socket": "LGA1700" },
+      { "id": "p3", "name": "Intel Core i5-13400F (13th Gen)", "price": 18500, "socket": "LGA1700" }
+    ],
+    "motherboard": [
+      { "id": "m1", "name": "ASUS Prime H510M-E", "price": 5500, "socket": "LGA1200" }
+    ]
+  }
+}

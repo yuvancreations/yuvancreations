@@ -19,24 +19,39 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-            if (currentUser) {
-                // Fetch user data from firestore to get role
-                const docRef = doc(db, 'users', currentUser.uid);
-                const docSnap = await getDoc(docRef);
-
-                if (docSnap.exists()) {
-                    setUser({ ...currentUser, ...docSnap.data() });
-                } else {
-                    setUser(currentUser); // fallback
-                }
-            } else {
-                setUser(null);
-            }
+        const loadingFallback = setTimeout(() => {
             setLoading(false);
+        }, 4000);
+
+        const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+            try {
+                if (currentUser) {
+                    // Fetch user data from firestore to get role.
+                    // Fallback to auth user if Firestore fetch fails.
+                    const docRef = doc(db, 'users', currentUser.uid);
+                    const docSnap = await getDoc(docRef);
+
+                    if (docSnap.exists()) {
+                        setUser({ ...currentUser, ...docSnap.data() });
+                    } else {
+                        setUser(currentUser);
+                    }
+                } else {
+                    setUser(null);
+                }
+            } catch (error) {
+                console.warn('Failed to hydrate user profile from Firestore.', error);
+                setUser(currentUser || null);
+            } finally {
+                clearTimeout(loadingFallback);
+                setLoading(false);
+            }
         });
 
-        return () => unsubscribe();
+        return () => {
+            clearTimeout(loadingFallback);
+            unsubscribe();
+        };
     }, []);
 
     const login = async (email, password) => {
@@ -91,6 +106,8 @@ export const AuthProvider = ({ children }) => {
                 name,
                 email,
                 role: role,
+                printCredits: 0,
+                activeMembershipPlan: '',
                 createdAt: serverTimestamp()
             });
 
@@ -142,7 +159,13 @@ export const AuthProvider = ({ children }) => {
 
     return (
         <AuthContext.Provider value={{ user, token, loading, login, signup, logout, api }}>
-            {!loading && children}
+            {loading ? (
+                <div className="min-h-screen bg-white flex items-center justify-center text-sm font-medium text-gray-500">
+                    Loading...
+                </div>
+            ) : (
+                children
+            )}
         </AuthContext.Provider>
     );
 };

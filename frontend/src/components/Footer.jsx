@@ -23,10 +23,12 @@ const particles = Array.from({ length: 18 }, (_, i) => ({
 }));
 
 const quickLinks = [
-    { label: 'Home', to: '/#home' },
-    { label: 'Services', to: '/#services' },
-    { label: 'Pricing', to: '/#pricing' },
-    { label: 'About Us', to: '/#about' },
+    { label: 'Home', to: '/' },
+    { label: 'Services', to: '/services/web-apps' },
+    { label: 'Gallery', to: '/gallery' },
+    { label: 'Membership', to: '/membership' },
+    { label: 'Pricing', to: '/pricing/website-design' },
+    { label: 'About Us', to: '/about' },
     { label: 'Contact', to: '/contact' },
 ];
 
@@ -73,7 +75,7 @@ const Footer = () => {
                         className="md:col-span-5"
                     >
                         <Link to="/" className="inline-block mb-6 bg-white/5 border border-white/10 p-3 rounded-2xl hover:border-cyan-500/40 transition-colors">
-                            <img src="/images/logo/footer logo.png" alt="Yuvan Creations" className="h-14 w-auto object-contain" />
+                            <img src={`${import.meta.env.BASE_URL}images/logo/footer logo.png`} alt="Yuvan Creations" className="h-14 w-auto object-contain" />
                         </Link>
 
                         <p className="text-gray-400 leading-relaxed max-w-xs text-sm mb-8">
@@ -175,11 +177,11 @@ const Footer = () => {
                         className="flex items-center gap-3"
                     >
                         {[
-                            { icon: <Facebook size={16} />, href: '#', color: 'hover:bg-blue-600' },
-                            { icon: <Instagram size={16} />, href: '#', color: 'hover:bg-pink-600' },
-                            { icon: <Linkedin size={16} />, href: '#', color: 'hover:bg-blue-700' },
+                            { icon: <Facebook size={16} />, href: 'https://www.facebook.com/yuvancreations', color: 'hover:bg-blue-600' },
+                            { icon: <Instagram size={16} />, href: 'https://www.instagram.com/yuvancreationshrd/', color: 'hover:bg-pink-600' },
+                            { icon: <Linkedin size={16} />, href: 'https://www.linkedin.com/in/yuvan-creations-7b6531371/', color: 'hover:bg-blue-700' },
                         ].map((s, i) => (
-                            <a key={i} href={s.href}
+                            <a key={i} href={s.href} target="_blank" rel="noopener noreferrer"
                                 className={`w-9 h-9 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white ${s.color} hover:border-transparent transition-all duration-300`}>
                                 {s.icon}
                             </a>
@@ -187,7 +189,7 @@ const Footer = () => {
                     </motion.div>
 
                     <p className="text-gray-600 text-xs font-mono">
-                        {'</'} Built with ❤️ in Haridwar {'>'}
+                        {'</'} Built with ❤️ By YUVAN CREATIONS {'>'}
                     </p>
                 </div>
             </div>

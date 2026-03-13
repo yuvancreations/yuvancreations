@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { LayoutDashboard, UserCircle, Activity, LogOut, ArrowLeft } from 'lucide-react';
+import { LayoutDashboard, UserCircle, Activity, LogOut, ArrowLeft, Coins, Crown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { doc, onSnapshot } from 'firebase/firestore';
+import { db } from '../firebase';
 
 const UserDashboard = () => {
     const { user, logout } = useAuth();
+    const [credits, setCredits] = useState(Number(user?.printCredits || 0));
+    const [activePlan, setActivePlan] = useState(user?.activeMembershipPlan || 'No active plan');
+
+    useEffect(() => {
+        if (!user?.uid) return undefined;
+
+        const unsubscribe = onSnapshot(doc(db, 'users', user.uid), (snap) => {
+            if (!snap.exists()) return;
+            const data = snap.data();
+            setCredits(Number(data?.printCredits || 0));
+            setActivePlan(data?.activeMembershipPlan || 'No active plan');
+        });
+
+        return () => unsubscribe();
+    }, [user?.uid]);
+
+    const firstName = (user?.name || user?.displayName || 'User').split(' ')[0];
 
     return (
         <div className="min-h-screen bg-gray-50 flex flex-col md:flex-row">
@@ -16,18 +35,18 @@ const UserDashboard = () => {
                 </div>
 
                 <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
-                    <a href="#" className="flex items-center space-x-3 px-4 py-3 bg-blue-50 text-accent rounded-xl font-medium transition-colors">
+                    <button type="button" className="w-full text-left flex items-center space-x-3 px-4 py-3 bg-blue-50 text-accent rounded-xl font-medium transition-colors">
                         <LayoutDashboard size={20} />
                         <span>Dashboard</span>
-                    </a>
-                    <a href="#" className="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-xl font-medium transition-colors">
+                    </button>
+                    <button type="button" className="w-full text-left flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-xl font-medium transition-colors">
                         <UserCircle size={20} />
                         <span>Profile</span>
-                    </a>
-                    <a href="#" className="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-xl font-medium transition-colors">
+                    </button>
+                    <button type="button" className="w-full text-left flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-xl font-medium transition-colors">
                         <Activity size={20} />
                         <span>My Activity</span>
-                    </a>
+                    </button>
                 </nav>
 
                 <div className="p-4 border-t border-gray-100 mt-auto">
@@ -44,7 +63,7 @@ const UserDashboard = () => {
             {/* Main Content */}
             <main className="flex-1 p-8">
                 <header className="flex justify-between items-center mb-8">
-                    <h1 className="text-2xl font-bold text-gray-900">Welcome, {user?.name.split(' ')[0]}</h1>
+                    <h1 className="text-2xl font-bold text-gray-900">Welcome, {firstName}</h1>
                     <Link to="/" className="hidden md:flex items-center space-x-2 text-sm font-medium text-gray-500 hover:text-primary bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm transition-colors">
                         <ArrowLeft size={16} />
                         <span>Back to Website</span>
@@ -75,6 +94,31 @@ const UserDashboard = () => {
                     <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                         <h3 className="text-lg font-bold text-gray-900 mb-4">Recent Activity</h3>
                         <p className="text-gray-500 italic">No recent activity found.</p>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <Coins size={20} className="text-emerald-600" />
+                            Print Credits
+                        </h3>
+                        <p className="text-4xl font-black text-emerald-600">{Number.isFinite(credits) ? credits : 0}</p>
+                        <p className="text-gray-500 text-sm mt-2">1 print = 1 credit</p>
+                    </div>
+
+                    <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <Crown size={20} className="text-indigo-600" />
+                            Membership Plan
+                        </h3>
+                        <p className="text-gray-900 font-semibold">{activePlan || 'No active plan'}</p>
+                        <Link
+                            to="/membership"
+                            className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-bold hover:bg-indigo-700 transition-colors"
+                        >
+                            Buy / Upgrade Plan
+                        </Link>
                     </div>
                 </div>
             </main>

@@ -21,7 +21,7 @@ const Counter = ({ value, suffix = '' }) => (
 );
 
 const stats = [
-    { value: '15+', label: 'Years of Excellence', icon: <Award size={22} />, color: 'text-blue-600', bg: 'bg-blue-50' },
+    { value: '17+', label: 'Years of Excellence', icon: <Award size={22} />, color: 'text-blue-600', bg: 'bg-blue-50' },
     { value: '500+', label: 'Projects Completed', icon: <CheckCircle size={22} />, color: 'text-red-600', bg: 'bg-red-50' },
     { value: '98%', label: 'Client Satisfaction', icon: <Smile size={22} />, color: 'text-pink-600', bg: 'bg-pink-50' },
     { value: '50+', label: 'Services Offered', icon: <Layers size={22} />, color: 'text-amber-600', bg: 'bg-amber-50' },
@@ -187,7 +187,7 @@ const About = () => {
                             {/* Floating decorations */}
                             <motion.div animate={{ y: [0, -8, 0] }} transition={{ repeat: Infinity, duration: 3 }}
                                 className="absolute -top-4 -right-4 bg-amber-50 border border-amber-100 rounded-2xl p-4 shadow-lg z-20">
-                                <p className="text-amber-600 font-black text-2xl">15+</p>
+                                <p className="text-amber-600 font-black text-2xl">17+</p>
                                 <p className="text-amber-500 text-xs font-medium">Years Active</p>
                             </motion.div>
                             <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 3.5, delay: 0.5 }}

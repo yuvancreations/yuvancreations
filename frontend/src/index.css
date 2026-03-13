@@ -31,3 +31,67 @@ button * {
 }
 
 /* Base utility overrides if needed */
+
+/* Subtle coder-style animation for navbar only */
+.nav-coder {
+  isolation: isolate;
+}
+
+.nav-coder::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+      rgba(37, 99, 235, 0) 0%,
+      rgba(37, 99, 235, 0.6) 50%,
+      rgba(37, 99, 235, 0) 100%);
+  background-size: 220% 100%;
+  animation: navScan 4.8s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nav-coder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(180deg, rgba(2, 6, 23, 0.03) 0%, rgba(2, 6, 23, 0) 42%),
+    repeating-linear-gradient(90deg,
+      rgba(37, 99, 235, 0.07) 0,
+      rgba(37, 99, 235, 0.07) 1px,
+      transparent 1px,
+      transparent 30px);
+  background-size: 100% 100%, 220% 100%;
+  animation: navGridDrift 12s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nav-coder>* {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes navScan {
+  0% {
+    background-position: -120% 0;
+  }
+
+  100% {
+    background-position: 130% 0;
+  }
+}
+
+@keyframes navGridDrift {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 0 0, 220% 0;
+  }
+}

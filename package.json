@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "dev": "vite frontend",
-    "build": "vite build frontend",
-    "preview": "vite preview frontend"
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
