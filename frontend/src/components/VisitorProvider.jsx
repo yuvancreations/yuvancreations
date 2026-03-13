@@ -6,7 +6,7 @@ const VisitorContext = createContext();
 
 export const useVisitors = () => useContext(VisitorContext);
 
-const VisitorProvider = ({ children }) => {
+export function VisitorProvider({ children }) {
     const [visitorCount, setVisitorCount] = useState(0);
 
     useEffect(() => {
@@ -53,6 +53,4 @@ const VisitorProvider = ({ children }) => {
             {children}
         </VisitorContext.Provider>
     );
-};
-
-export default VisitorProvider;
+}

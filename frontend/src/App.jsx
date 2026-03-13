@@ -15,7 +15,7 @@ import GlobalInteractionSound from './components/GlobalInteractionSound';
 import ScrollToTop from './components/ScrollToTop';
 import { SiteContentProvider } from './context/SiteContentContext';
 
-import VisitorProvider from './components/VisitorProvider';
+import { VisitorProvider } from './components/VisitorProvider';
 
 // New Service Pages
 import ComputerSolutions from './pages/services/ComputerSolutions';
