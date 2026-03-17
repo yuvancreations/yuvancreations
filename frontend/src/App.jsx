@@ -37,6 +37,8 @@ import BillMaker from './pages/software/BillMaker';
 import PCBuild from './pages/software/PCBuild';
 import Inventory from './pages/software/Inventory';
 import RequirementForm from './pages/software/RequirementForm';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+
 
 function App() {
     const routerProps = import.meta.env.DEV ? {} : { basename: '/yuvancreations' };
@@ -55,6 +57,8 @@ function App() {
                         <Route path="/membership" element={<MembershipPage />} />
                         <Route path="/gallery" element={<GalleryPage />} />
                         <Route path="/pay" element={<PaymentPage />} />
+                        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
 
                         {/* Service Routes */}
                         <Route path="/services/computer-solutions" element={<ComputerSolutions />} />

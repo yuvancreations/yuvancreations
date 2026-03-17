@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, ArrowUpRight, Terminal } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -29,6 +29,7 @@ const quickLinks = [
     { label: 'Membership', to: '/membership' },
     { label: 'Pricing', to: '/pricing/website-design' },
     { label: 'About Us', to: '/about' },
+    { label: 'Privacy Policy', to: '/privacy-policy' },
     { label: 'Contact', to: '/contact' },
 ];
 
