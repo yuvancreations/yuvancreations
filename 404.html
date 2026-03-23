@@ -8,9 +8,8 @@
   <script>
     (function () {
       var location = window.location;
-      var basePath = "/yuvancreations";
       var fullPath = location.pathname + location.search + location.hash;
-      var target = location.origin + basePath + "/?redirect=" + encodeURIComponent(fullPath);
+      var target = location.origin + "/?redirect=" + encodeURIComponent(fullPath);
       location.replace(target);
     })();
   </script>
