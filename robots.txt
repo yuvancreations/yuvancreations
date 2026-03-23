@@ -4,4 +4,4 @@ Disallow: /admin
 Disallow: /dashboard
 Disallow: /pay
 
-Sitemap: https://yuvancreations.github.io/yuvancreations/sitemap.xml
+Sitemap: https://yuvancreations.in/sitemap.xml
