@@ -4,4 +4,8 @@ Disallow: /admin
 Disallow: /dashboard
 Disallow: /pay
 
+# Specific for Local Search
 Sitemap: https://yuvancreations.in/sitemap.xml
+
+# Performance
+Crawl-delay: 5
