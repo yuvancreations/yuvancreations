@@ -7,20 +7,32 @@ import {
     Shield, Lock, FileText, Scale,
     UserCheck, AlertTriangle, Info,
     Mail, Phone, MapPin, ArrowRight,
-    ChevronDown, CheckCircle2, Globe
+    ChevronDown, CheckCircle2, Globe, RefreshCcw
 } from 'lucide-react';
 
 const PrivacyPolicy = () => {
     const [activeTab, setActiveTab] = useState('legal');
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // Check if there's a hash or state to set the initial tab
+        const handleHashChange = () => {
+            const hash = window.location.hash.replace('#', '');
+            if (['legal', 'terms', 'privacy', 'refund', 'contact'].includes(hash)) {
+                setActiveTab(hash);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        };
+
+        handleHashChange();
+        window.addEventListener('hashchange', handleHashChange);
+        return () => window.removeEventListener('hashchange', handleHashChange);
     }, []);
 
     const tabs = [
         { id: 'legal', label: 'Legal Notice', icon: <Scale size={18} /> },
         { id: 'terms', label: 'Terms of Use', icon: <FileText size={18} /> },
         { id: 'privacy', label: 'Privacy Policy', icon: <Shield size={18} /> },
+        { id: 'refund', label: 'Refund Policy', icon: <RefreshCcw size={18} /> },
         { id: 'contact', label: 'Contact & Grievance', icon: <Mail size={18} /> },
     ];
 
@@ -113,7 +125,7 @@ const PrivacyPolicy = () => {
                                         <p>
                                             This document is published in accordance with the provisions of Rule 3 (1) of the Information Technology (Intermediaries Guidelines) Rules, 2011 that require publishing the rules and regulations, privacy policy and Terms of Use for access or usage of domain name:
                                             <br />
-                                            <a href="https://yuvancreations.github.io/yuvancreations" className="text-blue-600 font-bold hover:underline">https://yuvancreations.github.io/yuvancreations</a>
+                                            <a href="https://yuvancreations.in" className="text-blue-600 font-bold hover:underline">https://yuvancreations.in</a>
                                         </p>
 
                                         <p>(hereinafter referred to as “Website”), including the related mobile site and mobile application (hereinafter referred to as “Platform”).</p>
@@ -217,8 +229,12 @@ const PrivacyPolicy = () => {
 
                                     <div className="prose prose-blue max-w-none">
                                         <h3 className="text-xl font-bold text-gray-900 mb-4">Introduction</h3>
+                                        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-xl">
+                                            <p className="text-blue-800 text-sm font-bold">Domain Update Notification:</p>
+                                            <p className="text-blue-700 text-sm">Our official website domain has been updated from <span className="font-mono">https://yuvancreations.github.io/yuvancreations</span> to <span className="font-mono font-bold text-blue-900">https://yuvancreations.in</span>. All services and policies are now associated with the updated domain.</p>
+                                        </div>
                                         <p>This Privacy Policy explains how NISHANT SHARMA collects, uses, and protects your data through the website:</p>
-                                        <p><a href="https://yuvancreations.github.io/yuvancreations" className="text-blue-600 font-bold">https://yuvancreations.github.io/yuvancreations</a></p>
+                                        <p><a href="https://yuvancreations.in" className="text-blue-600 font-bold">https://yuvancreations.in</a></p>
                                         <p>Your data is processed in India. By using the Platform, you agree to this Privacy Policy and Indian laws.</p>
 
                                         <div className="bg-red-50 border border-red-100 rounded-2xl p-6 mt-8 flex items-start gap-4">
@@ -315,6 +331,50 @@ const PrivacyPolicy = () => {
                                             <h4 className="text-xl font-black text-gray-900 mb-4">08. Changes to Policy</h4>
                                             <p className="text-gray-600">Policy may be updated anytime. Check regularly for updates.</p>
                                         </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        )}
+
+                        {/* 3.5 REFUND POLICY */}
+                        {activeTab === 'refund' && (
+                            <motion.div
+                                key="refund"
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: 20 }}
+                                className="space-y-8 text-gray-700"
+                            >
+                                <div className="bg-white rounded-3xl p-10 shadow-sm border border-gray-100">
+                                    <div className="flex items-center gap-4 mb-8">
+                                        <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
+                                            <RefreshCcw size={24} />
+                                        </div>
+                                        <h2 className="text-3xl font-black text-gray-900 uppercase">Refund Policy</h2>
+                                    </div>
+
+                                    <div className="prose prose-blue max-w-none">
+                                        <p className="text-lg font-medium leading-relaxed mb-6">
+                                            At Yuvan Creations, we strive to provide high-quality services to our customers.
+                                        </p>
+
+                                        <div className="space-y-4">
+                                            {[
+                                                "Once a service has been initiated or completed, no refunds will be provided.",
+                                                "Customers may request cancellation before the service has started. In such cases, a refund may be considered after deducting applicable charges.",
+                                                "Any eligible refund will be processed within 5-7 business days from the date of approval.",
+                                                "For any issues or concerns, customers are encouraged to contact us so we can resolve them promptly."
+                                            ].map((item, idx) => (
+                                                <div key={idx} className="flex items-start gap-4 p-4 bg-gray-50 rounded-2xl border border-gray-100 italic">
+                                                    <CheckCircle2 size={20} className="text-blue-500 mt-1 flex-shrink-0" />
+                                                    <p className="text-gray-700">{item}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        <p className="mt-10 p-6 bg-blue-900 text-white rounded-3xl font-bold text-center">
+                                            By purchasing our services, you agree to this refund policy.
+                                        </p>
                                     </div>
                                 </div>
                             </motion.div>

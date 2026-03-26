@@ -5,6 +5,6 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
     plugins: [react(), tailwindcss()],
-    // Use root path in dev to avoid blank page on localhost.
-    base: command === 'build' ? '/yuvancreations/' : '/',
+    // Use root path in dev and build for custom domain.
+    base: '/',
 }))

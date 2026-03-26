@@ -1,12 +1,12 @@
 {
   "name": "frontend",
   "private": true,
-  "homepage": "https://yuvancreations.github.io/yuvancreations",
+  "homepage": "https://yuvancreations.in",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node generate-routes.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",

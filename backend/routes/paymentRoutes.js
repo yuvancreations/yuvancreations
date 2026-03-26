@@ -171,7 +171,7 @@ const isWebhookAuthorized = (req) => {
 
 router.post('/initiate', async (req, res) => {
     try {
-        const { amount, transactionId, customerName, mobileNumber, redirectUrl } = req.body || {};
+        const { amount, transactionId, customerName, mobileNumber, redirectUrl, paymentType, upiId } = req.body || {};
 
         const numericAmount = Number(amount);
         const amountInRupees = Number.isFinite(numericAmount) && numericAmount > 0 ? numericAmount : 10;
@@ -179,9 +179,11 @@ router.post('/initiate', async (req, res) => {
 
         const merchantOrderId = transactionId || `T${Date.now()}`;
         const normalizedMobile = normalizeMobileNumber(mobileNumber || process.env.DEFAULT_PAYMENT_MOBILE);
-        const finalRedirectUrl = redirectUrl || `${FRONTEND_URL}/pay?txId=${merchantOrderId}`;
+        const finalRedirectUrl = redirectUrl || `https://yuvancreations.in/pay?txId=${merchantOrderId}`;
 
         const token = await getPhonePeAccessToken();
+
+        const flowType = paymentType === 'UPI_COLLECT' ? 'UPI_COLLECT' : 'PG_CHECKOUT';
 
         const payload = {
             merchantOrderId,
@@ -192,12 +194,14 @@ router.post('/initiate', async (req, res) => {
                 ...(normalizedMobile ? { udf2: normalizedMobile } : {})
             },
             paymentFlow: {
-                type: 'PG_CHECKOUT',
+                type: flowType,
                 message: PHONEPE_PAYMENT_MESSAGE,
                 merchantUrls: {
                     redirectUrl: finalRedirectUrl
-                }
-            }
+                },
+                ...(flowType === 'UPI_COLLECT' ? { vpa: upiId } : {})
+            },
+            callbackUrl: process.env.PHONEPE_CALLBACK_URL || `${process.env.BACKEND_URL || process.env.BACKEND_PUBLIC_URL || 'https://asia-south1-yuvan-creations-website.cloudfunctions.net/backend'}/api/payment/callback`
         };
 
         const headers = {

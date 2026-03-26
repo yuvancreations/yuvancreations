@@ -20,6 +20,7 @@ import Footer from '../../components/Footer';
 import { useAuth } from '../../context/AuthContext';
 import { initiatePayment, verifyPayment, saveDocumentToCloud } from '../../services/paymentService';
 import { consumeOnePrintCredit, getUserPrintCredits } from '../../services/membershipService';
+import PaymentModal from '../../components/PaymentModal';
 
 const BILL_TYPES = {
     invoice: {
@@ -124,6 +125,7 @@ const BillMaker = ({ initialType = 'invoice' }) => {
     const [isProcessing, setIsProcessing] = useState(false);
     const [printCredits, setPrintCredits] = useState(0);
     const [isLoadingCredits, setIsLoadingCredits] = useState(false);
+    const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -327,11 +329,10 @@ const BillMaker = ({ initialType = 'invoice' }) => {
         reader.readAsDataURL(file);
     };
 
-    const handleInitiatePayment = async () => {
+    const handleInitiatePayment = async (paymentData) => {
         setIsProcessing(true);
         const result = await initiatePayment({
-            amount: 10,
-            customerName: currentDoc.partyName || 'Customer',
+            ...paymentData,
             redirectPath: `/software/bill-maker?type=${activeType}`
         });
 
@@ -472,7 +473,7 @@ const BillMaker = ({ initialType = 'invoice' }) => {
                         ) : (
                             <>
                                 <button
-                                    onClick={handleInitiatePayment}
+                                    onClick={() => setIsPaymentModalOpen(true)}
                                     disabled={isProcessing}
                                     className="flex items-center gap-2 px-5 py-3 bg-indigo-600 text-white font-black rounded-xl hover:bg-indigo-700 transition-colors"
                                 >
@@ -766,6 +767,14 @@ const BillMaker = ({ initialType = 'invoice' }) => {
             <div className="no-print mt-16">
                 <Footer />
             </div>
+
+            <PaymentModal 
+                isOpen={isPaymentModalOpen}
+                onClose={() => setIsPaymentModalOpen(false)}
+                onPay={handleInitiatePayment}
+                amount={10}
+                customerName={currentDoc.partyName || 'Customer'}
+            />
         </div>
     );
 };

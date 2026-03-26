@@ -29,7 +29,8 @@ const quickLinks = [
     { label: 'Membership', to: '/membership' },
     { label: 'Pricing', to: '/pricing/website-design' },
     { label: 'About Us', to: '/about' },
-    { label: 'Privacy Policy', to: '/privacy-policy' },
+    { label: 'Privacy Policy', to: '/privacy-policy#privacy' },
+    { label: 'Refund Policy', to: '/privacy-policy#refund' },
     { label: 'Contact', to: '/contact' },
 ];
 

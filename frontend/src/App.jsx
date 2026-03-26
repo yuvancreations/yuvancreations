@@ -13,7 +13,9 @@ import UserRoute from './components/UserRoute';
 import AdminRoute from './components/AdminRoute';
 import GlobalInteractionSound from './components/GlobalInteractionSound';
 import ScrollToTop from './components/ScrollToTop';
+import RouteSEO from './components/RouteSEO';
 import { SiteContentProvider } from './context/SiteContentContext';
+import ChatBot from './components/ChatBot';
 
 import { VisitorProvider } from './components/VisitorProvider';
 
@@ -41,7 +43,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 
 
 function App() {
-    const routerProps = import.meta.env.DEV ? {} : { basename: '/yuvancreations' };
+    const routerProps = {};
 
     return (
         <AuthProvider>
@@ -50,6 +52,7 @@ function App() {
                     <Router {...routerProps}>
                         <GlobalInteractionSound />
                         <ScrollToTop />
+                        <RouteSEO />
                         <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/contact" element={<ContactPage />} />
@@ -110,6 +113,7 @@ function App() {
                             }
                         />
                         </Routes>
+                        <ChatBot />
                     </Router>
                 </VisitorProvider>
             </SiteContentProvider>

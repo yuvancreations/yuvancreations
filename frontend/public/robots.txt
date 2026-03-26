@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /pay
 
-Sitemap: https://yuvancreations.github.io/yuvancreations/sitemap.xml
+# Specific for Local Search
+Sitemap: https://yuvancreations.in/sitemap.xml
+
+# Performance
+Crawl-delay: 5

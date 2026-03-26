@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { initiatePayment, verifyPayment } from '../../services/paymentService';
+import PaymentModal from '../../components/PaymentModal';
 import { useAuth } from '../../context/AuthContext';
 
 const PaymentPage = () => {
@@ -12,6 +13,7 @@ const PaymentPage = () => {
     const [isProcessing, setIsProcessing] = useState(false);
     const [status, setStatus] = useState(null); // 'success', 'failed'
     const [verificationTxId, setVerificationTxId] = useState('');
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const { user } = useAuth();
     const navigate = useNavigate();
 
@@ -71,16 +73,10 @@ const PaymentPage = () => {
         setIsProcessing(false);
     };
 
-    const handlePay = async () => {
-        if (!amount || isNaN(amount) || amount < 1) {
-            alert('Please enter a valid amount');
-            return;
-        }
-
+    const handlePay = async (paymentData) => {
         setIsProcessing(true);
         const result = await initiatePayment({
-            amount: parseFloat(amount),
-            customerName: user?.name || 'Customer',
+            ...paymentData,
             mobileNumber: user?.phone || user?.mobile || ''
         });
 
@@ -213,7 +209,13 @@ const PaymentPage = () => {
                                     </div>
 
                                     <button
-                                        onClick={handlePay}
+                                        onClick={() => {
+                                            if (!amount || isNaN(amount) || amount < 1) {
+                                                alert('Please enter a valid amount');
+                                                return;
+                                            }
+                                            setIsModalOpen(true);
+                                        }}
                                         disabled={isProcessing}
                                         className="w-full relative group overflow-hidden bg-indigo-600 text-white rounded-3xl py-6 font-black text-lg shadow-xl shadow-indigo-200 hover:shadow-indigo-300 transition-all active:scale-[0.98]"
                                     >
@@ -246,6 +248,14 @@ const PaymentPage = () => {
             </div>
 
             <Footer />
+
+            <PaymentModal 
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                onPay={handlePay}
+                amount={amount}
+                customerName={user?.name || 'Customer'}
+            />
         </div>
     );
 };

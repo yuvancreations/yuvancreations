@@ -59,7 +59,8 @@ const extractPaidAmountInPaise = (payload) => {
     return Number.isFinite(numeric) ? numeric : 0;
 };
 
-export const initiatePayment = async ({ amount, customerName, mobileNumber, redirectPath = '/pay' }) => {
+export const initiatePayment = async (data) => {
+    const { amount, customerName, mobileNumber, redirectPath = '/pay' } = data;
     const transactionId = 'T' + Date.now();
     try {
         const response = await axios.post(`${PAYMENT_API_BASE_URL}/initiate`, {
@@ -67,7 +68,11 @@ export const initiatePayment = async ({ amount, customerName, mobileNumber, redi
             transactionId,
             customerName: customerName || 'Customer',
             mobileNumber,
-            redirectUrl: buildPaymentReturnUrl(transactionId, redirectPath)
+            redirectUrl: buildPaymentReturnUrl(transactionId, redirectPath),
+            paymentType: data.paymentType || 'PG_CHECKOUT',
+            upiId: data.upiId || null
+        }, {
+            withCredentials: true
         });
 
         const redirectUrl = extractRedirectUrl(response.data);
@@ -96,7 +101,9 @@ export const initiatePayment = async ({ amount, customerName, mobileNumber, redi
 
 export const verifyPayment = async (txId, docDetails = null) => {
     try {
-        const response = await axios.get(`${PAYMENT_API_BASE_URL}/status/${txId}`);
+        const response = await axios.get(`${PAYMENT_API_BASE_URL}/status/${txId}`, {
+            withCredentials: true
+        });
         const state = extractPaymentState(response.data);
         const isSuccess = response.data?.code === 'PAYMENT_SUCCESS' || state === 'COMPLETED';
         const isPending = state === 'PENDING' || response.data?.code === 'PAYMENT_PENDING';
@@ -158,6 +165,8 @@ export const saveDocumentToCloud = async (type, data) => {
             customerName: data.billToName || data.quoteToName,
             amount: data.grandTotal || 0,
             date: data.date
+        }, {
+            withCredentials: true
         });
 
         console.log(`Document ${docId} synced to cloud.`);

@@ -39,6 +39,16 @@ const clients = [
         glow: 'rgba(59,130,246,0.3)',
         tag: 'Digital Marketing',
     },
+    {
+        name: '360LBS',
+        tagline: 'Complete Financial Accounting Website',
+        url: 'https://www.360lbs.in/',
+        logoSrc: '/images/client/360.png',
+        logoBg: 'bg-white',
+        color: 'from-violet-500 to-purple-500',
+        glow: 'rgba(168,85,247,0.3)',
+        tag: 'Financial Accounting',
+    },
 ];
 
 const Partners = () => {
@@ -85,20 +95,21 @@ const Partners = () => {
                     </motion.p>
                 </div>
 
-                {/* Client Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {clients.map((client, index) => (
+                {/* Client Cards Marquee */}
+                <div className="partners-marquee relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+                    <div className="partners-marquee-track flex w-max gap-8">
+                        {[...clients, ...clients].map((client, index) => (
                         <motion.a
-                            key={index}
+                            key={`${client.name}-${index}`}
                             href={client.url}
                             target="_blank"
                             rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.15 }}
+                            transition={{ delay: Math.min(index, clients.length - 1) * 0.08 }}
                             whileHover={{ y: -8, scale: 1.02 }}
-                            className="group relative bg-gray-900 rounded-3xl p-8 border border-gray-800 overflow-hidden cursor-pointer block shadow-xl transition-all duration-300"
+                            className="group relative bg-gray-900 rounded-3xl p-8 border border-gray-800 overflow-hidden cursor-pointer block shadow-xl transition-all duration-300 w-[300px] md:w-[320px] shrink-0"
                             style={{ '--glow': client.glow }}
                         >
                             {/* Card glow on hover */}
@@ -114,8 +125,17 @@ const Partners = () => {
                             <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none opacity-40"></div>
 
                             {/* Logo / Emoji */}
-                            <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${client.color} flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                                {client.logo}
+                            <div className={`w-16 h-16 rounded-2xl ${client.logoBg ?? `bg-gradient-to-br ${client.color}`} flex items-center justify-center text-3xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300 overflow-hidden`}>
+                                {client.logoSrc ? (
+                                    <img
+                                        src={client.logoSrc}
+                                        alt={`${client.name} logo`}
+                                        className="w-full h-full object-contain p-1"
+                                        loading="lazy"
+                                    />
+                                ) : (
+                                    client.logo
+                                )}
                             </div>
 
                             {/* Tag badge */}
@@ -144,6 +164,7 @@ const Partners = () => {
                             </div>
                         </motion.a>
                     ))}
+                    </div>
                 </div>
 
                 {/* Bottom trust badges */}
