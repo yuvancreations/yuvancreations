@@ -102,7 +102,7 @@ const Navbar = () => {
                         </Link>
 
                         {/* Desktop Menu */}
-                        <div className="hidden md:flex items-center space-x-8">
+                        <div className="hidden xl:flex items-center space-x-4 xl:space-x-6 text-[15px]">
                             <button onClick={() => handleNavClick('#home')} className="text-gray-600 hover:text-accent font-medium transition-colors">
                                 Home
                             </button>
@@ -203,6 +203,9 @@ const Navbar = () => {
                             <Link to="/gallery" className="text-gray-600 hover:text-accent font-medium transition-colors">
                                 Gallery
                             </Link>
+                            <Link to="/clients" className="text-gray-600 hover:text-accent font-medium transition-colors">
+                                Our Clients
+                            </Link>
                             <Link to="/membership" className="text-gray-600 hover:text-accent font-medium transition-colors">
                                 Membership
                             </Link>
@@ -247,7 +250,7 @@ const Navbar = () => {
                         </div>
 
                         {/* Mobile Menu Button */}
-                        <div className="md:hidden flex items-center">
+                        <div className="xl:hidden flex items-center">
                             <button onClick={toggleMobileMenu} className="text-gray-600 hover:text-primary focus:outline-none">
                                 {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                             </button>
@@ -262,7 +265,7 @@ const Navbar = () => {
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
-                            className="md:hidden overflow-hidden bg-white border-b border-gray-100"
+                            className="xl:hidden overflow-hidden bg-white border-b border-gray-100"
                         >
                             <div className="px-4 pt-2 pb-6 space-y-1">
                                 <button
@@ -367,6 +370,13 @@ const Navbar = () => {
                                     className="w-full text-left block px-3 py-3 text-base font-medium text-gray-700 hover:text-accent hover:bg-blue-50 rounded-lg"
                                 >
                                     Gallery
+                                </Link>
+                                <Link
+                                    to="/clients"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="w-full text-left block px-3 py-3 text-base font-medium text-gray-700 hover:text-accent hover:bg-blue-50 rounded-lg"
+                                >
+                                    Our Clients
                                 </Link>
                                 <Link
                                     to="/membership"

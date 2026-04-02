@@ -25,6 +25,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://yuvancreations.in/clients</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://yuvancreations.in/membership</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>

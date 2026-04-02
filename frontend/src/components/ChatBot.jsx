@@ -154,21 +154,47 @@ const ChatBot = () => {
 
                         {/* Chat Messages */}
                         <div className="flex-1 overflow-y-auto p-5 space-y-4 bg-slate-50/30 scroll-smooth custom-scrollbar">
-                            {messages.map((msg, idx) => (
+                            {messages.map((msg, idx) => {
+                                // Simple Markdown Link Parser
+                                const renderContent = (content) => {
+                                    if (!content) return null;
+                                    const parts = content.split(/(\[.*?\]\(.*?\))/g);
+                                    return parts.map((part, i) => {
+                                        const match = part.match(/\[(.*?)\]\((.*?)\)/);
+                                        if (match) {
+                                            return (
+                                                <a 
+                                                    key={i} 
+                                                    href={match[2]} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer"
+                                                    className="text-indigo-600 underline font-bold hover:text-indigo-800 transition-colors"
+                                                >
+                                                    {match[1]}
+                                                </a>
+                                            );
+                                        }
+                                        return part;
+                                    });
+                                };
 
-                                <motion.div 
-                                    key={idx} 
-                                    className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-                                >
-                                    <div className={`max-w-[85%] p-4 rounded-3xl text-[13px] font-semibold leading-relaxed ${
-                                        msg.role === 'user' 
-                                        ? 'bg-slate-900 text-white rounded-tr-none shadow-lg shadow-slate-200' 
-                                        : 'bg-white border border-slate-100 text-slate-700 rounded-tl-none shadow-sm'
-                                    }`}>
-                                        {msg.content}
-                                    </div>
-                                </motion.div>
-                            ))}
+                                return (
+                                    <motion.div 
+                                        key={idx} 
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                                    >
+                                        <div className={`max-w-[85%] p-4 rounded-[1.5rem] text-[13px] font-medium leading-relaxed ${
+                                            msg.role === 'user' 
+                                            ? 'bg-slate-900 text-white rounded-tr-none shadow-lg shadow-slate-200' 
+                                            : 'bg-white border border-slate-100 text-slate-700 rounded-tl-none shadow-sm'
+                                        }`}>
+                                            {renderContent(msg.content)}
+                                        </div>
+                                    </motion.div>
+                                );
+                            })}
                             {isLoading && (
                                 <div className="flex justify-start">
                                     <div className="bg-white border border-slate-100 p-4 rounded-3xl rounded-tl-none shadow-sm flex items-center gap-2">

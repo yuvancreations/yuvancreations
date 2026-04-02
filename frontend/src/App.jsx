@@ -9,6 +9,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import AdminCMS from './pages/AdminCMS';
 import MembershipPage from './pages/MembershipPage';
 import GalleryPage from './pages/GalleryPage';
+import OurClients from './pages/OurClients';
 import UserRoute from './components/UserRoute';
 import AdminRoute from './components/AdminRoute';
 import GlobalInteractionSound from './components/GlobalInteractionSound';
@@ -59,6 +60,7 @@ function App() {
                         <Route path="/about" element={<About />} />
                         <Route path="/membership" element={<MembershipPage />} />
                         <Route path="/gallery" element={<GalleryPage />} />
+                        <Route path="/clients" element={<OurClients />} />
                         <Route path="/pay" element={<PaymentPage />} />
                         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 

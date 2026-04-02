@@ -43,6 +43,12 @@ const ROUTE_META = {
         keywords: `${BASE_KEYWORDS}, privacy policy`,
         pageType: 'WebPage'
     },
+    '/clients': {
+        title: 'Our Clients | Yuvan Creations',
+        description: 'Explore the amazing brands, companies, and organizations that trust Yuvan Creations for premium IT solutions and digital marketing.',
+        keywords: `${BASE_KEYWORDS}, our clients, yuvan creations clients, trusted partners`,
+        pageType: 'CollectionPage'
+    },
     '/services/computer-solutions': {
         title: 'Computer Repair & IT Solutions',
         description: 'Professional computer repair and IT support services for businesses and individuals in Haridwar, including hardware, software, and networking.',
@@ -210,6 +216,7 @@ const PATH_LABELS = {
     '/gallery': 'Gallery',
     '/membership': 'Membership',
     '/privacy-policy': 'Privacy Policy',
+    '/clients': 'Our Clients',
     '/services': 'Services',
     '/software': 'Software',
     '/pricing': 'Pricing'

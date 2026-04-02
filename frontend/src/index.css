@@ -4,6 +4,10 @@
   --color-primary: #111111;
   --color-accent: #2563eb;
   --color-brand: #DC2626;
+  --color-bank-dark: #343C6A;
+  --color-bank-blue: #1814F3;
+  --color-bank-bg: #F5F7FA;
+  --color-bank-grey: #718EBF;
   /* Logo colors: accent=blue #2563eb | brand=red #DC2626 */
 }
 
